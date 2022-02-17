@@ -5,31 +5,6 @@
 </title>
 <body>
     <h1>Salut</h1>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
-    <div>
-        Salut i'm an element
-    </div>
     <div >
         Salut i'm an element
     </div>
