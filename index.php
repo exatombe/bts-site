@@ -1,10 +1,37 @@
 <html lang="fr">
-    <head>
-        <title>
-        Test
-        </title>
-    </head>
-    <body>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<title>
+    Test
+</title>
+<body>
     <h1>Salut</h1>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div>
+        Salut i'm an element
+    </div>
+    <div >
+        Salut i'm an element
+    </div>
     </body>
 </html>
