@@ -9,7 +9,7 @@
         Salut i'm an element
     </div>
     <div >
-        Salut i'm an element
+        Salut i'm jerem and i'm cheum
     </div>
     <div >
         Salut i'm an element
