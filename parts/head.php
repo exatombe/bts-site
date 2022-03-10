@@ -28,6 +28,7 @@
         <link rel="icon" type="image/png" sizes="64x64" href="https://bot-creator.com/favicon-64.png">
         <title><?php echo $n; ?></title>
 <!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
