@@ -1,0 +1,77 @@
+.BorderFooter
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 2000px;
+    border: solid 1px black ;
+    background-color: black;
+    padding: 100px;
+}
+
+.texte
+{
+    margin-left: 100px;
+    margin-top: -50px;
+}
+
+.ligne
+{
+    margin-left: -40px;
+    margin-right: -530px;
+    margin-top: 3px;
+}
+
+i
+{
+    margin-left: 380px;
+    margin-top: -40px;
+}
+
+.entreprise
+{
+    position: absolute;
+    left: 60px;
+    bottom: 250px;
+    font-size: larger;
+}
+
+.entrepriseTexte
+{
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    right: 1060px;
+}
+
+.partenaire
+{
+    position: absolute;
+    left: 500px;
+    bottom: 253px;
+    font-size: larger;
+}
+
+.partenaireliste
+{
+    list-style: none;
+    position: absolute;
+    left: 467px;
+    bottom: 53px;
+}
+
+.contact
+{
+    position: absolute;
+    left: 890px;
+    bottom: 253px;
+    font-size: larger;
+}
+
+.contactliste
+{
+    list-style: none;
+    position: absolute;
+    left: 478px;
+    bottom: 102px;
+}

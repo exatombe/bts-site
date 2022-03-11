@@ -29,6 +29,7 @@
         <title><?php echo $n; ?></title>
 <!-- Font Awesome -->
 <link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/style.css">
+<link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/styleFooter.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +39,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet"/>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+<script src="https://kit.fontawesome.com/0c8f4b5f9b.js" crossorigin="anonymous"></script>
 <?php
     }
     ?>
