@@ -33,6 +33,7 @@
                 <li><i class="fa-solid fa-envelope" style="padding-right: 20px;"></i><a href="mailto:contact@lamarchedesmangas.com" style="color: #4f4f4f;"> contact@lamarchedesmangas.com</a></li>
                 <br />
                 <li><i class="fa-solid fa-house" style="padding-right: 20px;"></i> 66 Rue de ta soeur, Paris 75005</li>
-    </section>
+            <p class="copyright"><strong>©️ Copyright-2022 Tout droit réservé</strong></p>
+     </section>
         </div>
 </footer>

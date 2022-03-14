@@ -75,3 +75,15 @@ i
     left: 478px;
     bottom: 102px;
 }
+
+.copyright
+{
+    
+    border: none;
+    position: absolute;
+    top: 246px;
+    left: -479px;
+    right: -167px;
+    text-align: center;
+    background-color: #272727;
+}
