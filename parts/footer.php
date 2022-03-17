@@ -8,7 +8,7 @@
             <i class="fa-brands fa-pinterest" style="margin-left: 460px; margin-top: -40px;"></i>
             <i class="fa-brands fa-instagram" style="margin-left: 500px; margin-top: -40px;"></i>
             <i class="fa-brands fa-whatsapp" style="margin-left: 540px; margin-top: -40px;"></i>
-            <i class="fa-brands fa-google" style="margin-left: 580px; margin-top: -40px;">></i>
+            <i class="fa-brands fa-google" style="margin-left: 580px; margin-top: -40px;"></i>
             <i class="fa-brands fa-github" style="margin-left: 620px; margin-top: -40px;"></i>
             <i class="fa-brands fa-youtube" style="margin-left: 660px; margin-top: -40px;"></i>
             <hr class="ligne" />
@@ -28,11 +28,11 @@
             </ul>
             <p class="contact"><strong>Nous contacter :</strong></p>
             <ul class="contactliste">
-                <li><i class="fa-solid fa-phone-flip" style="padding-right: 20px;"></i> + 0123567883</li>
+                <li><i class="fa-solid fa-phone-flip" style="margin-left: -40px; width: 20%;"></i> + 0123567883</li>
                 <br />
-                <li><i class="fa-solid fa-envelope" style="padding-right: 20px;"></i><a href="mailto:contact@lamarchedesmangas.com" style="color: #4f4f4f;"> contact@lamarchedesmangas.com</a></li>
+                <li><i class="fa-solid fa-house" style="margin-left: -40px; width: 20%; margin-top: 20px;"></i> 66 Rue de ta soeur, Paris 75005</li>
                 <br />
-                <li><i class="fa-solid fa-house" style="padding-right: 20px;"></i> 66 Rue de ta soeur, Paris 75005</li>
+                <li><i class="fa-solid fa-envelope" style="margin-left: -40px;"></i><a href="mailto:contact@lamarchedesmangas.com" style="color: #4f4f4f; position: absolute; top: 340px; margin-left: 23px;"> contact@lamarchedesmangas.com</a></li>
             <p class="copyright"><strong>©️ Copyright-2022 Tout droit réservé</strong></p>
      </section>
         </div>

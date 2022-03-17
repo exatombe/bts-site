@@ -30,60 +30,59 @@ i
 
 .entreprise
 {
-    position: absolute;
-    left: 60px;
-    bottom: 250px;
+    margin-left: -140px;
+    margin-top: 13px;
     font-size: larger;
 }
 
 .entrepriseTexte
 {
-    position: absolute;
-    left: 60px;
-    bottom: 50px;
-    right: 1060px;
+    text-align: left;
+    margin-left: -140px;
+    margin-right: 100px;
 }
 
 .partenaire
 {
-    position: absolute;
-    left: 500px;
-    bottom: 253px;
+    margin-top: -216px;
+    margin-left: 390px;
+    width: 100%;
     font-size: larger;
 }
 
 .partenaireliste
 {
     list-style: none;
-    position: absolute;
-    left: 467px;
-    bottom: 53px;
+    margin-left: 356px;
+
+    
 }
 
 .contact
 {
-    position: absolute;
-    left: 890px;
-    bottom: 253px;
+    margin-top: -243px;
+    margin-left: 810px;
+    width: 100%;
     font-size: larger;
 }
 
 .contactliste
 {
     list-style: none;
-    position: absolute;
-    left: 478px;
-    bottom: 102px;
+    margin-left: 818px;
+    margin-top: 16px;
+    width: 100%;
+
+    
 }
 
 .copyright
 {
     
     border: none;
-    position: absolute;
-    top: 246px;
-    left: -479px;
-    right: -167px;
     text-align: center;
     background-color: #272727;
+    margin-top: 85px;
+    margin-left: -1051px;
+    margin-right: -130px;
 }
