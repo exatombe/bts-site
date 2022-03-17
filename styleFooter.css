@@ -1,9 +1,6 @@
 .BorderFooter
 {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 2000px;
+    margin-top: 1500px;
     border: solid 1px black ;
     background-color: black;
     padding: 100px;
@@ -15,6 +12,18 @@
     margin-top: -50px;
 }
 
+.logooo 
+{
+    padding-left: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoo
+{
+    margin-left: 20px;
+}
+
 .ligne
 {
     margin-left: -40px;
@@ -24,8 +33,8 @@
 
 i
 {
-    margin-left: 380px;
     margin-top: -40px;
+    padding-right: 15px;
 }
 
 .entreprise
@@ -66,15 +75,16 @@ i
     font-size: larger;
 }
 
+
 .contactliste
 {
+    margin-left: 775px;
     list-style: none;
-    margin-left: 818px;
-    margin-top: 16px;
     width: 100%;
-
-    
+    margin-top: 16px;
 }
+
+
 
 .copyright
 {
@@ -82,7 +92,109 @@ i
     border: none;
     text-align: center;
     background-color: #272727;
-    margin-top: 85px;
+    margin-top: 76px;
     margin-left: -1051px;
-    margin-right: -130px;
+    margin-right: -173px;
+}
+
+@media only screen 
+   and (min-width : 1600px) {
+    .BorderFooter
+    {
+        margin-top: 1500px;
+        border: solid 1px black ;
+        background-color: black;
+        padding: 100px;
+    }
+    
+    .texte
+    {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+    
+    .logooo 
+    {
+        padding-left: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logoo
+    {
+        margin-left: 20px;
+    }
+    
+    .ligne
+    {
+        margin-left: -40px;
+        margin-right: -530px;
+        margin-top: 3px;
+    }
+    
+    i
+    {
+        margin-top: -40px;
+        padding-right: 15px;
+    }
+    
+    .entreprise
+    {
+        margin-left: -140px;
+        margin-top: 13px;
+        font-size: larger;
+    }
+    
+    .entrepriseTexte
+    {
+        text-align: left;
+        margin-left: -140px;
+        margin-right: 100px;
+    }
+    
+    .partenaire
+    {
+        margin-top: -216px;
+        margin-left: 390px;
+        width: 100%;
+        font-size: larger;
+    }
+    
+    .partenaireliste
+    {
+        list-style: none;
+        margin-left: 356px;
+    
+        
+    }
+    
+    .contact
+    {
+        margin-top: -243px;
+        margin-left: 810px;
+        width: 100%;
+        font-size: larger;
+    }
+    
+    
+    .contactliste
+    {
+        margin-left: 775px;
+        list-style: none;
+        width: 100%;
+        margin-top: 16px;
+    }
+    
+    
+    
+    .copyright
+    {
+        
+        border: none;
+        text-align: center;
+        background-color: #272727;
+        margin-top: 76px;
+        margin-left: -1051px;
+        margin-right: -173px;
+    }
 }
