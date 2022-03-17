@@ -12,5 +12,6 @@
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
         <?php include "./parts/footer.php"; ?>
+        <?php include "./parts/Authentification.php"; ?>
     </body>
 </html>
