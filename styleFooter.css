@@ -97,13 +97,15 @@ i
     margin-right: -173px;
 }
 
-@media all and (min-width: 1024px) and (max-width: 1600px) {
+@media only screen and (max-width : 1600px) {
     .BorderFooter
     {
         margin-top: 1500px;
         border: solid 1px black ;
         background-color: black;
-        padding: auto;
+        padding: 100px;
+        margin-right: -165px;
+        
     }
     
     .texte
@@ -194,6 +196,6 @@ i
         background-color: #272727;
         margin-top: 76px;
         margin-left: -1051px;
-        margin-right: -173px;
+        margin-right: -175px;
     }
 }
