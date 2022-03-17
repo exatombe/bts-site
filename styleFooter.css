@@ -101,10 +101,10 @@ i
    and (min-width : 1600px) {
     .BorderFooter
     {
-        margin-top: 1500px;
+        margin-top: auto;
         border: solid 1px black ;
         background-color: black;
-        padding: 100px;
+        padding: auto;
     }
     
     .texte
@@ -193,8 +193,8 @@ i
         border: none;
         text-align: center;
         background-color: #272727;
-        margin-top: 76px;
-        margin-left: -1051px;
-        margin-right: -173px;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
