@@ -13,14 +13,9 @@
         <?php include "./parts/header.php"; ?>
 
         <?php
-        $bytes = "dsfsdf";
-        try {
-            $bytes = random_bytes(20);
-        } catch (Exception $e) {
-        }
-        $custom_chain = bin2hex($bytes);
+
             include "./class/user.php";
-            $user = new User(2432);
+            $user = new User(34);
             var_dump($user);
 
         ?>

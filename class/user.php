@@ -1,9 +1,8 @@
 <?php
 include "./class/database.php";
 /**
- * Créer la classe User
+ * Classe Utilisateur, (pour créer et ou gérer un utilisateur)
  */
-
 class User extends Database {
     /** @param id  */
     private $id;
