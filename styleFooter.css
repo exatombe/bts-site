@@ -96,8 +96,8 @@ i
     box-sizing: border-box;
     text-align: center;
     background-color: #272727;
-    position: absolute;
-    top: 2311px;
+    position: relative;
+    margin-bottom: auto;
     right: 0px;
     left: 0px;
 }
@@ -200,8 +200,8 @@ i
         box-sizing: border-box;
         text-align: center;
         background-color: #272727;
-        position: absolute;
-        top: 2300px;
+        position: relative;
+        margin-bottom: auto;
         right: 0px;
         left: 0px;
     }
@@ -308,8 +308,8 @@ i
         box-sizing: border-box;
         text-align: center;
         background-color: #272727;
-        position: absolute;
-        top: 2310px;
+        position: relative;
+        margin-bottom: auto;
         left: 0px;
         right: 0px;
     }
