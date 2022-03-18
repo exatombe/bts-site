@@ -6,7 +6,8 @@
  */
 class Database{
     private $db;
-function __construct()
+    private $error;
+    function __construct()
     {   
      $dsn = 'mysql:dbname=lemarchedumanga;host=localhost';
      $user = 'root';
@@ -14,10 +15,9 @@ function __construct()
         try {
             $dbh = new PDO($dsn, $user, $password);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->db = $dbh; 
-            return $this;
+            $this->db = $dbh;
         } catch(PDOException $e) {
-            return $e->getMessage();
+            $this->error = $e->getMessage();
         }
     }
     
@@ -26,15 +26,20 @@ function __construct()
      */
     public function query(string $query,array $options = [])
     {
-        if(count($options) == 0){
-            $query = $this->db->prepare($query);
-            $query->execute($options);
-            return $query->fetchAll();
-        }else{
-            $query = $this->db->prepare($query);
-            $query->execute($options);
-            return $query->fetchAll();
+        try{
+                if (count($options) == 0) {
+                    $query = $this->db->prepare($query);
+                    $query->execute($options);
+                    return $query;
+                } else {
+                    $query = $this->db->prepare($query);
+                    $query->execute($options);
+                    return $query;
+                }
+        }catch(PDOException $e){
+            $this->error = $e->getMessage();
         }
+
     }
     /**
      * Trouvé toute les donnée qui remplissent une ou plusieurs conditions
@@ -48,7 +53,7 @@ function __construct()
                 array_push($searchArr,$key."='".$value."'");
             }
             $search = implode( " && ", $searchArr );
-            return Database::query("SELECT * FROM $table WHERE $search");
+            return Database::query("SELECT * FROM $table WHERE $search")->fetchAll();
         }
     }
     /**
@@ -57,7 +62,7 @@ function __construct()
     public function find(string $table, int $ID){
         $collum = "ID_".strtoupper($table);
         try{
-            return Database::query("SELECT * FROM $table WHERE $collum = $ID");
+            return Database::query("SELECT * FROM $table WHERE $collum = $ID")->fetchAll();
         }catch(PDOException $e){
             return $e->getMessage();
         }
@@ -77,7 +82,7 @@ function __construct()
                 array_push($searchArr,$key."='".$value."'");
             }
             $search = implode( "&&", $searchArr );
-            return Database::query("SELECT * FROM $table WHERE $search LIMIT 1");
+            return Database::query("SELECT * FROM $table WHERE $search LIMIT 1")->fetch();
         }
     }
     /**
@@ -85,7 +90,7 @@ function __construct()
      */
     public function findAll(string $table)
     {
-        return Database::query("SELECT * FROM $table");
+        return Database::query("SELECT * FROM $table")->fetchAll();
     }
 }
 
