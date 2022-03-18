@@ -8,7 +8,7 @@ class Database{
     private $db;
 function __construct()
     {   
-     $dsn = 'mysql:dbname=lemarchemanga;host=localhost';
+     $dsn = 'mysql:dbname=lemarchedumanga;host=localhost';
      $user = 'root';
      $password = '';
         try {
