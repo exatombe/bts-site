@@ -1,116 +1,12 @@
-    .BorderFooter
-    {
-        margin-top: 1500px;
-        box-sizing: border-box;
-        border: solid 1px black ;
-        padding: 100px;
-        background-color: black;
-        border-right-width: 1148px;
-        
-    }
-    
-    .texte
-    {
-        margin-left: 100px;
-        margin-top: -50px;
-    }
-    
-    .logooo 
-    {
-        padding-left: 150px;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .logoo
-    {
-        margin-left: 20px;
-    }
-    
-    .ligne
-    {
-        margin-left: -40px;
-        margin-right: -530px;
-        margin-top: 3px;
-    }
-    
-    i
-{
-    margin-top: -40px;
-    padding-right: 15px;
-}
-    
-    .entreprise
-    {
-        margin-left: -140px;
-        margin-top: 13px;
-        font-size: larger;
-    }
-    
-    .entrepriseTexte
-    {
-        text-align: left;
-        margin-left: -140px;
-        margin-right: 100px;
-    }
-    
-    .partenaire
-    {
-        margin-top: -216px;
-        margin-left: 390px;
-        width: 100%;
-        font-size: larger;
-    }
-    
-    .partenaireliste
-    {
-        list-style: none;
-        margin-left: 356px;
-    
-        
-    }
-    
-    .contact
-    {
-        margin-top: -243px;
-        margin-left: 810px;
-        width: 100%;
-        font-size: larger;
-    }
-    
-    
-    .contactliste
-    {
-        margin-left: 775px;
-        list-style: none;
-        width: 100%;
-        margin-top: 16px;
-    }
-    
-    
-    
-    .copyright
-    {
-        
-        border: none;
-        box-sizing: border-box;
-        text-align: center;
-        background-color: #272727;
-        position: absolute;
-        top: 2311px;
-        right: 0px;
-        left: 0px;
-    }
-
-@media screen and (max-width: 1366px)
-{
 .BorderFooter
 {
     margin-top: 1500px;
-    border: solid 1px black ;
     box-sizing: border-box;
-    background-color: black;
+    border: solid 1px black ;
     padding: 100px;
+    background-color: black;
+    border-right-width: 1148px;
+
 }
 
 .texte
@@ -119,7 +15,7 @@
     margin-top: -50px;
 }
 
-.logooo 
+.logooo
 {
     padding-left: 150px;
     display: flex;
@@ -171,7 +67,7 @@ i
     list-style: none;
     margin-left: 356px;
 
-    
+
 }
 
 .contact
@@ -195,16 +91,120 @@ i
 
 .copyright
 {
-    
+
     border: none;
     box-sizing: border-box;
     text-align: center;
     background-color: #272727;
     position: absolute;
-    top: 2300px;
+    top: 2311px;
     right: 0px;
     left: 0px;
 }
+
+@media screen and (max-width: 1366px)
+{
+    .BorderFooter
+    {
+        margin-top: 1500px;
+        border: solid 1px black ;
+        box-sizing: border-box;
+        background-color: black;
+        padding: 100px;
+    }
+
+    .texte
+    {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+
+    .logooo
+    {
+        padding-left: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logoo
+    {
+        margin-left: 20px;
+    }
+
+    .ligne
+    {
+        margin-left: -40px;
+        margin-right: -530px;
+        margin-top: 3px;
+    }
+
+    i
+    {
+        margin-top: -40px;
+        padding-right: 15px;
+    }
+
+    .entreprise
+    {
+        margin-left: -140px;
+        margin-top: 13px;
+        font-size: larger;
+    }
+
+    .entrepriseTexte
+    {
+        text-align: left;
+        margin-left: -140px;
+        margin-right: 100px;
+    }
+
+    .partenaire
+    {
+        margin-top: -216px;
+        margin-left: 390px;
+        width: 100%;
+        font-size: larger;
+    }
+
+    .partenaireliste
+    {
+        list-style: none;
+        margin-left: 356px;
+
+
+    }
+
+    .contact
+    {
+        margin-top: -243px;
+        margin-left: 810px;
+        width: 100%;
+        font-size: larger;
+    }
+
+
+    .contactliste
+    {
+        margin-left: 775px;
+        list-style: none;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+
+
+    .copyright
+    {
+
+        border: none;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #272727;
+        position: absolute;
+        top: 2300px;
+        right: 0px;
+        left: 0px;
+    }
 }
 
 /*Pour l'écran de jérémy ce pauvre avec un écran de 1280*/
@@ -212,105 +212,105 @@ i
 @media screen and (max-width: 1280px)
 {
     .BorderFooter
-{
-    margin-top: 1500px;
-    border: solid 1px black ;
-    box-sizing: border-box;
-    background-color: black;
-    padding: 100px;
-    margin-right: 0px;
-}
+    {
+        margin-top: 1500px;
+        border: solid 1px black ;
+        box-sizing: border-box;
+        background-color: black;
+        padding: 100px;
+        margin-right: 0px;
+    }
 
-.texte
-{
-    margin-left: 50px;
-    margin-top: -50px;
-}
+    .texte
+    {
+        margin-left: 50px;
+        margin-top: -50px;
+    }
 
-.logooo 
-{
-    padding-left: 150px;
-    display: flex;
-    justify-content: space-between;
-}
+    .logooo
+    {
+        padding-left: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.logoo
-{
-    margin-left: 20px;
-}
+    .logoo
+    {
+        margin-left: 20px;
+    }
 
-.ligne
-{
-    margin-left: -40px;
-    margin-right: -530px;
-    margin-top: 3px;
-}
+    .ligne
+    {
+        margin-left: -40px;
+        margin-right: -530px;
+        margin-top: 3px;
+    }
 
-i
-{
-    margin-top: -40px;
-    padding-right: 15px;
-}
+    i
+    {
+        margin-top: -40px;
+        padding-right: 15px;
+    }
 
-.entreprise
-{
-    margin-left: -110px;
-    margin-top: 13px;
-    font-size: larger;
-}
+    .entreprise
+    {
+        margin-left: -110px;
+        margin-top: 13px;
+        font-size: larger;
+    }
 
-.entrepriseTexte
-{
-    text-align: left;
-    margin-left: -110px;
-    margin-right: 80px;
-}
+    .entrepriseTexte
+    {
+        text-align: left;
+        margin-left: -110px;
+        margin-right: 80px;
+    }
 
-.partenaire
-{
-    margin-top: -216px;
-    margin-left: 390px;
-    width: 100%;
-    font-size: larger;
-}
+    .partenaire
+    {
+        margin-top: -216px;
+        margin-left: 390px;
+        width: 100%;
+        font-size: larger;
+    }
 
-.partenaireliste
-{
-    list-style: none;
-    margin-left: 356px;
-
-    
-}
-
-.contact
-{
-    margin-top: -243px;
-    margin-left: 810px;
-    width: 100%;
-    font-size: larger;
-}
+    .partenaireliste
+    {
+        list-style: none;
+        margin-left: 356px;
 
 
-.contactliste
-{
-    margin-left: 775px;
-    list-style: none;
-    width: 100%;
-    margin-top: 16px;
-}
+    }
+
+    .contact
+    {
+        margin-top: -243px;
+        margin-left: 810px;
+        width: 100%;
+        font-size: larger;
+    }
+
+
+    .contactliste
+    {
+        margin-left: 775px;
+        list-style: none;
+        width: 100%;
+        margin-top: 16px;
+    }
 
 
 
-.copyright
-{
-    
-    border: none;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: #272727;
-    position: absolute;
-    top: 2310px;
-    left: 0px;
-    right: 0px;
-}
+    .copyright
+    {
+
+        border: none;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #272727;
+        position: absolute;
+        top: 2310px;
+        left: 0px;
+        right: 0px;
+    }
 }

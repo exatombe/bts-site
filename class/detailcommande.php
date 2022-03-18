@@ -29,7 +29,7 @@ class Commande extends Database
             $detailcommande = parent::find("detailcommande", strval($id));
 
             $this->id = $id;
-            $this->quantite = count($detailcommande) == 1 ? $detailcommande[0]["quantite"] : null;
+            $this->quantite = count($detailcommande) == 1 ? $detailcommande[0]["Quantite"] : null;
             $this->manga = count($detailcommande) == 1 ? new Manga(int($detailcommande[0]["ID_MANGA"])) : null;
             $this->commande = count($detailcommande) == 1 ? new Commande(int($detailcommande[0]["ID_COMMANDE"])) : null;
         }
