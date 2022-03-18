@@ -3,6 +3,7 @@
         margin-top: 1500px;
         box-sizing: border-box;
         border: solid 1px black ;
+        padding: 100px;
         background-color: black;
         border-right-width: 1148px;
         
@@ -93,9 +94,12 @@
         
         border: none;
         box-sizing: border-box;
+        text-align: center;
         background-color: #272727;
-        margin-top: 76px;
-        border-width: thin;
+        position: absolute;
+        top: 2311px;
+        right: 0px;
+        left: 0px;
     }
 
 @media screen and (max-width: 1366px)
@@ -196,10 +200,10 @@ i
     box-sizing: border-box;
     text-align: center;
     background-color: #272727;
-    margin-top: 75px;
-    border-width: thin;
-    margin-left: -1010px;
-    margin-right: -173px;
+    position: absolute;
+    top: 2300px;
+    right: 0px;
+    left: 0px;
 }
 }
 
@@ -304,8 +308,9 @@ i
     box-sizing: border-box;
     text-align: center;
     background-color: #272727;
-    margin-top: 76px;
-    margin-left: -1051px;
-    margin-right: -137px;
+    position: absolute;
+    top: 2310px;
+    left: 0px;
+    right: 0px;
 }
 }

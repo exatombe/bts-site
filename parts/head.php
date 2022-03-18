@@ -31,6 +31,7 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/style.css">
 <link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/styleFooter.css">
+<link rel="stylesheet" type="text/css" href="http://<?= $_SERVER['SERVER_NAME']; ?>/styleAuthentification.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

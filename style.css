@@ -11,6 +11,9 @@ div {
 
 h6
 {
-    padding-left: 800px;
-    margin-bottom: 100px;
+    border-left: 1px solid white;
+    padding-left: 10px;
+    position: absolute;
+    left: 1100px;
+    top: 60px;
 }

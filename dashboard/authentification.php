@@ -10,6 +10,14 @@
        ?>
     </head>
     <body style="background-color: lightgray;">
-    <p>Salut</p>
+    <img src="http://<?= $_SERVER['SERVER_NAME']; ?>/media/favicon-64.png" alt="logo" />
+    <div class="boitelogin">
+        <h4><strong><u>Connexion ou inscription</u></strong></h4>
+        <div class="Pseudonyme">
+        <label for="e-mail">Email</label>
+        <input type="email" name="e-mail" id="e-mail">
+        </div>
+        <button onclick="verify">Se connecter / S'inscrire</button>
+    </div>
     </body>
 </html>

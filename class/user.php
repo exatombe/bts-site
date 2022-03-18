@@ -17,7 +17,7 @@ class User extends Database {
         parent::__construct();
         if($id === 0) {
             $password = password_hash($password,PASSWORD_DEFAULT);
-            $user = parent::query('INSERT INTO user (Username,Email,Password) VALUES (?,?,?)', [$username, $email, $password]);
+            parent::query('INSERT INTO user (Username,Email,Password) VALUES (?,?,?)', [$username, $email, $password]);
             $this->id = $id;
             $this->username = $username;
             $this->email = $email;

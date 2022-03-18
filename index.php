@@ -15,7 +15,7 @@
         <?php
 
             include "./class/user.php";
-            $user = new User(34);
+            $user = new User(1,"username","gerard@gmail.com","azerty123");
             var_dump($user);
 
         ?>

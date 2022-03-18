@@ -1,0 +1,50 @@
+.boitelogin
+{
+    width: 530px;  
+    height: 400px;
+    margin: auto;
+    border: none;
+    background-color: white;
+    padding: 12px;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4
+{
+    position: absolute;
+    top: 240px;
+}
+
+.Pseudonyme
+{
+    position: absolute;
+    top: 350px;
+    left: 685px;
+}
+
+input
+{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+button
+{
+    position: absolute;
+    top: 490px;
+}
+
+img
+{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
