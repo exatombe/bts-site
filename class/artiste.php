@@ -1,4 +1,5 @@
 <?php
+include "./class/database.php";
 /**
  * Créer la classe Artiste
  */
