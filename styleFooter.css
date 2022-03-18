@@ -2,6 +2,7 @@
 {
     margin-top: 1500px;
     border: solid 1px black ;
+    box-sizing: border-box;
     background-color: black;
     padding: 100px;
 }
@@ -90,6 +91,7 @@ i
 {
     
     border: none;
+    box-sizing: border-box;
     text-align: center;
     background-color: #272727;
     margin-top: 76px;
@@ -97,14 +99,14 @@ i
     margin-right: -173px;
 }
 
-@media only screen and (max-width : 1600px) {
+@media only screen and (min-width : 1024px) and (max-width : 1600px) {
     .BorderFooter
     {
         margin-top: 1500px;
+        box-sizing: border-box;
         border: solid 1px black ;
         background-color: black;
-        padding: 100px;
-        margin-right: -165px;
+        border-right-width: 1148px;
         
     }
     
@@ -192,10 +194,9 @@ i
     {
         
         border: none;
-        text-align: center;
+        box-sizing: border-box;
         background-color: #272727;
         margin-top: 76px;
-        margin-left: -1051px;
-        margin-right: -175px;
+        border-width: thin;
     }
 }
