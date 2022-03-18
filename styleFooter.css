@@ -1,3 +1,105 @@
+    .BorderFooter
+    {
+        margin-top: 1500px;
+        box-sizing: border-box;
+        border: solid 1px black ;
+        background-color: black;
+        border-right-width: 1148px;
+        
+    }
+    
+    .texte
+    {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+    
+    .logooo 
+    {
+        padding-left: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logoo
+    {
+        margin-left: 20px;
+    }
+    
+    .ligne
+    {
+        margin-left: -40px;
+        margin-right: -530px;
+        margin-top: 3px;
+    }
+    
+    i
+{
+    margin-top: -40px;
+    padding-right: 15px;
+}
+    
+    .entreprise
+    {
+        margin-left: -140px;
+        margin-top: 13px;
+        font-size: larger;
+    }
+    
+    .entrepriseTexte
+    {
+        text-align: left;
+        margin-left: -140px;
+        margin-right: 100px;
+    }
+    
+    .partenaire
+    {
+        margin-top: -216px;
+        margin-left: 390px;
+        width: 100%;
+        font-size: larger;
+    }
+    
+    .partenaireliste
+    {
+        list-style: none;
+        margin-left: 356px;
+    
+        
+    }
+    
+    .contact
+    {
+        margin-top: -243px;
+        margin-left: 810px;
+        width: 100%;
+        font-size: larger;
+    }
+    
+    
+    .contactliste
+    {
+        margin-left: 775px;
+        list-style: none;
+        width: 100%;
+        margin-top: 16px;
+    }
+    
+    
+    
+    .copyright
+    {
+        
+        border: none;
+        box-sizing: border-box;
+        background-color: #272727;
+        margin-top: 76px;
+        border-width: thin;
+    }
+
+@media screen and (max-width: 1366px)
+{
 .BorderFooter
 {
     margin-top: 1500px;
@@ -94,116 +196,11 @@ i
     box-sizing: border-box;
     text-align: center;
     background-color: #272727;
-    margin-top: 76px;
-    margin-left: -1051px;
+    margin-top: 75px;
+    border-width: thin;
+    margin-left: -1010px;
     margin-right: -173px;
 }
-
-/*Pour les écrans de 1600px*/
-
-@media only screen and (max-width : 1600px) {
-    .BorderFooter
-    {
-        margin-top: 1500px;
-        box-sizing: border-box;
-        border: solid 1px black ;
-        background-color: black;
-        border-right-width: 1148px;
-        
-    }
-    
-    .texte
-    {
-        margin-left: 100px;
-        margin-top: -50px;
-    }
-    
-    .logooo 
-    {
-        padding-left: 150px;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .logoo
-    {
-        margin-left: 20px;
-    }
-    
-    .ligne
-    {
-        margin-left: -40px;
-        margin-right: -530px;
-        margin-top: 3px;
-    }
-    
-    i
-    {
-        margin-top: -40px;
-        padding-right: 15px;
-    }
-    
-    .entreprise
-    {
-        margin-left: -140px;
-        margin-top: 13px;
-        font-size: larger;
-    }
-    
-    .entrepriseTexte
-    {
-        text-align: left;
-        margin-left: -140px;
-        margin-right: 100px;
-    }
-    
-    .partenaire
-    {
-        margin-top: -216px;
-        margin-left: 390px;
-        width: 100%;
-        font-size: larger;
-    }
-    
-    .partenaireliste
-    {
-        list-style: none;
-        margin-left: 356px;
-    
-        
-    }
-    
-    .contact
-    {
-        margin-top: -243px;
-        margin-left: 810px;
-        width: 100%;
-        font-size: larger;
-    }
-    
-    
-    .contactliste
-    {
-        margin-left: 775px;
-        list-style: none;
-        width: 100%;
-        margin-top: 16px;
-    }
-    
-    
-    
-    .copyright
-    {
-        
-        border: none;
-        box-sizing: border-box;
-        background-color: #272727;
-        margin-top: 76px;
-        border-width: thin;
-        padding-left: 300px;
-        padding-right: 200px;
-        margin-right: -343px;
-    }
 }
 
 /*Pour l'écran de jérémy ce pauvre avec un écran de 1280*/
