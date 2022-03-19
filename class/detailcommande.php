@@ -30,8 +30,8 @@ class Commande extends Database
 
             $this->id = $id;
             $this->quantite = count($detailcommande) == 1 ? $detailcommande[0]["Quantite"] : null;
-            $this->manga = count($detailcommande) == 1 ? new Manga(int($detailcommande[0]["ID_MANGA"])) : null;
-            $this->commande = count($detailcommande) == 1 ? new Commande(int($detailcommande[0]["ID_COMMANDE"])) : null;
+            $this->manga = count($detailcommande) == 1 ? new Manga(intval($detailcommande[0]["ID_MANGA"])) : null;
+            $this->commande = count($detailcommande) == 1 ? new Commande(intval($detailcommande[0]["ID_COMMANDE"])) : null;
         }
     }
 

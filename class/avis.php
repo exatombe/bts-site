@@ -20,7 +20,7 @@ class Avis extends Database
     /** @param user reference ID_USER */
     private $user;
 
-    public function __construct(int $id = 0, string $note = "", string $commentaire = "", DateTime $date, Manga $manga, User $user)
+    public function __construct(int $id = 0, string $note = "", string $commentaire = "", DateTime $date = new \DateTime('now'), Manga $manga = new Manga(0), User $user = new User(0))
     {
         parent::__construct();
         if ($id === 0) {
@@ -38,8 +38,8 @@ class Avis extends Database
             $this->note = count($avis) == 1 ? $avis[0]["Note"] : null;
             $this->commentaire = count($avis) == 1 ? $avis[0]["Commentaire"] : null;
             $this->date = count($avis) == 1 ? new \DateTime($avis[0]["Date"]) : null;
-            $this->id_manga = count($avis) == 1 ? new Manga(int($avis[0]["ID_MANGA"])) : null;
-            $this->id_user = count($avis) == 1 ? new User(int($avis[0]["ID_USER"])) : null;
+            $this->id_manga = count($avis) == 1 ? new Manga(intval($avis[0]["ID_MANGA"])) : null;
+            $this->id_user = count($avis) == 1 ? new User(intval($avis[0]["ID_USER"])) : null;
         }
     }
 

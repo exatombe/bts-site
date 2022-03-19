@@ -13,7 +13,7 @@ class Commande extends Database
     /** @param user reference User */
     private $user;
 
-    public function __construct(int $id = 0, bool $panier = true, User $user)
+    public function __construct(int $id = 0, bool $panier = true, User $user = new User(0))
     {
         parent::__construct();
         if ($id === 0) {
@@ -26,7 +26,7 @@ class Commande extends Database
 
             $this->id = $id;
             $this->panier = count($commande) == 1 ? $commande[0]["Panier"] : null;
-            $this->user = count($commande) == 1 ? new User(int($commande[0]["ID_USER"])) : null;
+            $this->user = count($commande) == 1 ? new User(intval($commande[0]["ID_USER"])) : null;
         }
     }
 
