@@ -1,20 +1,21 @@
 <?php
 include "./class/database.php";
 /**
- * Créer la classe Artiste
+ * Classe Artiste (Info essentiel sur un artiste)
  */
-class Artiste extends Database {
-    /** @param id reference ID_ */
+class Artiste extends Database
+{
+    /** @param id*/
     private $id;
-    /** @param nom reference Nom */
+    /** @param nom */
     private $nom;
-    /** @param prenom reference Prenom */
+    /** @param prenom  */
     private $prenom;
-    /** @param genre reference Genre */
+    /** @param genre */
     private $genre;
-    /** @param nationalite reference Nationalite */
+    /** @param nationalite */
     private $nationalite;
-    public function __construct(int $id=0,string $nom ="",string $prenom="",string $genre="", string $nationalite="")
+    public function __construct(int $id = 0, string $nom = "", string $prenom = "", string $genre = "", string $nationalite = "")
     {
         parent::__construct();
         if ($id === 0) {
@@ -35,34 +36,44 @@ class Artiste extends Database {
         }
     }
 
-    public function setId(int $id){
+    public function setId(int $id)
+    {
         return $this->id = $id;
     }
-    public function getId(): ?int{
+    public function getId(): ?int
+    {
         return $this->id;
     }
-    public function setNom(string $nom){
+    public function setNom(string $nom)
+    {
         return $this->nom = $nom;
     }
-    public function getNom(): ?string {
+    public function getNom(): ?string
+    {
         return $this->nom;
     }
-    public function setPrenom(string $prenom){
+    public function setPrenom(string $prenom)
+    {
         return $this->prenom = $prenom;
     }
-    public function getPrenom(): ?string{
+    public function getPrenom(): ?string
+    {
         return $this->prenom;
     }
-    public function setGenre(string $genre){
+    public function setGenre(string $genre)
+    {
         return $this->genre = $genre;
     }
-    public function getGenre(): ?string{
+    public function getGenre(): ?string
+    {
         return $this->genre;
     }
-    public function setNationalite(string $nationalite){
+    public function setNationalite(string $nationalite)
+    {
         return $this->nationalite = $nationalite;
     }
-    public function getNationalite(): ?string{
+    public function getNationalite(): ?string
+    {
         return $this->nationalite;
     }
 }

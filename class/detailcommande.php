@@ -3,9 +3,10 @@ include "./class/database.php";
 include "./class/manga.php";
 include "./class/commande.php";
 /**
-ID_DETAILCOMMANDE	Quantite	ID_COMMANDE	ID_MANGA */
+ * Classe detail commande, (correspond à un article au sein d'une commande)
+ */
 
-class Commande extends Database
+class DetailCommande extends Database
 {
     /** @param id */
     private $id;
@@ -20,7 +21,7 @@ class Commande extends Database
     {
         parent::__construct();
         if ($id === 0) {
-            $detailcommande = parent::query('INSERT INTO commande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?)', [$quantite,$manga->getid(),$commande->getId()]);
+            $detailcommande = parent::query('INSERT INTO detailcommande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?)', [$quantite, $manga->getid(), $commande->getId()]);
             $this->id = $id;
             $this->quantite = $quantite;
             $this->manga = $manga;
@@ -75,4 +76,19 @@ class Commande extends Database
         return $this->commande;
     }
 
+    public function update(): bool
+    {
+        if (isset($this->quantite) && isset($this->manga) && isset($this->commande)) {
+            $query = Database::query("UPDATE detailcommande SET Quantite='?', ID_MANGA='?', ID_COMMANDE='?'", [$this->quantite, $this->manga->getId(), $this->commande->getId()]);
+            if ($query) {
+                return true;
+            } else return false;
+        } else return false;
+    }
+
+    public function delete(): bool
+    {
+        $query = Database::query("DELETE FROM detailcommande WHERE ID_DETAILCOMMANDE='?'", [$this->id]);
+        return $query ? true : false;
+    }
 }

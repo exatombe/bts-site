@@ -3,8 +3,8 @@ include "./class/database.php";
 include "./class/auteur.php";
 include "./class/artiste.php";
 /**
-* La classe pour créer un manga 
-*/
+ * Classe manga, contient toutes les informations essentiels sur un manga !
+ */
 
 class Manga extends Database
 {
@@ -31,11 +31,11 @@ class Manga extends Database
     /** @param artiste reference Artiste */
     private $artiste;
 
-    public function __construct(int $id = 0, string $titre = "", int $prix = 0, string $editeur = "", string $genre="", string $synopsis="", string $format="", string $isbn="", string $image="",Auteur $auteur=new Auteur(0), Artiste $artiste = new Artiste(0))
+    public function __construct(int $id = 0, string $titre = "", int $prix = 0, string $editeur = "", string $genre = "", string $synopsis = "", string $format = "", string $isbn = "", string $image = "", Auteur $auteur = new Auteur(0), Artiste $artiste = new Artiste(0))
     {
         parent::__construct();
         if ($id === 0) {
-            $manga = parent::query('INSERT INTO commande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$titre,$prix,$editeur,$genre,$synopsis,$format,$isbn,$image,$artiste->getid(),$auteur->getId()]);
+            $manga = parent::query('INSERT INTO commande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$titre, $prix, $editeur, $genre, $synopsis, $format, $isbn, $image, $artiste->getid(), $auteur->getId()]);
             $this->id = $id;
             $this->titre = $titre;
             $this->prix = $prix;
@@ -66,8 +66,8 @@ class Manga extends Database
 
     /**
      * Get the value of id
-     */ 
-    public function getId():?int
+     */
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -76,7 +76,7 @@ class Manga extends Database
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId(int $id)
     {
         $this->id = $id;
@@ -87,8 +87,8 @@ class Manga extends Database
 
     /**
      * Get the value of titre
-     */ 
-    public function getTitre():?string
+     */
+    public function getTitre(): ?string
     {
         return $this->titre;
     }
@@ -97,7 +97,7 @@ class Manga extends Database
      * Set the value of titre
      *
      * @return  self
-     */ 
+     */
     public function setTitre(string $titre)
     {
         $this->titre = $titre;
@@ -107,8 +107,8 @@ class Manga extends Database
 
     /**
      * Get the value of prix
-     */ 
-    public function getPrix():?int
+     */
+    public function getPrix(): ?int
     {
         return $this->prix;
     }
@@ -117,7 +117,7 @@ class Manga extends Database
      * Set the value of prix
      *
      * @return  self
-     */ 
+     */
     public function setPrix(int $prix)
     {
         $this->prix = $prix;
@@ -127,8 +127,8 @@ class Manga extends Database
 
     /**
      * Get the value of editeur
-     */ 
-    public function getEditeur():?string
+     */
+    public function getEditeur(): ?string
     {
         return $this->editeur;
     }
@@ -137,7 +137,7 @@ class Manga extends Database
      * Set the value of editeur
      *
      * @return  self
-     */ 
+     */
     public function setEditeur(string $editeur)
     {
         $this->editeur = $editeur;
@@ -147,8 +147,8 @@ class Manga extends Database
 
     /**
      * Get the value of genre
-     */ 
-    public function getGenre():?string 
+     */
+    public function getGenre(): ?string
     {
         return $this->genre;
     }
@@ -157,7 +157,7 @@ class Manga extends Database
      * Set the value of genre
      *
      * @return  self
-     */ 
+     */
     public function setGenre(string $genre)
     {
         $this->genre = $genre;
@@ -167,7 +167,7 @@ class Manga extends Database
 
     /**
      * Get the value of synopsis
-     */ 
+     */
     public function getSynopsis(): ?string
     {
         return $this->synopsis;
@@ -177,7 +177,7 @@ class Manga extends Database
      * Set the value of synopsis
      *
      * @return  self
-     */ 
+     */
     public function setSynopsis(string $synopsis)
     {
         $this->synopsis = $synopsis;
@@ -187,8 +187,8 @@ class Manga extends Database
 
     /**
      * Get the value of format
-     */ 
-    public function getFormat():?string
+     */
+    public function getFormat(): ?string
     {
         return $this->format;
     }
@@ -197,7 +197,7 @@ class Manga extends Database
      * Set the value of format
      *
      * @return  self
-     */ 
+     */
     public function setFormat(string $format)
     {
         $this->format = $format;
@@ -207,8 +207,8 @@ class Manga extends Database
 
     /**
      * Get the value of isbn
-     */ 
-    public function getIsbn():?string
+     */
+    public function getIsbn(): ?string
     {
         return $this->isbn;
     }
@@ -217,7 +217,7 @@ class Manga extends Database
      * Set the value of isbn
      *
      * @return  self
-     */ 
+     */
     public function setIsbn(string $isbn)
     {
         $this->isbn = $isbn;
@@ -227,8 +227,8 @@ class Manga extends Database
 
     /**
      * Get the value of image
-     */ 
-    public function getImage():?string
+     */
+    public function getImage(): ?string
     {
         return $this->image;
     }
@@ -237,7 +237,7 @@ class Manga extends Database
      * Set the value of image
      *
      * @return  self
-     */ 
+     */
     public function setImage(string $image)
     {
         $this->image = $image;
@@ -247,8 +247,8 @@ class Manga extends Database
 
     /**
      * Get the value of auteur
-     */ 
-    public function getAuteur():?Auteur
+     */
+    public function getAuteur(): ?Auteur
     {
         return $this->auteur;
     }
@@ -257,7 +257,7 @@ class Manga extends Database
      * Set the value of auteur
      *
      * @return  Auteur
-     */ 
+     */
     public function setAuteur(Auteur $auteur)
     {
         $this->auteur = $auteur;
@@ -267,8 +267,8 @@ class Manga extends Database
 
     /**
      * Get the value of artiste
-     */ 
-    public function getArtiste():?Artiste
+     */
+    public function getArtiste(): ?Artiste
     {
         return $this->artiste;
     }
@@ -277,7 +277,7 @@ class Manga extends Database
      * Set the value of artiste
      *
      * @return  Artiste
-     */ 
+     */
     public function setArtiste(Artiste $artiste)
     {
         $this->artiste = $artiste;
@@ -285,4 +285,3 @@ class Manga extends Database
         return $this;
     }
 }
-

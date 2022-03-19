@@ -3,21 +3,21 @@ include "./class/database.php";
 include "./class/user.php";
 include "./class/manga.php";
 /**
- * Créer la classe Avis
+ * Classe avis, correspond à un avis (lié à un manga, et à un user)
  */
 class Avis extends Database
 {
-    /** @param id reference ID_ */
+    /** @param id */
     private $id;
-    /** @param note reference Note */
+    /** @param note  */
     private $note;
-    /** @param commentaire reference Commentaire */
+    /** @param commentaire */
     private $commentaire;
-    /** @param date reference Date */
+    /** @param date  */
     private $date;
-    /** @param manga reference ID_MANGA */
+    /** @param manga reference Manga */
     private $manga;
-    /** @param user reference ID_USER */
+    /** @param user reference User */
     private $user;
 
     public function __construct(int $id = 0, string $note = "", string $commentaire = "", DateTime $date = new \DateTime('now'), Manga $manga = new Manga(0), User $user = new User(0))
@@ -53,17 +53,21 @@ class Avis extends Database
         return $this->id;
     }
 
-    public function setNote(string $note){
+    public function setNote(string $note)
+    {
         return $this->note = $note;
     }
-    public function getNote(): ?string {
+    public function getNote(): ?string
+    {
         return $this->note;
     }
 
-    public function setCommentaire(string $commentaire){
+    public function setCommentaire(string $commentaire)
+    {
         return $this->commentaire = $commentaire;
     }
-    public function getCommentaire(): ?string {
+    public function getCommentaire(): ?string
+    {
         return $this->commentaire;
     }
 
@@ -96,5 +100,4 @@ class Avis extends Database
     {
         return $this->user;
     }
-
 }

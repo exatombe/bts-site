@@ -2,7 +2,8 @@
 include "./class/database.php";
 include "./class/user.php";
 /**
-ID_COMMANDE	Panier	ID_USER */
+ * Classe commande (Sert à spécifier si la commande est un panier ou  une commande)
+ */
 
 class Commande extends Database
 {
@@ -17,7 +18,7 @@ class Commande extends Database
     {
         parent::__construct();
         if ($id === 0) {
-            $commande = parent::query('INSERT INTO commande (Panier,ID_USER) VALUES (?,?)', [$panier,$user->getid()]);
+            $commande = parent::query('INSERT INTO commande (Panier,ID_USER) VALUES (?,?)', [$panier, $user->getid()]);
             $this->id = $id;
             $this->panier = $panier;
             $this->user = $user;
@@ -59,5 +60,4 @@ class Commande extends Database
     {
         return $this->user;
     }
-
 }
