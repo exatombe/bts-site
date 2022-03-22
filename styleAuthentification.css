@@ -1,7 +1,7 @@
 .boitelogin
 {
     width: 530px;  
-    height: 400px;
+    height: 430px;
     margin: auto;
     border: none;
     background-color: white;
@@ -17,14 +17,14 @@
 h4
 {
     position: absolute;
-    top: 240px;
+    top: 170px;
 }
 
 .Pseudonyme
 {
     position: absolute;
-    top: 350px;
-    left: 685px;
+    top: 320px;
+    left: 855px;
 }
 
 input
@@ -47,4 +47,31 @@ img
     left: 50px;
     width: 100px;
     height: 100px;
+}
+
+p
+{
+    position: absolute;
+    top: 210px;
+    font-size: small;
+}
+
+@media screen and (max-width: 1366px)
+{
+    .Pseudonyme
+{
+    position: absolute;
+    top: 320px;
+    left: 570px;
+}
+}
+
+@media screen and (max-width: 1280px)
+{
+    .Pseudonyme
+{
+    position: absolute;
+    top: 320px;
+    left: 530px;
+}
 }
