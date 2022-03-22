@@ -18,7 +18,9 @@
         <label for="e-mail">Email</label>
         <input type="email" name="e-mail" id="e-mail">
         </div>
-        <button onclick="verify">Se connecter / S'inscrire</button>
+        <span class="bouton">
+        <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter / S'inscrire</button>
+        </span>
     </div>
     </body>
 </html>

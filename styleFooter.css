@@ -5,8 +5,6 @@
     border: solid 1px black ;
     padding: 100px;
     background-color: black;
-    border-right-width: 1148px;
-
 }
 
 .texte
@@ -32,6 +30,7 @@
     margin-left: -40px;
     margin-right: -530px;
     margin-top: 3px;
+    color: white;
 }
 
 i
@@ -57,7 +56,7 @@ i
 .partenaire
 {
     margin-top: -216px;
-    margin-left: 390px;
+    margin-left: 590px;
     width: 100%;
     font-size: larger;
 }
@@ -65,7 +64,7 @@ i
 .partenaireliste
 {
     list-style: none;
-    margin-left: 356px;
+    margin-left: 555px;
 
 
 }
@@ -73,7 +72,7 @@ i
 .contact
 {
     margin-top: -243px;
-    margin-left: 810px;
+    margin-left: 1300px;
     width: 100%;
     font-size: larger;
 }
@@ -81,7 +80,7 @@ i
 
 .contactliste
 {
-    margin-left: 775px;
+    margin-left: 1270px;
     list-style: none;
     width: 100%;
     margin-top: 16px;

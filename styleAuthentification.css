@@ -34,10 +34,16 @@ input
     outline: none;
 }
 
-button
+.bouton 
 {
     position: absolute;
     top: 490px;
+    border: none;
+    background-color: #587EF2;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
 }
 
 img
