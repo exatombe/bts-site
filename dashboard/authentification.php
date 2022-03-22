@@ -13,7 +13,7 @@
     <img src="http://<?= $_SERVER['SERVER_NAME']; ?>/media/favicon-64.png" alt="logo" />
     <div class="boitelogin">
         <h4><strong><u>Connexion ou inscription</u></strong></h4>
-        <p>Saisissez votre e-mail pour vous connecter ou créer un compte</p>
+        <p class="mini">Saisissez votre e-mail pour vous connecter ou créer un compte</p>
         <div class="Pseudonyme">
         <label for="e-mail">Email</label>
         <input type="email" name="e-mail" id="e-mail">
