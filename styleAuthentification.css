@@ -1,13 +1,76 @@
-.boitelogin
+.boitelogin2
 {
+    position: absolute;
+    left: 10px;
+    top: 150px;
     width: 530px;  
-    height: 430px;
-    margin: auto;
+    height: 590px;
     border: none;
     background-color: white;
     padding: 12px;
-    margin-top: 140px;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h42
+{
+    position: absolute;
+    top: 30px;
+}
+
+.Compte2
+{
+    position: absolute;
+    top: 170px;
+    left: 177px;
+}
+
+.mddp2
+{
+    position: absolute;
+    top: 350px;
+    left: 177px;
+}
+
+input
+{
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.bouton2
+{
+    position: absolute;
+    top: 500px;
+    right: 175px;
+    border: none;
+    background-color: #587EF2;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+
+.mini2
+{
+    position: absolute;
+    top: 80px;
+    font-size: small;
+}
+
+.boitelogin
+{
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    width: 530px;  
+    height: 590px;
+    border: none;
+    background-color: white;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,27 +80,35 @@
 h4
 {
     position: absolute;
-    top: 170px;
+    top: 30px;
 }
 
-.Pseudonyme
+.Compte
 {
     position: absolute;
-    top: 320px;
-    left: 855px;
+    top: 170px;
+    left: 179px;
+}
+
+.mddp
+{
+    position: absolute;
+    top: 350px;
+    left: 180px;
 }
 
 input
 {
     border: none;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid grey;
     outline: none;
 }
 
 .bouton 
 {
     position: absolute;
-    top: 490px;
+    top: 500px;
+    right: 175px;
     border: none;
     background-color: #587EF2;
     padding: 10px;
@@ -58,9 +129,10 @@ img
 .mini
 {
     position: absolute;
-    top: 210px;
+    top: 80px;
     font-size: small;
 }
+
 
 @media screen and (max-width: 1366px)
 {
