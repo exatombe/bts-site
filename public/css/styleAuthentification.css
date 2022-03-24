@@ -3,11 +3,12 @@
     position: absolute;
     left: 10px;
     top: 150px;
-    width: 530px;  
+    width: 530px; 
     height: 590px;
     border: none;
     background-color: white;
     padding: 12px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,14 +25,21 @@
 {
     position: absolute;
     top: 170px;
-    left: 177px;
+    left: 137px;
+}
+
+.Pseudoo
+{
+    position: absolute;
+    top: 280px;
+    left: 67px;
 }
 
 .mddp2
 {
     position: absolute;
     top: 350px;
-    left: 177px;
+    left: 137px;
 }
 
 input
@@ -45,7 +53,7 @@ input
 {
     position: absolute;
     top: 500px;
-    right: 175px;
+    right: 200px;
     border: none;
     background-color: #587EF2;
     padding: 10px;
@@ -71,6 +79,7 @@ input
     border: none;
     background-color: white;
     padding: 12px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
