@@ -35,7 +35,7 @@
 
             <div class="site-header__end bottom">
                 <div class="search">
-                    <div class="search__toggle" aria-label="Open search">
+                    <div class="search__toggle active" aria-label="Open search">
                         Search
                     </div>
                     <form class="search__form" action="">
