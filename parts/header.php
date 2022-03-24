@@ -1,5 +1,5 @@
 <header class="head">
-	<p>Test</p>
+	<p>Le marché du manga</p>
 
     <div class="menu">
 	    <ul>
