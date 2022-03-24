@@ -46,12 +46,6 @@
         <?php  } ?>
         
         <link rel="stylesheet" type="text/css" href="/public/css/style_global.css">
-<<<<<<< HEAD
-
-
-=======
- 
->>>>>>> 92fb028f40ef0daa4cf766c0066079dc373ce5dd
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
