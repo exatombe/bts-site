@@ -29,18 +29,18 @@
         <link rel="icon" type="image/png" sizes="64x64" href="https://bot-creator.com/favicon-64.png">
         <title><?php echo $n; ?></title>
 <!-- Font Awesome -->
-<link rel="stylesheet" type="text/css" href="/public/css/style.css">
-<link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
-<link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/header.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/style_global.css">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-<!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet"/>
-<!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
 <script src="https://kit.fontawesome.com/0c8f4b5f9b.js" crossorigin="anonymous"></script>
 <?php
     }

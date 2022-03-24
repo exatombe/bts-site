@@ -19,48 +19,9 @@ h6
     top: 60px;
 }
 
-.menu{
+/* .head{
     text-align: center;
-    min-width: 800px;
-    margin: 15px;
-}
-
-.menu ul{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    zoom: 1;
-    *display: inline;
-    list-style-type: none;
-}
-
-.menu li{
-    float: left;
-    padding: 2px 5px;
-    font-size: 25px;
-    font-family: 'Nunito', sans-serif;
-    list-style-type: none;
-}
-
-.menu a{
-    display: block;
-    float: left;
-    width: auto;
-    background-color: #FFCCF6;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    padding: 5px;
-    border: 2px solid;
-    border-radius: 30px;
-    border-color: #B2299A;
-}
-
-.menu a:hover{
-    border: 2px solid;
-    border-radius: 30px;
-    border-color: black;
-    background-color: #C45CB2;
+    background: linear-gradient(15deg, rgba(26,54,138,1) 0%, rgba(37,47,77,1) 10%, rgba(37,47,77,1) 75%, rgba(255,101,0,1) 100%);
     color: white;
 }
 
