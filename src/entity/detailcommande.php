@@ -1,7 +1,7 @@
 <?php
-include "./class/database.php";
-include "./class/manga.php";
-include "./class/commande.php";
+include './src/repository/database.php';
+
+
 /**
  * Classe detail commande, (correspond à un article au sein d'une commande)
  */
@@ -36,59 +36,83 @@ class DetailCommande extends Database
         }
     }
 
-    public function setId(int $id)
-    {
-        return $this->id = $id;
-    }
-
-    public function getId(): ?int
+    /**
+     * Get the value of id
+     */
+    public function getId():?int
     {
         return $this->id;
     }
 
-    public function setQuantite(int $quantite)
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */
+    public function setId(int $id)
     {
-        return $this->quantite = $quantite;
+        $this->id = $id;
+
+        return $this;
     }
 
-    public function getQuantie(): ?int
+    /**
+     * Get the value of quantite
+     */
+    public function getQuantite():?int
     {
         return $this->quantite;
     }
 
-    public function setManga(Manga $manga)
+    /**
+     * Set the value of quantite
+     *
+     * @return  self
+     */
+    public function setQuantite(int $quantite)
     {
-        return $this->manga = $manga;
+        $this->quantite = $quantite;
+
+        return $this;
     }
 
-    public function getManga(): ?Manga
-    {
-        return $this->manga;
-    }
-
-    public function setCommande(Commande $commande)
-    {
-        return $this->commande = $commande;
-    }
-
-    public function getCommande(): ?Commande
+    /**
+     * Get the value of commande
+     */
+    public function getCommande():?Commande
     {
         return $this->commande;
     }
 
-    public function update(): bool
+    /**
+     * Set the value of commande
+     *
+     * @return  self
+     */
+    public function setCommande(Commande $commande)
     {
-        if (isset($this->quantite) && isset($this->manga) && isset($this->commande)) {
-            $query = Database::query("UPDATE detailcommande SET Quantite='?', ID_MANGA='?', ID_COMMANDE='?'", [$this->quantite, $this->manga->getId(), $this->commande->getId()]);
-            if ($query) {
-                return true;
-            } else return false;
-        } else return false;
+        $this->commande = $commande;
+
+        return $this;
     }
 
-    public function delete(): bool
+    /**
+     * Get the value of manga
+     */ 
+    public function getManga():?Manga
     {
-        $query = Database::query("DELETE FROM detailcommande WHERE ID_DETAILCOMMANDE='?'", [$this->id]);
-        return $query ? true : false;
+        return $this->manga;
+    }
+
+    /**
+     * Set the value of manga
+     *
+     * @return  self
+     */ 
+    public function setManga(Manga $manga)
+    {
+        $this->manga = $manga;
+
+        return $this;
     }
 }

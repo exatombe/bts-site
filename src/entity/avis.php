@@ -1,7 +1,8 @@
 <?php
-include "./class/database.php";
-include "./class/user.php";
-include "./class/manga.php";
+include './src/repository/database.php';
+include './src/entity/manga.php';
+include './src/entity/user.php';
+
 /**
  * Classe avis, correspond à un avis (lié à un manga, et à un user)
  */
@@ -43,61 +44,125 @@ class Avis extends Database
         }
     }
 
-    public function setId(int $id)
-    {
-        return $this->id = $id;
-    }
 
-    public function getId(): ?int
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId():?int
     {
         return $this->id;
     }
 
-    public function setNote(string $note)
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId(int $id)
     {
-        return $this->note = $note;
+        $this->id = $id;
+
+        return $this;
     }
-    public function getNote(): ?string
+
+    /**
+     * Get the value of note
+     */ 
+    public function getNote():?int
     {
         return $this->note;
     }
 
-    public function setCommentaire(string $commentaire)
+    /**
+     * Set the value of note
+     *
+     * @return  self
+     */ 
+    public function setNote(int $note)
     {
-        return $this->commentaire = $commentaire;
+        $this->note = $note;
+
+        return $this;
     }
-    public function getCommentaire(): ?string
+
+    /**
+     * Get the value of commentaire
+     */ 
+    public function getCommentaire():?string
     {
         return $this->commentaire;
     }
 
-    public function setDate(DateTime $date)
+    /**
+     * Set the value of commentaire
+     *
+     * @return  self
+     */ 
+    public function setCommentaire(string $commentaire)
     {
-        return $this->date = $date;
+        $this->commentaire = $commentaire;
+
+        return $this;
     }
 
-    public function getDate(): ?DateTime
+    /**
+     * Get the value of date
+     */ 
+    public function getDate():?DateTime
     {
         return $this->date;
     }
 
-    public function setManga(Manga $manga)
+    /**
+     * Set the value of date
+     *
+     * @return  self
+     */ 
+    public function setDate(DateTime $date)
     {
-        return $this->manga = $manga;
+        $this->date = $date;
+
+        return $this;
     }
 
-    public function getManga(): ?Manga
+    /**
+     * Get the value of manga
+     */ 
+    public function getManga():?Manga
     {
         return $this->manga;
     }
 
-    public function setUser(User $user)
+    /**
+     * Set the value of manga
+     *
+     * @return  self
+     */ 
+    public function setManga(Manga $manga)
     {
-        return $this->user = $user;
+        $this->manga = $manga;
+
+        return $this;
     }
 
-    public function getUser(): ?User
+    /**
+     * Get the value of user
+     */ 
+    public function getUser():?User
     {
         return $this->user;
+    }
+
+    /**
+     * Set the value of user
+     *
+     * @return  self
+     */ 
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

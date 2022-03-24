@@ -1,7 +1,8 @@
 <?php
-include "./class/database.php";
-include "./class/auteur.php";
-include "./class/artiste.php";
+include './src/repository/database.php';
+include './src/entity/artiste.php';
+include './src/entity/auteur.php';
+
 /**
  * Classe manga, contient toutes les informations essentiels sur un manga !
  */
@@ -31,7 +32,7 @@ class Manga extends Database
     /** @param artiste reference Artiste */
     private $artiste;
 
-    public function __construct(int $id = 0, string $titre = "", int $prix = 0, string $editeur = "", string $genre = "", string $synopsis = "", string $format = "", string $isbn = "", string $image = "", Auteur $auteur = new Auteur(0), Artiste $artiste = new Artiste(0))
+    public function __construct(int $id = 0, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
     {
         parent::__construct();
         if ($id === 0) {

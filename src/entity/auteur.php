@@ -1,5 +1,6 @@
 <?php
-include "./class/database.php";
+include './src/repository/database.php';
+
 /**
  * Classe Auteur (info essentiel sur un Auteur)
  */
@@ -36,44 +37,104 @@ class Auteur extends Database
         }
     }
 
-    public function setId(int $id)
-    {
-        return $this->id = $id;
-    }
-    public function getId(): ?int
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId():?int
     {
         return $this->id;
     }
-    public function setNom(string $nom)
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId(int $id)
     {
-        return $this->nom = $nom;
+        $this->id = $id;
+
+        return $this;
     }
-    public function getNom(): ?string
+
+    /**
+     * Get the value of nom
+     */ 
+    public function getNom():?string
     {
         return $this->nom;
     }
-    public function setPrenom(string $prenom)
+
+    /**
+     * Set the value of nom
+     *
+     * @return  self
+     */ 
+    public function setNom(string $nom)
     {
-        return $this->prenom = $prenom;
+        $this->nom = $nom;
+
+        return $this;
     }
-    public function getPrenom(): ?string
+
+    /**
+     * Get the value of prenom
+     */ 
+    public function getPrenom():?string
     {
         return $this->prenom;
     }
-    public function setGenre(string $genre)
+
+    /**
+     * Set the value of prenom
+     *
+     * @return  self
+     */ 
+    public function setPrenom(string $prenom)
     {
-        return $this->genre = $genre;
+        $this->prenom = $prenom;
+
+        return $this;
     }
-    public function getGenre(): ?string
+
+    /**
+     * Get the value of genre
+     */ 
+    public function getGenre():?string
     {
         return $this->genre;
     }
-    public function setNationalite(string $nationalite)
+
+    /**
+     * Set the value of genre
+     *
+     * @return  self
+     */ 
+    public function setGenre(string $genre)
     {
-        return $this->nationalite = $nationalite;
+        $this->genre = $genre;
+
+        return $this;
     }
-    public function getNationalite(): ?string
+
+    /**
+     * Get the value of nationalite
+     */ 
+    public function getNationalite():?string
     {
         return $this->nationalite;
+    }
+
+    /**
+     * Set the value of nationalite
+     *
+     * @return  self
+     */ 
+    public function setNationalite(string $nationalite)
+    {
+        $this->nationalite = $nationalite;
+
+        return $this;
     }
 }

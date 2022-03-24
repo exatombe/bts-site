@@ -1,5 +1,6 @@
 <?php
-include "./class/database.php";
+include './src/repository/database.php';
+
 /**
  * Classe Utilisateur, (pour créer et ou gérer un utilisateur)
  */
@@ -35,7 +36,8 @@ class User extends Database
 
     public function setId(int $id)
     {
-        return $this->id = $id;
+        $this->id = $id;
+        return $this;
     }
     public function getId(): ?int
     {
@@ -43,7 +45,8 @@ class User extends Database
     }
     public function setUsername(string $username)
     {
-        return $this->username = $username;
+        $this->username = $username;
+        return $this;
     }
     public function getUsername(): ?string
     {
@@ -51,7 +54,8 @@ class User extends Database
     }
     public function setEmail(string $email)
     {
-        return $this->email = $email;
+        $this->email = $email;
+        return $this;
     }
     public function getEmail(): ?string
     {
@@ -60,7 +64,8 @@ class User extends Database
     public function setPassword(string $password)
     {
         $password = password_hash($password, PASSWORD_DEFAULT);
-        return $this->password = $password;
+        $this->password = $password;
+        return $this;
     }
     public function getPassword(): ?string
     {

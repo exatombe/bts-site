@@ -11,13 +11,10 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-
         <?php
-
-            include "./class/user.php";
-            $user = new User(1,"username","gerard@gmail.com","azerty123");
+            include './src/entity/user.php';
+            $user = new User(1);
             var_dump($user);
-
         ?>
         <?php include "./parts/footer.php"; ?>
     </body>

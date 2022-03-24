@@ -1,6 +1,7 @@
 <?php
-include "./class/database.php";
-include "./class/user.php";
+
+include './src/repository/database.php';
+include './src/entity/user.php';
 /**
  * Classe commande (Sert à spécifier si la commande est un panier ou  une commande)
  */
@@ -31,33 +32,65 @@ class Commande extends Database
         }
     }
 
-    public function setId(int $id)
-    {
-        return $this->id = $id;
-    }
+  
 
-    public function getId(): ?int
+    /**
+     * Get the value of id
+     */ 
+    public function getId():?int
     {
         return $this->id;
     }
 
-    public function setPanier(bool $panier)
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId(int $id)
     {
-        return $this->panier = $panier;
+        $this->id = $id;
+
+        return $this;
     }
 
-    public function getPanier(): ?bool
+    /**
+     * Get the value of panier
+     */ 
+    public function getPanier():?bool
     {
         return $this->panier;
     }
 
-    public function setUser(User $user)
+    /**
+     * Set the value of panier
+     *
+     * @return  self
+     */ 
+    public function setPanier(bool $panier)
     {
-        return $this->user = $user;
+        $this->panier = $panier;
+
+        return $this;
     }
 
-    public function getUser(): ?User
+    /**
+     * Get the value of user
+     */ 
+    public function getUser():?User
     {
         return $this->user;
+    }
+
+    /**
+     * Set the value of user
+     *
+     * @return  self
+     */ 
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }
