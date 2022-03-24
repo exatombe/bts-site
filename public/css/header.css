@@ -7,7 +7,7 @@
     font-size: 27px; }
 
 .site-header__top {
-    background-color: #def7ff; }
+    background: linear-gradient(#DE2727 , #EB4040) ; }
 .site-header__top ul {
     display: flex; }
 .site-header__top li:not(:last-child) {
@@ -17,7 +17,7 @@
 
 .site-header__bottom {
     position: relative;
-    background-color: #c7f2ff; }
+    background: linear-gradient(#EB4040 , #F24E4E) ; }
 @media (max-width: 939px) {
     .site-header__bottom .site-header__end {
         order: -1; } }
