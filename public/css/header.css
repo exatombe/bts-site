@@ -127,6 +127,7 @@
         right: 5.5rem;
         top: 0.65rem; } }
 .search__toggle.active {
+    margin-left: 1rem;
     background: url("/media/img/header-3/search.svg") center/22px no-repeat; }
 
 .search__form {
@@ -143,10 +144,11 @@
         width: 100%; } }
 .search__form input {
     min-width: 200px;
+    width: 300px;
     appearance: none;
     border: 0;
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 30px;
     font-size: 16px;
     padding: 0.5rem; }
 @media (max-width: 799px) {

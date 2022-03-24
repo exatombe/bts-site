@@ -41,6 +41,7 @@
                     <form class="search__form" action="">
                         <label class="sr-only" for="search">Search</label>
                         <input
+                                class="search_bar"
                                 type="search"
                                 name=""
                                 id="search"
