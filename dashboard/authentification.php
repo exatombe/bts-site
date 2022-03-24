@@ -18,9 +18,17 @@
         <label for="e-mail">Email</label>
         <input type="email" name="e-mail" id="e-mail">
         </div>
+        <div class="Pseudoo">
+        <label for="Pseudo">Nom Utilisateur</label>
+        <input type="text" name="pseudo" id="Pseudo">
+        </div>
         <div class="mddp2">
         <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp">
+        <input type="text" name="mdp" id="mdp">
+        </div>
+        <div class="Cmddp">
+        <label for="cmddp">Confirmation mot de passe</label>
+        <input type="password" name="cmddp" id="cmddp">
         </div>
         <span class="bouton2">
         <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter !</button>
