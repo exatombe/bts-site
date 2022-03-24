@@ -1,14 +1,4 @@
 
-div {
-    height: 300px;
-    width:200px;
-}
-
-.head{
-    text-align: center;
-    background: linear-gradient(15deg, rgba(26,54,138,1) 0%, rgba(37,47,77,1) 10%, rgba(37,47,77,1) 75%, rgba(255,101,0,1) 100%);
-    color: white;
-}
 
 h6
 {
@@ -23,5 +13,5 @@ h6
     text-align: center;
     background: linear-gradient(15deg, rgba(26,54,138,1) 0%, rgba(37,47,77,1) 10%, rgba(37,47,77,1) 75%, rgba(255,101,0,1) 100%);
     color: white;
-}
+}*/
 
