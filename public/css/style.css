@@ -1,14 +1,5 @@
 
 
-h6
-{
-    border-left: 1px solid white;
-    padding-left: 10px;
-    position: absolute;
-    left: 1100px;
-    top: 60px;
-}
-
 /* .head{
     text-align: center;
     background: linear-gradient(15deg, rgba(26,54,138,1) 0%, rgba(37,47,77,1) 10%, rgba(37,47,77,1) 75%, rgba(255,101,0,1) 100%);

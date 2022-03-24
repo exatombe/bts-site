@@ -130,9 +130,8 @@
     background: url("/media/img/header-3/search.svg") center/22px no-repeat; }
 
 .search__form {
-    display: none; }
-.search__form.active {
     display: block; }
+
 @media (max-width: 799px) {
     .search__form {
         position: absolute;
