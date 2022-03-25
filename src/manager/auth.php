@@ -43,5 +43,6 @@ class Auth extends EntityRepository
             $user->setUsername($username);
         }
         EntityRepository::insertUser($user);
+        return true;
     }
 }
