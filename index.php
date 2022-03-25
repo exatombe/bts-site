@@ -11,7 +11,7 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-        <p style="animation: marquee 25s cubic-bezier(0.77, -0.13, 0, 1.61) infinite;">Je bouge....</p>
+      
         <?php include './parts/footer.php'; ?>
     </body>
 </html>

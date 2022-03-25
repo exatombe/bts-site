@@ -28,6 +28,7 @@
         <meta name="theme-color" content="#1a1a1a"/>
         <link rel="icon" type="image/png" sizes="64x64" href="https://bot-creator.com/favicon-64.png">
         <title><?php echo $n; ?></title>
+
 <!-- Font Awesome -->
         <link rel="stylesheet" type="text/css" href="/public/css/style.css">
         <?php if(isset($footer)){ ?>
@@ -51,6 +52,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Nunito&display=swap" rel="stylesheet">
+
 <script src="https://kit.fontawesome.com/0c8f4b5f9b.js" crossorigin="anonymous"></script>
 <?php
     }

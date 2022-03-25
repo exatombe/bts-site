@@ -4,10 +4,12 @@
 */
 .brand {
     font-weight: bold;
-    font-size: 27px; }
+    font-style: oblique 20deg;
+    font-size: 50px; }
 
 .site-header__top {
-    background: linear-gradient(#DE2727 , #EB4040) ; }
+    background: linear-gradient(#DE2727 , #EB4040) ;
+    padding-top: 8px; }
 .site-header__top ul {
     display: flex; }
 .site-header__top li:not(:last-child) {
@@ -150,7 +152,8 @@
     background-color: #fff;
     border-radius: 30px;
     font-size: 16px;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    padding-left: 1rem; }
 @media (max-width: 799px) {
     .search__form input {
         border-bottom: 1px solid #979797; } }

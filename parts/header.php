@@ -8,11 +8,10 @@
                 </ul>
             </div>
             <div class="site-header__middle">
-                <a href="#" class="brand">Brand</a>
+                <a href="#" class="brand">Le Marché du Manga</a>
             </div>
             <div class="site-header__end top">
-                <a href="/dashboard/authentification">Login</a>
-                <a href="#" class="button">Some action</a>
+                <a href="/dashboard/authentification" class="button">Login / Register</a>
             </div>
         </div>
     </div>
