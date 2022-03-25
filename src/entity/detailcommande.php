@@ -1,6 +1,4 @@
 <?php
-include './src/entity/manga.php';
-include './src/entity/commande.php';
 
 /**
  * Classe detail commande, (correspond à un article au sein d'une commande)
@@ -8,13 +6,13 @@ include './src/entity/commande.php';
 
 class DetailCommande
 {
-    /** @param id */
+    /** @var int|null  */
     private $id;
-    /** @param quantite*/
+    /** @var int|null  */
     private $quantite;
-    /** @param commande reference Commande */
+    /** @var Commande|null  */
     private $commande;
-    /** @param manga reference Manga */
+    /** @var Manga|null  */
     private $manga;
 
     public function __construct(?int $id = null, ?int $quantite= null, ?Manga $manga = null, ?Commande $commande = null)
@@ -39,7 +37,7 @@ class DetailCommande
      *
      * @return  self
      */
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -59,7 +57,7 @@ class DetailCommande
      *
      * @return  self
      */
-    public function setQuantite(int $quantite)
+    public function setQuantite(int $quantite): self
     {
         $this->quantite = $quantite;
 
@@ -79,7 +77,7 @@ class DetailCommande
      *
      * @return  self
      */
-    public function setCommande(Commande $commande)
+    public function setCommande(Commande $commande): self
     {
         $this->commande = $commande;
 
@@ -99,7 +97,7 @@ class DetailCommande
      *
      * @return  self
      */ 
-    public function setManga(Manga $manga)
+    public function setManga(Manga $manga): self
     {
         $this->manga = $manga;
 

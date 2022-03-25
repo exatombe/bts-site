@@ -8,7 +8,7 @@
                 </ul>
             </div>
             <div class="site-header__middle">
-                <a href="#" class="brand">Le Marché du Manga</a>
+                <a href="#" class="brand">LMM</a>
             </div>
             <div class="site-header__end top">
                 <a href="/dashboard/authentification" class="button">Login / Register</a>

@@ -109,6 +109,7 @@
     position: absolute;
     right: 1rem;
     top: 1rem; }
+
 @media (min-width: 940px) {
     .nav__toggle {
         display: none; } }
@@ -136,6 +137,9 @@
     display: block; }
 
 @media (max-width: 799px) {
+    .nav__wrapper{
+        margin-top: 36px;
+    }
     .search__form {
         position: absolute;
         left: 0;

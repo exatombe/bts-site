@@ -1,5 +1,5 @@
 <?php
-include './src/repository/entityRepository.php';
+include $_SERVER["DOCUMENT_ROOT"].'/src/repository/entityRepository.php';
 class Auth extends EntityRepository
 {
     private $user;

@@ -5,15 +5,15 @@
  */
 class Artiste
 {
-    /** @param id*/
+    /** @var int|null  */
     private $id;
-    /** @param nom */
+    /** @var string|null  */
     private $nom;
-    /** @param prenom  */
+    /** @var string|null  */
     private $prenom;
-    /** @param genre */
+    /** @var string|null  */
     private $genre;
-    /** @param nationalite */
+    /** @var string|null  */
     private $nationalite;
     public function __construct(?int $id = null, ?string $nom = null, ?string $prenom = null, ?string $genre = null, ?string $nationalite = null)
     {
@@ -26,7 +26,7 @@ class Artiste
 
     /**
      * Get the value of id
-     */ 
+     */
     public function getId():?int
     {
         return $this->id;
@@ -36,8 +36,8 @@ class Artiste
      * Set the value of id
      *
      * @return  self
-     */ 
-    public function setId(int $id)
+     */
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -46,7 +46,7 @@ class Artiste
 
     /**
      * Get the value of nom
-     */ 
+     */
     public function getNom():?string
     {
         return $this->nom;
@@ -56,8 +56,8 @@ class Artiste
      * Set the value of nom
      *
      * @return  self
-     */ 
-    public function setNom(string $nom)
+     */
+    public function setNom(string $nom):self
     {
         $this->nom = $nom;
 
@@ -66,7 +66,7 @@ class Artiste
 
     /**
      * Get the value of prenom
-     */ 
+     */
     public function getPrenom():?string
     {
         return $this->prenom;
@@ -76,8 +76,8 @@ class Artiste
      * Set the value of prenom
      *
      * @return  self
-     */ 
-    public function setPrenom(string $prenom)
+     */
+    public function setPrenom(string $prenom):self
     {
         $this->prenom = $prenom;
 
@@ -86,7 +86,7 @@ class Artiste
 
     /**
      * Get the value of genre
-     */ 
+     */
     public function getGenre():?string
     {
         return $this->genre;
@@ -96,8 +96,8 @@ class Artiste
      * Set the value of genre
      *
      * @return  self
-     */ 
-    public function setGenre(string $genre)
+     */
+    public function setGenre(string $genre): self
     {
         $this->genre = $genre;
 
@@ -106,7 +106,7 @@ class Artiste
 
     /**
      * Get the value of nationalite
-     */ 
+     */
     public function getNationalite():?string
     {
         return $this->nationalite;
@@ -116,8 +116,8 @@ class Artiste
      * Set the value of nationalite
      *
      * @return  self
-     */ 
-    public function setNationalite(string $nationalite)
+     */
+    public function setNationalite(string $nationalite): self
     {
         $this->nationalite = $nationalite;
 

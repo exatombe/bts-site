@@ -5,15 +5,15 @@
  */
 class Auteur
 {
-    /** @param id  */
+    /** @var int|null  */
     private $id;
-    /** @param nom  */
+    /** @var string|null  */
     private $nom;
-    /** @param prenom  */
+    /** @var string|null  */
     private $prenom;
-    /** @param genre  */
+    /** @var string|null  */
     private $genre;
-    /** @param nationalite  */
+    /** @var string|null  */
     private $nationalite;
     public function __construct(?int $id = null, ?string $nom = null, ?string $prenom = null, ?string $genre = null, ?string $nationalite = null)
     {
@@ -38,7 +38,7 @@ class Auteur
      *
      * @return  self
      */ 
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -58,7 +58,7 @@ class Auteur
      *
      * @return  self
      */ 
-    public function setNom(string $nom)
+    public function setNom(string $nom):self
     {
         $this->nom = $nom;
 
@@ -78,7 +78,7 @@ class Auteur
      *
      * @return  self
      */ 
-    public function setPrenom(string $prenom)
+    public function setPrenom(string $prenom):self
     {
         $this->prenom = $prenom;
 
@@ -98,7 +98,7 @@ class Auteur
      *
      * @return  self
      */ 
-    public function setGenre(string $genre)
+    public function setGenre(string $genre): self
     {
         $this->genre = $genre;
 
@@ -118,7 +118,7 @@ class Auteur
      *
      * @return  self
      */ 
-    public function setNationalite(string $nationalite)
+    public function setNationalite(string $nationalite): self
     {
         $this->nationalite = $nationalite;
 

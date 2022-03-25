@@ -1,35 +1,33 @@
 <?php
-include './src/entity/artiste.php';
-include './src/entity/auteur.php';
-
 /**
  * Classe manga, contient toutes les informations essentiels sur un manga !
  */
 
 class Manga
 {
-    /** @param id */
+    /** @var int|null  */
     private $id;
-    /** @param titre*/
+    /** @var string|null  */
     private $titre;
-    /** @param Prix */
+    /** @var int|null  */
     private $prix;
-    /** @param Editeur */
+    /** @var string|null  */
     private $editeur;
-    /** @param Genre */
+    /** @var string|null  */
     private $genre;
-    /** @param Synopsis */
+    /** @var string|null  */
     private $synopsis;
-    /** @param Format */
+    /** @var string|null  */
     private $format;
-    /** @param ISBN */
+    /** @var string|null  */
     private $isbn;
-    /** @param Image */
+    /** @var string|null  */
     private $image;
-    /** @param auteur reference Auteur */
+    /** @var Auteur|null  */
     private $auteur;
-    /** @param artiste reference Artiste */
+    /** @var Artiste|null  */
     private $artiste;
+
 
     public function __construct(?int $id = null, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
     {
@@ -59,7 +57,7 @@ class Manga
      *
      * @return  self
      */
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -80,7 +78,7 @@ class Manga
      *
      * @return  self
      */
-    public function setTitre(string $titre)
+    public function setTitre(string $titre): self
     {
         $this->titre = $titre;
 
@@ -100,7 +98,7 @@ class Manga
      *
      * @return  self
      */
-    public function setPrix(int $prix)
+    public function setPrix(int $prix): self
     {
         $this->prix = $prix;
 
@@ -120,7 +118,7 @@ class Manga
      *
      * @return  self
      */
-    public function setEditeur(string $editeur)
+    public function setEditeur(string $editeur): self
     {
         $this->editeur = $editeur;
 
@@ -140,7 +138,7 @@ class Manga
      *
      * @return  self
      */
-    public function setGenre(string $genre)
+    public function setGenre(string $genre): self
     {
         $this->genre = $genre;
 
@@ -160,7 +158,7 @@ class Manga
      *
      * @return  self
      */
-    public function setSynopsis(string $synopsis)
+    public function setSynopsis(string $synopsis): self
     {
         $this->synopsis = $synopsis;
 
@@ -180,7 +178,7 @@ class Manga
      *
      * @return  self
      */
-    public function setFormat(string $format)
+    public function setFormat(string $format): self
     {
         $this->format = $format;
 
@@ -200,7 +198,7 @@ class Manga
      *
      * @return  self
      */
-    public function setIsbn(string $isbn)
+    public function setIsbn(string $isbn): self
     {
         $this->isbn = $isbn;
 
@@ -220,7 +218,7 @@ class Manga
      *
      * @return  self
      */
-    public function setImage(string $image)
+    public function setImage(string $image): self
     {
         $this->image = $image;
 
@@ -238,13 +236,12 @@ class Manga
     /**
      * Set the value of auteur
      *
-     * @return  Auteur
+     * @return  self
      */
-    public function setAuteur(Auteur $auteur)
+    public function setAuteur(Auteur $auteur): self
     {
         $this->auteur = $auteur;
-
-        return $this->auteur = $auteur;
+        return $this;
     }
 
     /**
@@ -258,12 +255,11 @@ class Manga
     /**
      * Set the value of artiste
      *
-     * @return  Artiste
+     * @return  self
      */
-    public function setArtiste(Artiste $artiste)
+    public function setArtiste(Artiste $artiste): self
     {
         $this->artiste = $artiste;
-
         return $this;
     }
 }

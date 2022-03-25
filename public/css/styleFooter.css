@@ -5,14 +5,13 @@ footer {
     color: #666666;
     display: flex;
     font-size: 5em;
-    height: 180px;
+    height: 120px;
     justify-content: center;
-    position: fixed;
+    position: relative;
     text-transform: uppercase;
     width: 100%;
-    z-index: 1;
   }
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
 
   * {
     font-family: Roboto;
@@ -112,5 +111,8 @@ footer {
     }
     .footer-distributed .footer-left p.footer-links {
       line-height: 1.8;
+    }
+    footer{
+      height: 210px;
     }
   }

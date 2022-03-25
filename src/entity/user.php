@@ -4,13 +4,13 @@
  */
 class User
 {
-    /** @param id  */
+    /** @var int|null  */
     private $id;
-    /** @param username */
+    /** @var string|null  */
     private $username;
-    /** @param email*/
+    /** @var string|null  */
     private $email;
-    /** @param password  */
+    /** @var string|null  */
     private $password;
     public function __construct(?int $id = null, ?string $username = null, ?string $email = null, ?string $password = null)
     {
@@ -20,7 +20,7 @@ class User
             $this->password = $password;
     }
 
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
         return $this;
@@ -29,7 +29,7 @@ class User
     {
         return $this->id;
     }
-    public function setUsername(string $username)
+    public function setUsername(string $username): self
     {
         $this->username = $username;
         return $this;
@@ -38,7 +38,7 @@ class User
     {
         return $this->username;
     }
-    public function setEmail(string $email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
@@ -47,7 +47,7 @@ class User
     {
         return $this->email;
     }
-    public function setPassword(string $password)
+    public function setPassword(string $password): self
     {
         $password = password_hash($password, PASSWORD_DEFAULT);
         $this->password = $password;

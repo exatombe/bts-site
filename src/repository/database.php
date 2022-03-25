@@ -113,4 +113,10 @@ class Database
             return $this;
         }
     }
+
+    /* Add a getter of db */
+    public function getDb()
+    {
+        return $this->db;
+    }
 }

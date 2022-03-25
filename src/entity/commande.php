@@ -1,19 +1,19 @@
 <?php
-include './src/entity/user.php';
+
 /**
  * Classe commande (Sert à spécifier si la commande est un panier ou  une commande)
  */
 
 class Commande 
 {
-    /** @param id */
+    /** @var int|null  */
     private $id;
-    /** @param panier */
+    /** @var bool|null  */
     private $panier;
-    /** @param user reference User */
+    /** @var User|null  */
     private $user;
 
-    public function __construct(?int $id = null, bool $panier = true, ?User $user = null)
+    public function __construct(?int $id = null, ?bool $panier = true, ?User $user = null)
     {
             $this->id = $id;
             $this->panier = $panier;
@@ -35,7 +35,7 @@ class Commande
      *
      * @return  self
      */ 
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -55,7 +55,7 @@ class Commande
      *
      * @return  self
      */ 
-    public function setPanier(bool $panier)
+    public function setPanier(bool $panier): self
     {
         $this->panier = $panier;
 
@@ -75,7 +75,7 @@ class Commande
      *
      * @return  self
      */ 
-    public function setUser(User $user)
+    public function setUser(User $user): self
     {
         $this->user = $user;
 

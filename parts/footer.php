@@ -24,7 +24,6 @@
 
 					<a href="#">Contact</a>
 				</p>
-
 				<p>Company Name &copy; 2015</p>
 			</div>
 
