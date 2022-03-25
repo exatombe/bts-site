@@ -1,12 +1,10 @@
 <?php
-
-include './src/repository/database.php';
 include './src/entity/user.php';
 /**
  * Classe commande (Sert à spécifier si la commande est un panier ou  une commande)
  */
 
-class Commande extends Database
+class Commande 
 {
     /** @param id */
     private $id;
@@ -15,21 +13,11 @@ class Commande extends Database
     /** @param user reference User */
     private $user;
 
-    public function __construct(int $id = 0, bool $panier = true, User $user = new User(0))
+    public function __construct(?int $id = null, bool $panier = true, ?User $user = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $commande = parent::query('INSERT INTO commande (Panier,ID_USER) VALUES (?,?)', [$panier, $user->getid()]);
             $this->id = $id;
             $this->panier = $panier;
             $this->user = $user;
-        } else {
-            $commande = parent::find("commande", strval($id));
-
-            $this->id = $id;
-            $this->panier = count($commande) == 1 ? $commande[0]["Panier"] : null;
-            $this->user = count($commande) == 1 ? new User(intval($commande[0]["ID_USER"])) : null;
-        }
     }
 
   

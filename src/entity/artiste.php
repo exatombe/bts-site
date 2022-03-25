@@ -1,10 +1,9 @@
 <?php
-include './src/repository/database.php';
 
 /**
  * Classe Artiste (Info essentiel sur un artiste)
  */
-class Artiste extends Database
+class Artiste
 {
     /** @param id*/
     private $id;
@@ -16,25 +15,13 @@ class Artiste extends Database
     private $genre;
     /** @param nationalite */
     private $nationalite;
-    public function __construct(int $id = 0, string $nom = "", string $prenom = "", string $genre = "", string $nationalite = "")
+    public function __construct(?int $id = null, ?string $nom = null, ?string $prenom = null, ?string $genre = null, ?string $nationalite = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $auteur =
             $this->id = $id;
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->genre = $genre;
             $this->nationalite = $nationalite;
-        } else {
-            $artiste = parent::find("artiste", strval($id));
-
-            $this->id = $id;
-            $this->nom = count($artiste) == 1 ? $artiste[0]["Nom"] : null;
-            $this->prenom = count($artiste) == 1 ? $artiste[0]["Prenom"] : null;
-            $this->genre = count($artiste) == 1 ? $artiste[0]["Genre"] : NULL;
-            $this->nationalite = count($artiste) == 1 ? $artiste[0]["Nationalite"] : null;
-        }
     }
 
     /**

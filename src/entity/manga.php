@@ -1,5 +1,4 @@
 <?php
-include './src/repository/database.php';
 include './src/entity/artiste.php';
 include './src/entity/auteur.php';
 
@@ -7,7 +6,7 @@ include './src/entity/auteur.php';
  * Classe manga, contient toutes les informations essentiels sur un manga !
  */
 
-class Manga extends Database
+class Manga
 {
     /** @param id */
     private $id;
@@ -32,11 +31,8 @@ class Manga extends Database
     /** @param artiste reference Artiste */
     private $artiste;
 
-    public function __construct(int $id = 0, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
+    public function __construct(?int $id = null, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $manga = parent::query('INSERT INTO commande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$titre, $prix, $editeur, $genre, $synopsis, $format, $isbn, $image, $artiste->getid(), $auteur->getId()]);
             $this->id = $id;
             $this->titre = $titre;
             $this->prix = $prix;
@@ -48,21 +44,6 @@ class Manga extends Database
             $this->image = $image;
             $this->artiste = $artiste;
             $this->auteur = $auteur;
-        } else {
-            $manga = parent::find("manga", strval($id));
-
-            $this->id = $id;
-            $this->titre = count($manga) == 1 ? $manga[0]["Titre"] : null;
-            $this->prix = count($manga) == 1 ? $manga[0]["Prix"] : null;
-            $this->editeur = count($manga) == 1 ? $manga[0]["Editeur"] : null;
-            $this->genre = count($manga) == 1 ? $manga[0]["Genre"] : null;
-            $this->synopsis = count($manga) == 1 ? $manga[0]["Synopsis"] : null;
-            $this->format = count($manga) == 1 ? $manga[0]["Format"] : null;
-            $this->isbn = count($manga) == 1 ? $manga[0]["ISBN"] : null;
-            $this->image = count($manga) == 1 ? $manga[0]["Image"] : null;
-            $this->artiste = count($manga) == 1 ? new Artiste(intval($manga[0]["ID_ARTISTE"])) : null;
-            $this->auteur = count($manga) == 1 ? new Auteur(intval($manga[0]["ID_AUTEUR"])) : null;
-        }
     }
 
     /**

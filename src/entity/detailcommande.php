@@ -1,12 +1,12 @@
 <?php
-include './src/repository/database.php';
-
+include './src/entity/manga.php';
+include './src/entity/commande.php';
 
 /**
  * Classe detail commande, (correspond à un article au sein d'une commande)
  */
 
-class DetailCommande extends Database
+class DetailCommande
 {
     /** @param id */
     private $id;
@@ -17,23 +17,13 @@ class DetailCommande extends Database
     /** @param manga reference Manga */
     private $manga;
 
-    public function __construct(int $id = 0, int $quantite, Manga $manga, Commande $commande)
+    public function __construct(?int $id = null, ?int $quantite= null, ?Manga $manga = null, ?Commande $commande = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $detailcommande = parent::query('INSERT INTO detailcommande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?)', [$quantite, $manga->getid(), $commande->getId()]);
+        
             $this->id = $id;
             $this->quantite = $quantite;
             $this->manga = $manga;
             $this->commande = $commande;
-        } else {
-            $detailcommande = parent::find("detailcommande", strval($id));
-
-            $this->id = $id;
-            $this->quantite = count($detailcommande) == 1 ? $detailcommande[0]["Quantite"] : null;
-            $this->manga = count($detailcommande) == 1 ? new Manga(intval($detailcommande[0]["ID_MANGA"])) : null;
-            $this->commande = count($detailcommande) == 1 ? new Commande(intval($detailcommande[0]["ID_COMMANDE"])) : null;
-        }
     }
 
     /**

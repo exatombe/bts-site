@@ -1,10 +1,9 @@
 <?php
-include './src/repository/database.php';
 
 /**
  * Classe Auteur (info essentiel sur un Auteur)
  */
-class Auteur extends Database
+class Auteur
 {
     /** @param id  */
     private $id;
@@ -16,25 +15,13 @@ class Auteur extends Database
     private $genre;
     /** @param nationalite  */
     private $nationalite;
-    public function __construct(int $id = 0, string $nom = "", string $prenom = "", string $genre = "", string $nationalite = "")
+    public function __construct(?int $id = null, ?string $nom = null, ?string $prenom = null, ?string $genre = null, ?string $nationalite = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $auteur = parent::query('INSERT INTO auteur (Nom,Prenom,Genre,Nationalite) VALUES (?,?,?,?)', [$nom, $prenom, $genre, $nationalite]);
             $this->id = $id;
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->genre = $genre;
             $this->nationalite = $nationalite;
-        } else {
-            $auteur = parent::find("auteur", strval($id));
-
-            $this->id = $id;
-            $this->nom = count($auteur) == 1 ? $auteur[0]["Nom"] : null;
-            $this->prenom = count($auteur) == 1 ? $auteur[0]["Prenom"] : null;
-            $this->genre = count($auteur) == 1 ? $auteur[0]["Genre"] : null;
-            $this->nationalite = count($auteur) == 1 ? $auteur[0]["Nationalite"] : null;
-        }
     }
 
 
