@@ -1,5 +1,6 @@
 <?php
     if(isset($content) && isset($n) && isset($key) && isset($image)){
+    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/Auth.php';
     session_start();
 ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

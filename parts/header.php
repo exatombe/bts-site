@@ -11,7 +11,15 @@
                 <a href="#" class="brand">LMM</a>
             </div>
             <div class="site-header__end top">
-                <a href="/dashboard/authentification" class="button">Login / Register</a>
+                <?php if (isset($_SESSION['user'])) {
+                    $_SESSION['user'];
+                    $auth = new Auth();
+                    $auth->forceSetUser($_SESSION['user']);
+                    ?>
+                    <a href="/dashboard/authentification?action=logout" class="button">Logout</a>
+                <?php } else { ?>
+                    <a href="/dashboard/authentification" class="button">Login / Register</a>
+                <?php } ?>
             </div>
         </div>
     </div>

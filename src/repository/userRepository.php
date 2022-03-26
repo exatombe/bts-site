@@ -39,10 +39,9 @@
 
         public function getUserByEmail(string $email): ?User
         {
-            $query = parent::findBy("user",["Email"=> $email]);
-            $user = $query->fetchAll(); 
-            if(count($user) > 0){
-                return new User($user[0]["ID_USER"], $user[0]["Username"], $user[0]["Email"], $user[0]["Password"]);
+            $user = parent::findOneBy("user",["Email"=> $email]);
+            if($user){
+                return new User($user["ID_USER"], $user["Username"], $user["Email"], $user["Password"]);
             }else{
                 return null;
             }
