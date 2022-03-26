@@ -30,21 +30,18 @@
         <title><?php echo $n; ?></title>
 
 <!-- Font Awesome -->
-        <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-        <?php if(isset($footer)){ ?>
+        <?php if(!isset($default)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+        <?php } ?>
 
-       <?php }else{  ?>
-        <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
-      <?php } ?>
+        <?php if(!isset($footer)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
+       <?php } ?>
+        <?php if(!isset($header)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/header.css">
+            <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
+        <?php } ?>
 
-        <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
-
-        <?php if(isset($header)){ ?>
-
-        <?php }else{  ?>
-        <link rel="stylesheet" type="text/css" href="/public/css/header.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
-        <?php  } ?>
         
         <link rel="stylesheet" type="text/css" href="/public/css/style_global.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>

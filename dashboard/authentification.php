@@ -8,49 +8,33 @@
        $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
        $footer = true;
        $header = true;
+       $default = true;
        require "../parts/head.php";
        ?>
+        <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
     </head>
-    <body style="background-color: lightgray;">
-    <img src="http://<?= $_SERVER['SERVER_NAME']; ?>/media/favicon-64.png" alt="logo" />
-    <div class="boitelogin2">
-        <h4 class="h42"><strong><u>Créer un compte</u></strong></h4>
-        <p class="mini2">Saisissez un email, un pseudo et un mot de passe</p>
-        <div class="Compte2">
-        <label for="e-mail">Email</label>
-        <input type="email" name="e-mail" id="e-mail">
-        </div>
-        <div class="Pseudoo">
-        <label for="Pseudo">Nom Utilisateur</label>
-        <input type="text" name="pseudo" id="Pseudo">
-        </div>
-        <div class="mddp2">
-        <label for="mdp">Mot de passe</label>
-        <input type="text" name="mdp" id="mdp">
-        </div>
-        <div class="Cmddp">
-        <label for="cmddp">Confirmation mot de passe</label>
-        <input type="password" name="cmddp" id="cmddp">
-        </div>
-        <span class="bouton2">
-        <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter !</button>
-        </span>
-    </div>
+    <body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
 
-    <div class="boitelogin">
-        <h4><strong><u>Connexion</u></strong></h4>
-        <p class="mini">Saisissez votre e-mail et votre mot de passe pour vous connecter</p>
-        <div class="Compte">
-        <label for="e-mail">Email</label>
-        <input type="email" name="e-mail" id="e-mail">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
         </div>
-        <div class="mddp">
-        <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp">
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Login</button>
+            </form>
         </div>
-        <span class="bouton">
-        <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter !</button>
-        </span>
     </div>
     </body>
 </html>
