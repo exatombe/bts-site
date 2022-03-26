@@ -108,6 +108,7 @@
 .nav__toggle {
     position: absolute;
     right: 1rem;
+    cursor: pointer;
     top: 1rem; }
 
 @media (min-width: 940px) {

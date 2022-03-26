@@ -10,7 +10,6 @@
     $header = true;
     $default = true;
     require "../parts/head.php";
-    $auth = new Auth();
     if (isset($_SESSION['user'])) {
         header('Location: ../index.php');
     }

@@ -2,6 +2,7 @@
     if(isset($content) && isset($n) && isset($key) && isset($image)){
     include $_SERVER['DOCUMENT_ROOT'].'/src/manager/Auth.php';
     session_start();
+    $auth = new Auth();
 ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>

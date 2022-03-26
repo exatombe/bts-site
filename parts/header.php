@@ -13,7 +13,6 @@
             <div class="site-header__end top">
                 <?php if (isset($_SESSION['user'])) {
                     $_SESSION['user'];
-                    $auth = new Auth();
                     $auth->forceSetUser($_SESSION['user']);
                     ?>
                     <a href="/dashboard/authentification?action=logout" class="button">Logout</a>
@@ -27,9 +26,9 @@
         <div class="wrapper site-header__wrapper">
             <div class="site-header__start">
                 <nav class="nav">
-                    <button class="nav__toggle" aria-expanded="false" type="button">
-                        menu
-                    </button>
+                    <a class="nav__toggle" aria-expanded="false" type="button">
+                        <i class="fa-solid fa-bars"></i> Menu   
+                    </a>
                     <ul class="nav__wrapper">
                         <li class="nav__item"><a href="#">Home</a></li>
                         <li class="nav__item"><a href="#">About</a></li>
