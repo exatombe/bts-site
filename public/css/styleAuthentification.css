@@ -6,7 +6,8 @@ body{
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(#8D0E0E, #d72727, #F28282);/*
+    background: linear-gradient(#0f0c29, #302b63, #24243e);*/
 }
 .main{
     width: 350px;
@@ -54,7 +55,7 @@ button{
     justify-content: center;
     display: block;
     color: #fff;
-    background: #573b8a;
+    background: #A11111;
     font-size: 1em;
     font-weight: bold;
     margin: 20px auto 10px;
@@ -65,7 +66,7 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background: #6d44b8;
+    background: #D11111;
 }
 .login{
     height: 460px;
@@ -75,7 +76,7 @@ button:hover{
     transition: .8s ease-in-out;
 }
 .login label{
-    color: #573b8a;
+    color: #D11111;
     transform: scale(.6);
 }
 
