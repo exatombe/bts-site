@@ -4,11 +4,11 @@
     left: 10px;
     top: 150px;
     width: 530px; 
+    border-bottom-width: 300px;
     height: 590px;
     border: none;
     background-color: white;
     padding: 12px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
