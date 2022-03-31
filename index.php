@@ -11,7 +11,31 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-      
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <?php include './parts/footer.php'; ?>
     </body>
 </html>

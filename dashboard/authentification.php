@@ -1,56 +1,84 @@
 <html lang="fr">
-    <head>
-       <?php
-       $n = "Le Marche des Mangas - Login"; // Titre
-       $content = "Le login"; // Description
-       $image ="https://img.search.brave.com/H1k51jh7MoZP6ORpCXv7mD-vgVSQciaZIwBtoBkNrqg/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL3By/b2ZpbGVfaW1hZ2Vz/LzE1NjM2OTU4ODIv/bG9nb19ibG9nXzQw/MHg0MDAucG5n"; // Image
-       $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
-       $footer = true;
-       $header = true;
-       require "../parts/head.php"; 
 
-       ?>
-    </head>
-    <body style="background-color: lightgray;">
-    <img src="http://<?= $_SERVER['SERVER_NAME']; ?>/media/favicon-64.png" alt="logo" />
-    <div class="boitelogin2">
-        <h4 class="h42"><strong><u>Créer un compte</u></strong></h4>
-        <p class="mini2">Saisissez un email, un pseudo et un mot de passe</p>
-        <div class="Compte2">
-        <label for="e-mail">Email</label>
-        <input type="email" name="e-mail" id="e-mail">
-        </div>
-        <div class="Pseudoo">
-        <label for="Pseudo">Nom Utilisateur</label>
-        <input type="text" name="pseudo" id="Pseudo">
-        </div>
-        <div class="mddp2">
-        <label for="mdp">Mot de passe</label>
-        <input type="text" name="mdp" id="mdp">
-        </div>
-        <div class="Cmddp">
-        <label for="cmddp">Confirmation mot de passe</label>
-        <input type="password" name="cmddp" id="cmddp">
-        </div>
-        <span class="bouton2">
-        <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter !</button>
-        </span>
-    </div>
+<head>
+    <?php
+    $n = "Le Marche des Mangas - Login"; // Titre
+    $content = "Le login"; // Description
+    $image = "https://img.search.brave.com/H1k51jh7MoZP6ORpCXv7mD-vgVSQciaZIwBtoBkNrqg/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL3By/b2ZpbGVfaW1hZ2Vz/LzE1NjM2OTU4ODIv/bG9nb19ibG9nXzQw/MHg0MDAucG5n"; // Image
+    $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
+    $footer = true;
+    $header = true;
+    $default = true;
+    require "../parts/head.php";
+    if (isset($_SESSION['user'])) {
+        header('Location: ../index.php');
+    }
+    if(isset($_GET["action"]) == "logout"){
+        $_SESSION["user"] = null;
+        header('Location: ../index.php');
+    }
 
-    <div class="boitelogin">
-        <h4><strong><u>Connexion</u></strong></h4>
-        <p class="mini">Saisissez votre e-mail et votre mot de passe pour vous connecter</p>
-        <div class="Compte">
-        <label for="e-mail">Email</label>
-        <input type="email" name="e-mail" id="e-mail">
+    ?>
+    <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form method="POST">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="hidden" name="signup" value="submit">
+                <input type="text" name="username" placeholder="User name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <input type="password" name="confirmPass" placeholder="Password" required="">
+                <?php
+                if (isset($_POST['signup'])) {
+                    $email = $_POST['email'];
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                    $confirmPass = $_POST['confirmPass'];
+                    $auth->Register($email, $username, $password, $confirmPass);
+                    if ($auth->getError()) {
+                        echo '<div class="alert alert-danger" role="alert">' . $auth->getError() . '</div>';
+                    } else {
+                        $_SESSION['user'] = $auth->getUser();
+                        echo '<div class="alert alert-success" role="alert">' . $auth->getSuccess() . '</div>';
+                        echo '<script>setTimeout(function(){window.location.href="../index.php"},2000);</script>';
+                    }
+                }
+                ?>
+                <button>Sign up</button>
+            </form>
         </div>
-        <div class="mddp">
-        <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp">
+
+        <div class="login">
+            <form method="POST">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="hidden" name="login" value="submit">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <button>Login</button>
+                <?php
+                if (isset($_POST['login'])) {
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    $auth->Login($email, $password);
+                    if ($auth->getError()) {
+                        echo '<div class="alert alert-danger" role="alert">' . $auth->getError() . '</div>';
+                    } else {
+                        echo '<div class="alert alert-success" role="alert">' . $auth->getSuccess() . '</div>';
+                        $_SESSION['user'] = $auth->getUser();
+                        echo '<script>setTimeout(function(){window.location.href="../index.php"},2000);</script>';
+                    }
+                }
+
+                ?>
+            </form>
         </div>
-        <span class="bouton">
-        <button onclick="verify" style="border: none; background-color: #587EF2;">Se connecter !</button>
-        </span>
     </div>
-    </body>
+</body>
+
 </html>

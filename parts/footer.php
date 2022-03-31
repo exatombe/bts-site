@@ -2,10 +2,10 @@
 
 			<div class="footer-right">
 
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
+				<a href="#"><i class="fa fa-facebook" style="padding-top: 7px;"></i></a>
+				<a href="#"><i class="fa fa-twitter" style="padding-top: 7px;"></i></a>
+				<a href="#"><i class="fa fa-linkedin" style="padding-top: 7px;"></i></a>
+				<a href="#"><i class="fa fa-github" style="padding-top: 7px;"></i></a>
 
 			</div>
 
@@ -24,7 +24,6 @@
 
 					<a href="#">Contact</a>
 				</p>
-
 				<p>Company Name &copy; 2015</p>
 			</div>
 

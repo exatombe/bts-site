@@ -10,155 +10,89 @@
     background-color: white;
     padding: 12px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
-
-.h42
-{
-    position: absolute;
-    top: 30px;
+.main{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
 }
-
-.Compte2
-{
-    position: absolute;
-    top: 170px;
-    left: 137px;
+#chk{
+    display: none;
 }
-
-.Pseudoo
-{
-    position: absolute;
-    top: 280px;
-    left: 67px;
+.signup{
+    position: relative;
+    width:100%;
+    height: 100%;
 }
-
-.mddp2
-{
-    position: absolute;
-    top: 350px;
-    left: 137px;
-}
-
-input
-{
-    border: none;
-    border-bottom: 1px solid grey;
-    outline: none;
-}
-
-.bouton2
-{
-    position: absolute;
-    top: 500px;
-    right: 200px;
-    border: none;
-    background-color: #587EF2;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 4px;
-}
-
-.mini2
-{
-    position: absolute;
-    top: 80px;
-    font-size: small;
-}
-
-.boitelogin
-{
-    position: absolute;
-    right: 10px;
-    top: 150px;
-    width: 530px;  
-    height: 590px;
-    border: none;
-    background-color: white;
-    padding: 12px;
-    padding-bottom: 20px;
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
+    margin: 60px 0 20;
+    padding-top:10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
     justify-content: center;
-    align-items: center;
-}
-
-h4
-{
-    position: absolute;
-    top: 30px;
-}
-
-.Compte
-{
-    position: absolute;
-    top: 170px;
-    left: 179px;
-}
-
-.mddp
-{
-    position: absolute;
-    top: 350px;
-    left: 180px;
-}
-
-input
-{
+    display: flex;
+    margin: 20px auto;
+    padding: 20px;
     border: none;
-    border-bottom: 1px solid grey;
     outline: none;
+    border-radius: 5px;
 }
-
-.bouton 
-{
-    position: absolute;
-    top: 500px;
-    right: 175px;
+button{
+    width: 60%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px auto 10px;
+    outline: none;
     border: none;
-    background-color: #587EF2;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: #6d44b8;
+}
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+.login label{
+    color: #573b8a;
+    transform: scale(.6);
 }
 
-img
-{
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    width: 100px;
-    height: 100px;
+#chk:checked ~ .login{
+    transform: translateY(-500px);
 }
-
-.mini
-{
-    position: absolute;
-    top: 80px;
-    font-size: small;
+#chk:checked ~ .login label{
+    transform: scale(1);
 }
-
-
-@media screen and (max-width: 1366px)
-{
-    .Pseudonyme
-{
-    position: absolute;
-    top: 320px;
-    left: 570px;
-}
-}
-
-@media screen and (max-width: 1280px)
-{
-    .Pseudonyme
-{
-    position: absolute;
-    top: 320px;
-    left: 530px;
-}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
 }

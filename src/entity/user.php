@@ -1,40 +1,26 @@
 <?php
-include './src/repository/database.php';
-
 /**
  * Classe Utilisateur, (pour créer et ou gérer un utilisateur)
  */
-class User extends Database
+class User
 {
-    /** @param id  */
+    /** @var int|null  */
     private $id;
-    /** @param username */
+    /** @var string|null  */
     private $username;
-    /** @param email*/
+    /** @var string|null  */
     private $email;
-    /** @param password  */
+    /** @var string|null  */
     private $password;
-    public function __construct(int $id = 0, string $username = "", string $email = "", string $password = "")
+    public function __construct(?int $id = null, ?string $username = null, ?string $email = null, ?string $password = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $password = password_hash($password, PASSWORD_DEFAULT);
-            parent::query('INSERT INTO user (Username,Email,Password) VALUES (?,?,?)', [$username, $email, $password]);
             $this->id = $id;
             $this->username = $username;
             $this->email = $email;
             $this->password = $password;
-        } else {
-            $user = parent::find("user", strval($id));
-
-            $this->id = $id;
-            $this->username = count($user) == 1 ? $user[0]["Username"] : null;
-            $this->email = count($user) == 1 ? $user[0]["Email"] : null;
-            $this->password = count($user) == 1 ? $user[0]["Password"] : null;
-        }
     }
 
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
         return $this;
@@ -43,7 +29,7 @@ class User extends Database
     {
         return $this->id;
     }
-    public function setUsername(string $username)
+    public function setUsername(string $username): self
     {
         $this->username = $username;
         return $this;
@@ -52,7 +38,7 @@ class User extends Database
     {
         return $this->username;
     }
-    public function setEmail(string $email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
@@ -61,7 +47,7 @@ class User extends Database
     {
         return $this->email;
     }
-    public function setPassword(string $password)
+    public function setPassword(string $password): self
     {
         $password = password_hash($password, PASSWORD_DEFAULT);
         $this->password = $password;

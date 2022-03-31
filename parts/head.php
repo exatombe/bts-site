@@ -1,6 +1,8 @@
 <?php
     if(isset($content) && isset($n) && isset($key) && isset($image)){
+    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/Auth.php';
     session_start();
+    $auth = new Auth();
 ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -28,22 +30,20 @@
         <meta name="theme-color" content="#1a1a1a"/>
         <link rel="icon" type="image/png" sizes="64x64" href="https://bot-creator.com/favicon-64.png">
         <title><?php echo $n; ?></title>
+
 <!-- Font Awesome -->
-        <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-        <?php if(isset($footer)){ ?>
+        <?php if(!isset($default)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+        <?php } ?>
 
-       <?php }else{  ?>
-        <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
-      <?php } ?>
+        <?php if(!isset($footer)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
+       <?php } ?>
+        <?php if(!isset($header)){ ?>
+            <link rel="stylesheet" type="text/css" href="/public/css/header.css">
+            <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
+        <?php } ?>
 
-        <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
-
-        <?php if(isset($header)){ ?>
-
-        <?php }else{  ?>
-        <link rel="stylesheet" type="text/css" href="/public/css/header.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
-        <?php  } ?>
         
         <link rel="stylesheet" type="text/css" href="/public/css/style_global.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
@@ -51,6 +51,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Nunito&display=swap" rel="stylesheet">
+
 <script src="https://kit.fontawesome.com/0c8f4b5f9b.js" crossorigin="anonymous"></script>
 <?php
     }

@@ -8,11 +8,17 @@
                 </ul>
             </div>
             <div class="site-header__middle">
-                <a href="#" class="brand">Brand</a>
+                <a href="#" class="brand">LMM</a>
             </div>
             <div class="site-header__end top">
-                <a href="/dashboard/authentification">Login</a>
-                <a href="#" class="button">Some action</a>
+                <?php if (isset($_SESSION['user'])) {
+                    $_SESSION['user'];
+                    $auth->forceSetUser($_SESSION['user']);
+                    ?>
+                    <a href="/dashboard/authentification?action=logout" class="button">Logout</a>
+                <?php } else { ?>
+                    <a href="/dashboard/authentification" class="button">Login / Register</a>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -20,9 +26,9 @@
         <div class="wrapper site-header__wrapper">
             <div class="site-header__start">
                 <nav class="nav">
-                    <button class="nav__toggle" aria-expanded="false" type="button">
-                        menu
-                    </button>
+                    <a class="nav__toggle" aria-expanded="false" type="button">
+                        <i class="fa-solid fa-bars"></i> Menu   
+                    </a>
                     <ul class="nav__wrapper">
                         <li class="nav__item"><a href="#">Home</a></li>
                         <li class="nav__item"><a href="#">About</a></li>
@@ -41,6 +47,7 @@
                     <form class="search__form" action="">
                         <label class="sr-only" for="search">Search</label>
                         <input
+                                class="search_bar"
                                 type="search"
                                 name=""
                                 id="search"

@@ -1,42 +1,36 @@
 <?php
-include './src/repository/database.php';
-include './src/entity/artiste.php';
-include './src/entity/auteur.php';
-
 /**
  * Classe manga, contient toutes les informations essentiels sur un manga !
  */
 
-class Manga extends Database
+class Manga
 {
-    /** @param id */
+    /** @var int|null  */
     private $id;
-    /** @param titre*/
+    /** @var string|null  */
     private $titre;
-    /** @param Prix */
+    /** @var int|null  */
     private $prix;
-    /** @param Editeur */
+    /** @var string|null  */
     private $editeur;
-    /** @param Genre */
+    /** @var string|null  */
     private $genre;
-    /** @param Synopsis */
+    /** @var string|null  */
     private $synopsis;
-    /** @param Format */
+    /** @var string|null  */
     private $format;
-    /** @param ISBN */
+    /** @var string|null  */
     private $isbn;
-    /** @param Image */
+    /** @var string|null  */
     private $image;
-    /** @param auteur reference Auteur */
+    /** @var Auteur|null  */
     private $auteur;
-    /** @param artiste reference Artiste */
+    /** @var Artiste|null  */
     private $artiste;
 
-    public function __construct(int $id = 0, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
+
+    public function __construct(?int $id = null, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $manga = parent::query('INSERT INTO commande (Quantite,ID_MANGA, ID_COMMANDE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$titre, $prix, $editeur, $genre, $synopsis, $format, $isbn, $image, $artiste->getid(), $auteur->getId()]);
             $this->id = $id;
             $this->titre = $titre;
             $this->prix = $prix;
@@ -48,21 +42,6 @@ class Manga extends Database
             $this->image = $image;
             $this->artiste = $artiste;
             $this->auteur = $auteur;
-        } else {
-            $manga = parent::find("manga", strval($id));
-
-            $this->id = $id;
-            $this->titre = count($manga) == 1 ? $manga[0]["Titre"] : null;
-            $this->prix = count($manga) == 1 ? $manga[0]["Prix"] : null;
-            $this->editeur = count($manga) == 1 ? $manga[0]["Editeur"] : null;
-            $this->genre = count($manga) == 1 ? $manga[0]["Genre"] : null;
-            $this->synopsis = count($manga) == 1 ? $manga[0]["Synopsis"] : null;
-            $this->format = count($manga) == 1 ? $manga[0]["Format"] : null;
-            $this->isbn = count($manga) == 1 ? $manga[0]["ISBN"] : null;
-            $this->image = count($manga) == 1 ? $manga[0]["Image"] : null;
-            $this->artiste = count($manga) == 1 ? new Artiste(intval($manga[0]["ID_ARTISTE"])) : null;
-            $this->auteur = count($manga) == 1 ? new Auteur(intval($manga[0]["ID_AUTEUR"])) : null;
-        }
     }
 
     /**
@@ -78,7 +57,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -99,7 +78,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setTitre(string $titre)
+    public function setTitre(string $titre): self
     {
         $this->titre = $titre;
 
@@ -119,7 +98,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setPrix(int $prix)
+    public function setPrix(int $prix): self
     {
         $this->prix = $prix;
 
@@ -139,7 +118,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setEditeur(string $editeur)
+    public function setEditeur(string $editeur): self
     {
         $this->editeur = $editeur;
 
@@ -159,7 +138,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setGenre(string $genre)
+    public function setGenre(string $genre): self
     {
         $this->genre = $genre;
 
@@ -179,7 +158,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setSynopsis(string $synopsis)
+    public function setSynopsis(string $synopsis): self
     {
         $this->synopsis = $synopsis;
 
@@ -199,7 +178,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setFormat(string $format)
+    public function setFormat(string $format): self
     {
         $this->format = $format;
 
@@ -219,7 +198,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setIsbn(string $isbn)
+    public function setIsbn(string $isbn): self
     {
         $this->isbn = $isbn;
 
@@ -239,7 +218,7 @@ class Manga extends Database
      *
      * @return  self
      */
-    public function setImage(string $image)
+    public function setImage(string $image): self
     {
         $this->image = $image;
 
@@ -257,13 +236,12 @@ class Manga extends Database
     /**
      * Set the value of auteur
      *
-     * @return  Auteur
+     * @return  self
      */
-    public function setAuteur(Auteur $auteur)
+    public function setAuteur(Auteur $auteur): self
     {
         $this->auteur = $auteur;
-
-        return $this->auteur = $auteur;
+        return $this;
     }
 
     /**
@@ -277,12 +255,11 @@ class Manga extends Database
     /**
      * Set the value of artiste
      *
-     * @return  Artiste
+     * @return  self
      */
-    public function setArtiste(Artiste $artiste)
+    public function setArtiste(Artiste $artiste): self
     {
         $this->artiste = $artiste;
-
         return $this;
     }
 }

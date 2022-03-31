@@ -1,40 +1,27 @@
 <?php
-include './src/repository/database.php';
 
 /**
  * Classe Auteur (info essentiel sur un Auteur)
  */
-class Auteur extends Database
+class Auteur
 {
-    /** @param id  */
+    /** @var int|null  */
     private $id;
-    /** @param nom  */
+    /** @var string|null  */
     private $nom;
-    /** @param prenom  */
+    /** @var string|null  */
     private $prenom;
-    /** @param genre  */
+    /** @var string|null  */
     private $genre;
-    /** @param nationalite  */
+    /** @var string|null  */
     private $nationalite;
-    public function __construct(int $id = 0, string $nom = "", string $prenom = "", string $genre = "", string $nationalite = "")
+    public function __construct(?int $id = null, ?string $nom = null, ?string $prenom = null, ?string $genre = null, ?string $nationalite = null)
     {
-        parent::__construct();
-        if ($id === 0) {
-            $auteur = parent::query('INSERT INTO auteur (Nom,Prenom,Genre,Nationalite) VALUES (?,?,?,?)', [$nom, $prenom, $genre, $nationalite]);
             $this->id = $id;
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->genre = $genre;
             $this->nationalite = $nationalite;
-        } else {
-            $auteur = parent::find("auteur", strval($id));
-
-            $this->id = $id;
-            $this->nom = count($auteur) == 1 ? $auteur[0]["Nom"] : null;
-            $this->prenom = count($auteur) == 1 ? $auteur[0]["Prenom"] : null;
-            $this->genre = count($auteur) == 1 ? $auteur[0]["Genre"] : null;
-            $this->nationalite = count($auteur) == 1 ? $auteur[0]["Nationalite"] : null;
-        }
     }
 
 
@@ -51,7 +38,7 @@ class Auteur extends Database
      *
      * @return  self
      */ 
-    public function setId(int $id)
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -71,7 +58,7 @@ class Auteur extends Database
      *
      * @return  self
      */ 
-    public function setNom(string $nom)
+    public function setNom(string $nom):self
     {
         $this->nom = $nom;
 
@@ -91,7 +78,7 @@ class Auteur extends Database
      *
      * @return  self
      */ 
-    public function setPrenom(string $prenom)
+    public function setPrenom(string $prenom):self
     {
         $this->prenom = $prenom;
 
@@ -111,7 +98,7 @@ class Auteur extends Database
      *
      * @return  self
      */ 
-    public function setGenre(string $genre)
+    public function setGenre(string $genre): self
     {
         $this->genre = $genre;
 
@@ -131,7 +118,7 @@ class Auteur extends Database
      *
      * @return  self
      */ 
-    public function setNationalite(string $nationalite)
+    public function setNationalite(string $nationalite): self
     {
         $this->nationalite = $nationalite;
 
