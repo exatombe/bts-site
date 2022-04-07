@@ -154,7 +154,8 @@
     width: 300px;
     appearance: none;
     border: 0;
-    background-color: #fff;
+    background-color: #FFA0A0; /*j'ai add la ligne 157*/
+    /*background-color: #fff;*/
     border-radius: 30px;
     font-size: 16px;
     padding: 0.5rem;

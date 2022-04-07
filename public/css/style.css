@@ -11,3 +11,14 @@ html{/*
     font-family: 'Nunito', sans-serif;
 */font-family: "Comic Sans MS";
 }
+
+.article{
+    width: auto;
+    margin: 15px 20px;
+    padding: 10px;
+    border: solid black 2px;
+}
+
+.article_titre{
+    font-size: large;
+}
