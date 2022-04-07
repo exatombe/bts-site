@@ -90,6 +90,7 @@
             </div>
         </div>
     </div>
+    <!--<img class="bois" src="/media/bois.png">-->
 </header>
 <script type="text/javascript" src="/public/js/header.js"></script>
 
