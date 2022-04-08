@@ -71,7 +71,7 @@
                     } else {
                         echo '<div class="alert alert-success" role="alert">' . $auth->getSuccess() . '</div>';
                         $_SESSION['user'] = $auth->getUser();
-                        echo '<script>setTimeout(function(){window.location.href="../index.php"},2000);</script>';
+                        header("Location: ../index.php");
                     }
                 }
 

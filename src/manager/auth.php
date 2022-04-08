@@ -36,7 +36,11 @@ class Auth extends EntityRepository
         };
         
     }
-
+    /**
+     *  
+     * Met de force un utilisateur dans l'Auth
+     * @param User $user
+     */
     public function forceSetUser(User $user)
     {
         $this->user = $user;

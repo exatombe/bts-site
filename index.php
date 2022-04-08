@@ -11,6 +11,23 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
+        <?php 
+            $em = new EntityRepository();
+            $auteur = $em->findOneBy("auteur",["Nom" => "Hiro"]);
+            $artiste = $em->findOneBy("artiste",["Nom" => "Hiro"]);
+            $manga = new Manga();
+            $manga->setTitre("Fairy Tail Tome 4");
+            $manga->setAuteur(new Auteur($auteur["ID_AUTEUR"]));
+            $manga->setArtiste(new Artiste($artiste["ID_ARTISTE"]));
+            $manga->setEditeur("Hachette");
+            $manga->setPrix(10);
+            $manga->setFormat("Poche");
+            $manga->setGenre("Action");
+            $manga->setIsbn("978-2-84599-987-9");
+            $manga->setSynopsis("J'aime les pates");
+            $manga->setImage("fairytail.jpg");
+            $em->insert($manga);
+        ?>
         <br/>
         <br/>
         <br/>
