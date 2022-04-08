@@ -16,11 +16,11 @@ class Auth extends EntityRepository
         $this->authSuccess = null;
     }
     /**
-     * @return User|string
+     * @return Auth
      */
-    public function Login(string $email, string $password)
+    public function Login(string $email, string $password): Auth
     {
-        $user = EntityRepository::getUserByEmail($email);
+        $user = parent::getUserByEmail($email);
         if ($user) {
             if (password_verify($password, $user->getPassword())) {
                 $this->user = $user;
@@ -55,9 +55,9 @@ class Auth extends EntityRepository
      * 
      * @param string $email
      * @param string $password
-     * @return Auth|string
+     * @return Auth
      */
-    public function Register(string $email, string $username, string $password, string $confirmPass)
+    public function Register(string $email, string $username, string $password, string $confirmPass): Auth
     {
         $user = new User();
         if ($password != "") {
@@ -106,7 +106,7 @@ class Auth extends EntityRepository
             return $this;
         }
        
-        $user_id= EntityRepository::insertUser($user);
+        $user_id= parent::insertUser($user);
         $user->setId(intval($user_id));
         $this->user = $user;
         $this->authSuccess = "User created";
@@ -115,28 +115,28 @@ class Auth extends EntityRepository
     /**
      * @return User|null
      */
-    public function getUser()
+    public function getUser(): ?User
     {
         return $this->user;
     }
     /**
      * @return string|null
      */
-    public function getError()
+    public function getError(): ?string
     {
         return $this->authError;
     }
     /**
      * @return string|null
      */
-    public function getSuccess()
+    public function getSuccess(): ?string
     {
         return $this->authSuccess;
     }
     /**
      * @return Auth
      */
-    public function logout()
+    public function logout(): Auth
     {
         $this->user = null;
         return $this;
@@ -144,7 +144,7 @@ class Auth extends EntityRepository
     /**
      * @return bool
      */
-    public function isLoggedIn()
+    public function isLoggedIn(): bool
     {
         return $this->user != null;
     }
