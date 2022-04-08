@@ -11,7 +11,6 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-
         <br/>
         <br/>
         <br/>

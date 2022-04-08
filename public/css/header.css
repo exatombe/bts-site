@@ -164,6 +164,34 @@
     .search__form input {
         border-bottom: 1px solid #979797; } }
 
+.matches {
+    position:absolute;
+    width:300px;
+    margin: 0.5em 0 0;
+    padding: 0;
+}
+
+.matches > .match {
+    margin: 0;
+    padding: 0.5em;
+    background-color: white;
+    list-style: none;
+}
+
+.matches > .match:first-child {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.matches > .match:last-child {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.match > a > .highlight {
+    font-weight: bold;
+    border-radius: 0.2em;
+}
 /*
 .bois{
     width: 100%;

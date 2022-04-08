@@ -1,3 +1,4 @@
+<script src="../public/js/search.js"></script>
 <header class="site-header">
     <div class="site-header__top">
         <div class="wrapper site-header__wrapper">
@@ -52,7 +53,9 @@
                                 name=""
                                 id="search"
                                 placeholder="What's on your mind?"
+                                autocomplete="off"
                         />
+                        <ul class="matches"></ul>
                     </form>
                 </div>
                 <a href="#" class="cart">
