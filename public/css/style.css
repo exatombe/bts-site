@@ -12,6 +12,10 @@ html{/*
 */font-family: "Comic Sans MS";
 }
 
+
+
+/* TEST MATHEO PAS TOUCHER BANDE DE TCHOINS */
+
 .article{
     width: auto;
     margin: 15px 20px;
@@ -19,6 +23,44 @@ html{/*
     border: solid black 2px;
 }
 
+.article_infos1{ /* partie 1 des nfos de l'article (img titre prix auteur artiste) */
+    display: inline-block;
+
+}
+
 .article_titre{
     font-size: large;
+}
+
+.article_img{
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    margin: 2% 10%;
+    border: solid black 3px;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+/*  VADIM ESSAIE DE FAIRE DES TRUCS EN CSS (PS : PLS HELP)  */
+/* tkt bg tu gère */
+/* <3 ❤*/
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+}
+
+.card_img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

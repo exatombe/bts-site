@@ -13,7 +13,9 @@
         <?php include "./parts/header.php"; ?>
 
         <div class="article">
+
             <p class="article_titre">Fairy Tail - Tome 1</p>
+            <img class="article_img" src="/media/cover/Fairy%20Tail%20-%20Tome%201.jpg">
             <br/><br/><br/>
             <br/><br/><br/>
             <br/><br/><br/>
