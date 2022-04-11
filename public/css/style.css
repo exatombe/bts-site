@@ -15,6 +15,11 @@ html{/*
 
 
 /* TEST MATHEO PAS TOUCHER BANDE DE TCHOINS */
+/* ❤❤❤ */
+
+*::-webkit-scrollbar{
+    display: none;
+}
 
 .article{
     width: auto;
