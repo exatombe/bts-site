@@ -14,14 +14,15 @@
 
     <div class="cards">
         <article class="card">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/91B0dwAjhcL.jpg" alt="Fairy Tail - Tome 1">
-            <div class="content">
-                <h2> Fairy Tail - Tome 1 </h2>
+            <img class="card_img" src="https://images-na.ssl-images-amazon.com/images/I/91B0dwAjhcL.jpg" alt="Fairy Tail - Tome 1">
+            <div class="card_text">
+                <p> Fairy Tail - Tome 1 </p><br/>
+                <p> de Hiro Mashima</p><br/>
+                <p>3€</p><br/>
+                <div class="button">
+                    <p>AJOUTER AU PANIER</p>
+                </div>
             </div>
-            <div class="content">
-                <p> The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago. </p>
-            </div>
-
         </article>
     </div>
 

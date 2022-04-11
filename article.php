@@ -13,25 +13,16 @@
         <?php include "./parts/header.php"; ?>
 
         <div class="article">
-            <img class="article_img" src="/media/cover/Fairy%20Tail%20-%20Tome%201.jpg">
-            <div class="article_infos1">
-                <p class="article_titre">Fairy Tail - Tome 1</p>
+            <div class="article_part1">
+                <img class="article_img" src="/media/cover/Fairy%20Tail%20-%20Tome%201.jpg">
+                <div class="article_vligne"></div>
+                <div class="article_infos">
+                    <p class="article_titre">Fairy Tail - Tome 1</p><br/>
+                    Auteur:"AUTEUR"
+                    Artiste:"ARTISTE"
+                    Prix:"PRIX"
+                </div>
             </div>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
-            <br/><br/><br/>
             rouge
         </div>
 
