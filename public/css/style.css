@@ -23,7 +23,7 @@ html{/*
     border: solid black 2px;
 }
 
-.article_infos1{ /* partie 1 des nfos de l'article (img titre prix auteur artiste) */
+.article_infos1{ /* partie 1 des infos de l'article (img titre prix auteur artiste) */
     display: inline-block;
 
 }
