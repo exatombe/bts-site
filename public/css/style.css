@@ -76,12 +76,12 @@ html{/*
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 20px;
+    margin : 0 10%;
 }
 
 .card{
     text-align: center;
     display: grid;
-    border: solid black 2px;
     padding: 10px;
 }
 
@@ -94,7 +94,7 @@ html{/*
 
 .card_img{
     object-fit: cover;
-    width: 100px;
-    height: 150px;
-    margin: auto;
+    width: 200px;
+    height: 300px;
+    margin: 15%;
 }
