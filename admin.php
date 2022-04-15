@@ -90,43 +90,48 @@
         </div>
     <div class="row align-items-start">
         <div class="col mb-3">
-            <div class="col mb-3">
                 <h3>Manga</h3>
                 <form method="post">
                     <input type="hidden" name="form_name" value="manga" />
-                    <div class="mb-3">
+                    <div class="row align-items-start">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Titre</label>
                         <input class="form-control" name="titre"  />
                     </div>
-                    <div class="mb-3">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Prix</label>
                         <input class="form-control"  type="number" name="prix"  />
                     </div>
-                    <div class="mb-6">
+
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Editeur</label>
                         <input class="form-control" name="editeur"  />
+                    </div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Synopsis</label>
                         <textarea class="form-control" name="synopsis" rows="3"></textarea>
                     </div>
-                    <div class="mb-3">
+                    <div class="row align-items-start">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Format</label>
                         <input class="form-control"  name="format" />
                     </div>
-                    <div class="mb-3">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">ISBN</label>
                         <input class="form-control"  name="format" />
                     </div>
-                    <div class="mb-3">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Image</label>
                         <input class="form-control"  name="image" />
                     </div>
-                    <div class="mb-3">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Genre</label>
                         <input class="form-control"  name="genre" />
                     </div>
-                    <div class="mb-3">
+                        </div>
+                    <div class="row align-items-start">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Auteur</label>
                         <select class="form-control" placeholder="Type to search..." name="auteur">
                             <?php
@@ -137,7 +142,7 @@
                             ?>
                         </select>
                     </div>
-                    <div class="mb-3">
+                    <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Artiste</label>
                         <select class="form-control" placeholder="Type to search..." name="artiste">
                             <?php
@@ -148,11 +153,11 @@
                             ?>
                         </select>
                     </div>
+                    </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary mb-3">Ajouté Manga</button>
                     </div>
                 </form>
-            </div>
         </div>
     </div>
 
