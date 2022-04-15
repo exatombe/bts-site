@@ -105,7 +105,8 @@ class EntityRepository extends Database
     }
 
 
-    public function searchManga(string $product){
+    public function searchManga(string $product): array
+    {
         function makeArrayOfClassFromValues($value)
         {
             return (new EntityRepository)->select(new Manga($value["ID_MANGA"]));
@@ -116,6 +117,38 @@ class EntityRepository extends Database
         if($searchValues->rowCount() > 0){
             $searchValues = $searchValues->fetchAll();
             return array_map("makeArrayOfClassFromValues",$searchValues);
+        }else{
+            return [];
+        }
+    }
+
+    public function searchAuteur(string $name): array
+    {
+        function makeArrayOfClassFromValues2($value)
+        {
+            return (new EntityRepository)->select(new Auteur($value["ID_AUTEUR"]));
+        }
+        $name = htmlspecialchars($name);
+        $searchValues = parent::query("SELECT * FROM auteur WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return array_map("makeArrayOfClassFromValues2",$searchValues);
+        }else{
+            return [];
+        }
+    }
+
+    public function searchArtiste(string $name): array
+    {
+        function makeArrayOfClassFromValues3($value)
+        {
+            return (new EntityRepository)->select(new Artiste($value["ID_ARTISTE"]));
+        }
+        $name = htmlspecialchars($name);
+        $searchValues = parent::query("SELECT * FROM artiste WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return array_map("makeArrayOfClassFromValues3",$searchValues);
         }else{
             return [];
         }

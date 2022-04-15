@@ -11,11 +11,11 @@
     $default = true;
     require "../parts/head.php";
     if (isset($_SESSION['user'])) {
-        header('Location: ../index.php');
+        header('Location: ../');
     }
     if(isset($_GET["action"]) == "logout"){
         $_SESSION["user"] = null;
-        header('Location: ../index.php');
+        header('Location: ../');
     }
 
     ?>
