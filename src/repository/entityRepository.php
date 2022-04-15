@@ -103,4 +103,21 @@ class EntityRepository extends Database
             return $this->updateArtiste($class);
         }
     }
+
+
+    public function searchManga(string $product){
+        function makeArrayOfClassFromValues($value)
+        {
+            return (new EntityRepository)->select(new Manga($value["ID_MANGA"]));
+        }
+
+        $product = htmlspecialchars($product);
+        $searchValues = parent::query("SELECT * FROM manga WHERE Titre LIKE '%$product%' OR Genre LIKE '%$product%' OR Editeur LIKE '%$product%'");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return array_map("makeArrayOfClassFromValues",$searchValues);
+        }else{
+            return [];
+        }
+    }
 }

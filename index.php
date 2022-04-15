@@ -11,7 +11,19 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-
+    <?php
+        /* $mangas = $auth->searchManga("Re:Zero");
+        if(count($mangas) > 0){
+            echo "<ul>";
+            foreach($mangas as $manga){
+                echo "<li>";
+                echo "<a href='manga.php?id=".$manga->getId()."'>".$manga->getTitre()."</a>";
+                echo "</li>";
+            }
+            echo "</ul>";
+        }
+        */
+    ?>
         <br/>
         <br/>
         <br/>

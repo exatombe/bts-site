@@ -13,8 +13,6 @@
             </div>
             <div class="site-header__end top">
                 <?php if (isset($_SESSION['user'])) {
-                    $_SESSION['user'];
-                    $auth->forceSetUser($_SESSION['user']);
                     ?>
                     <a href="/dashboard/authentification?action=logout" class="button">Logout</a>
                 <?php } else { ?>

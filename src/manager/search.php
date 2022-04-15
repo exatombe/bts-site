@@ -24,4 +24,26 @@ class SearchManager extends Database{
             return json_encode(["error" => "Aucun résultat trouvé"]);
         }
     }
+
+    public function searchAuteur(string $name){
+        $name = htmlspecialchars($name);
+        $searchValues = parent::query("SELECT * FROM auteur WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return json_encode($searchValues);
+        }else{
+            return json_encode(["error" => "Aucun résultat trouvé"]);
+        }
+    }
+
+    public function searchArtiste(string $name){
+        $name = htmlspecialchars($name);
+        $searchValues = parent::query("SELECT * FROM artiste WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return json_encode($searchValues);
+        }else{
+            return json_encode(["error" => "Aucun résultat trouvé"]);
+        }
+    }
 }
