@@ -42,29 +42,35 @@ html{/*
 }
 
 .article_vligne{
-    width: 1px;
+    /* ligne de séparation entre l'image et les infos */
+    width: 0px;
     height: 450px;
     display: inline-block;
-    margin: 2% auto;
+    margin: 2% 10%;
     margin-left: 0;
-    border: solid #A9A9A9 2px;
+    background: #A9A9A9;
+    border: solid #A9A9A9 1px;
     vertical-align: middle;
 }
 
-.article_infos{ /* partie 1 des infos de l'article (img titre prix auteur artiste) */
+.article_infos{
+    /* infos de l'article (titre prix auteur artiste) */
     border: solid black 2px;
-/*    margin: 2% 10%;*/
-    margin-right: 10%;
-    margin-left: 10%;
+    margin: 2%;
     display: inline-block;
     vertical-align: middle;
-    float: inline-end;
     height: 400px;
     width: 33%;
-
 }
 
 .article_titre{
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 4% 8%;
+}
+
+.article_synopsis{
+    margin: 2% 10%;
     font-size: large;
 }
 
