@@ -12,21 +12,21 @@
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
 
-    <div class="cards">
-        <?php for($i = 0; $i<15; $i++){ ?>
+<div class="cards">
+    <?php for($i = 0; $i<15; $i++){ ?>
         <article class="card">
             <img class="card_img" src="https://images-na.ssl-images-amazon.com/images/I/91B0dwAjhcL.jpg" alt="Fairy Tail - Tome 1">
             <div class="card_text">
-                <p style="font-weight: bold;"> Fairy Tail - Tome 1 </p><br/>
+                <p> Fairy Tail - Tome 1 </p><br/>
                 <p> de Hiro Mashima</p><br/>
-                <p style="font-size: larger;">3€</p><br/>
+                <p>3€</p><br/>
                 <div class="button">
                     <p>AJOUTER AU PANIER</p>
                 </div>
             </div>
         </article>
-        <?php } ?>
-    </div>
+    <?php } ?>
+</div>
 
 
 <?php include './parts/footer.php'; ?>
