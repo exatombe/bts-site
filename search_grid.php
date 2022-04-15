@@ -13,6 +13,7 @@
 <?php include "./parts/header.php"; ?>
 
     <div class="cards">
+        <?php for($i = 0; $i<15; $i++){ ?>
         <article class="card">
             <img class="card_img" src="https://images-na.ssl-images-amazon.com/images/I/91B0dwAjhcL.jpg" alt="Fairy Tail - Tome 1">
             <div class="card_text">
@@ -24,6 +25,7 @@
                 </div>
             </div>
         </article>
+        <?php } ?>
     </div>
 
 

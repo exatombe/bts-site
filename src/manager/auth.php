@@ -52,9 +52,11 @@ class Auth extends EntityRepository
      * and if not, it creates a new user
      * Throw an exception if the email is already used
      * Or if the password is not same as the confirmation password
-     * 
+     *
      * @param string $email
+     * @param string $username
      * @param string $password
+     * @param string $confirmPass
      * @return Auth
      */
     public function Register(string $email, string $username, string $password, string $confirmPass): Auth
