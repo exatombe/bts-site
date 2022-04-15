@@ -16,13 +16,64 @@
     }
     if(isset($_POST["form_name"])){
         $form_name = $_POST["form_name"];
+        switch($form_name){
+            case "manga":
+                if(isset($_POST["titre"]) && isset($_POST["prix"]) && isset($_POST["editeur"]) && isset($_POST["synopsis"]) && isset($_POST["format"]) && isset($_POST["isbn"]) && isset($_POST["image"]) && isset($_POST["genre"]) && isset($_POST["auteur"]) && isset($_POST["artiste"])){
+                    $titre = htmlspecialchars($_POST["titre"]);
+                    $prix = intval($_POST["prix"]);
+                    $editeur = htmlspecialchars($_POST["editeur"]);
+                    $synopsis = htmlspecialchars($_POST["synopsis"]);
+                    $format = htmlspecialchars($_POST["format"]);
+                    $isbn = htmlspecialchars($_POST["isbn"]);
+                    $image = htmlspecialchars($_POST["image"]);
+                    $genre = htmlspecialchars($_POST["genre"]);
+                    $auteur = $auth->select(new Auteur(intval($_POST["auteur"])));
+                    $artiste = $auth->select(new Artiste(intval($_POST["artiste"])));
+                    $manga = new Manga(0,$titre, $prix, $editeur, $genre, $synopsis, $format, $isbn, $image, $auteur, $artiste);
+                    $auth->insert($manga);
+                    $auth->setSuccess("Le manga a bien été ajouté");
+                }else{
+                    $auth->setError("Tous les champs sont obligatoires");
+                }
+            break;
+            case "auteur":
+                if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["genre"]) && isset($_POST["nationalite"])){
+                    $nom = htmlspecialchars($_POST["nom"]);
+                    $prenom = htmlspecialchars($_POST["prenom"]);
+                    $genre = htmlspecialchars($_POST["genre"]);
+                    $nationalite = htmlspecialchars($_POST["nationalite"]);
+                    $auteur = new Auteur(0,$nom, $prenom, $genre, $nationalite);
+                    $auth->insert($auteur);
+                    $auth->setSuccess("L'auteur a bien été ajouté");
+                }else{
+                    $auth->setError("Tous les champs sont obligatoires");
+                }
+            break;
+            case "artiste":
+                if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["genre"]) && isset($_POST["nationalite"])){
+                    $nom = htmlspecialchars($_POST["nom"]);
+                    $prenom = htmlspecialchars($_POST["prenom"]);
+                    $genre = htmlspecialchars($_POST["genre"]);
+                    $nationalite = htmlspecialchars($_POST["nationalite"]);
+                    $artiste = new Artiste(0,$nom, $prenom, $genre, $nationalite);
+                    $auth->insert($artiste);
+                    $auth->setSuccess("L'artiste a bien été ajouté");
+                }else{
+                    $auth->setError("Tous les champs sont obligatoires");
+                }
+            break;
+        }
     }
     ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
 </head>
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
+<div id="pageMessages">
+
+</div>
 <div class="container">
     <div class="row align-items-start">
         <div class="col mb-3">
@@ -51,7 +102,7 @@
                     <input class="form-control" name="nationalite"  />
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary mb-3">Ajouté Auteur</button>
+                    <button type="submit" class="btn btn-primary mb-3">Ajouter Auteur</button>
                 </div>
             </form>
         </div>
@@ -82,7 +133,7 @@
                     <input class="form-control" name="nationalite"  />
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary mb-3">Ajouté artiste</button>
+                    <button type="submit" class="btn btn-primary mb-3">Ajouter artiste</button>
                 </div>
                 </form>
             </div>
@@ -100,7 +151,7 @@
                     </div>
                     <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Prix</label>
-                        <input class="form-control"  type="number" name="prix"  />
+                        <input class="form-control"  type="number" name="prix" min="3" step="0.01" />
                     </div>
 
                     <div class="col mb-3">
@@ -119,7 +170,7 @@
                     </div>
                     <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">ISBN</label>
-                        <input class="form-control"  name="format" />
+                        <input class="form-control"  name="isbn" />
                     </div>
                     <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Image</label>
@@ -134,6 +185,7 @@
                     <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Auteur</label>
                         <select class="form-control" placeholder="Type to search..." name="auteur">
+                            <option selected disabled>Choisir un auteur</option>
                             <?php
                             $auteurs = $auth->searchAuteur("");
                             foreach ($auteurs as $auteur) {
@@ -145,6 +197,7 @@
                     <div class="col mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Artiste</label>
                         <select class="form-control" placeholder="Type to search..." name="artiste">
+                            <option selected disabled>Choisir un artiste</option>
                             <?php
                             $artistes = $auth->searchArtiste("");
                             foreach ($artistes as $artiste) {
@@ -155,13 +208,27 @@
                     </div>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary mb-3">Ajouté Manga</button>
+                        <button type="submit" class="btn btn-primary mb-3">Ajouter Manga</button>
                     </div>
                 </form>
         </div>
     </div>
 
 </div>
+<script src="/public/js/Alert.js"></script>
+<?php
+if(isset($_POST["form_name"])){
+    if($auth->getError() !== null){
+    ?>
+    <script> createAlert('Oups!','Quelque chose c\'est mal passé :( ',`<?= $auth->getError();?>`,'danger',false,true,'pageMessages') </script>
+    <?php
+}else{
+    ?>
+    <script> createAlert('Succés !','Donnée ajouté !',`<?= $auth->getSuccess();?>`,'success',false,true,'pageMessages') </script>
+    <?php
+    }
+}
+?>
 <script>
     $(document).ready(function () {
         $('select').selectize({
@@ -169,6 +236,7 @@
         });
     });
 </script>
+
 <?php include './parts/footer.php'; ?>
 </body>
 </html>

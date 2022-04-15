@@ -15,7 +15,10 @@ class Auth extends EntityRepository
         $this->authError = null;
         $this->authSuccess = null;
     }
+
     /**
+     * @param string $email
+     * @param string $password
      * @return Auth
      */
     public function Login(string $email, string $password): Auth
@@ -33,7 +36,7 @@ class Auth extends EntityRepository
         }else {
             $this->authError = "User with this email doesn't exist";
             return $this;
-        };
+        }
         
     }
     /**
@@ -128,6 +131,17 @@ class Auth extends EntityRepository
     {
         return $this->authError;
     }
+
+    /**
+     * @param string $error
+     * @return Auth
+     */
+    public function setError(string $error): Auth
+    {
+        $this->authError = $error;
+        return $this;
+    }
+
     /**
      * @return string|null
      */
@@ -135,6 +149,17 @@ class Auth extends EntityRepository
     {
         return $this->authSuccess;
     }
+
+    /**
+     * @param string $success
+     * @return Auth
+     */
+    public function setSuccess(string $success): Auth
+    {
+        $this->authSuccess = $success;
+        return $this;
+    }
+
     /**
      * @return Auth
      */
