@@ -46,4 +46,10 @@
                 return null;
             }
          }
+
+         public function getPanier(User $user): ?array
+         {
+             $panier = parent::findOneBy("commande",["ID_USER"=> $user->getId()]);
+             
+         }
     }
