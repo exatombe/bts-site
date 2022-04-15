@@ -6,13 +6,13 @@
         }
         public function insertManga(Manga $manga): string
         {
-            parent::query('INSERT INTO manga (Titre, Prix, Editeur, Genre, Synopsis, Format, ISBN, Image, ID_AUTEUR, ID_ARTISTE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$manga->getTitre(), $manga->getPrix(), $manga->getEditeur(), $manga->getGenre(), $manga->getSynopsis(), $manga->getFormat(), $manga->getIsbn(), $manga->getImage(), $manga->getArtiste()->getid(), $manga->getAuteur()->getId()]);
+            parent::query('INSERT INTO manga (Titre, Prix, Editeur, Genre, Synopsis, Format, ISBN, Image, ID_AUTEUR, ID_ARTISTE) VALUES (?,?,?,?,?,?,?,?,?,?)', [$manga->getTitre(), $manga->getPrix(), $manga->getEditeur(), $manga->getGenre(), $manga->getSynopsis(), $manga->getFormat(), $manga->getIsbn(), $manga->getImage(), $manga->getAuteur()->getId(), $manga->getArtiste()->getid()]);
             return $this->getDb()->lastInsertId();
         }
 
         public function updateManga(Manga $manga): bool
         {
-            $query = parent::query("UPDATE manga SET Titre = ?, Prix = ?, Editeur = ?, Genre = ?, Synopsis = ?, Format = ?, ISBN = ?, Image = ?, ID_AUTEUR = ?, ID_ARTISTE = ? WHERE ID_MANGA = ?", [$manga->getTitre(),$manga->getPrix(),$manga->getEditeur(),$manga->getGenre(),$manga->getSynopsis(),$manga->getFormat(),$manga->getIsbn(),$manga->getImage(),$manga->getArtiste()->getid(),$manga->getAuteur()->getId(),$manga->getId()]);
+            $query = parent::query("UPDATE manga SET Titre = ?, Prix = ?, Editeur = ?, Genre = ?, Synopsis = ?, Format = ?, ISBN = ?, Image = ?, ID_AUTEUR = ?, ID_ARTISTE = ? WHERE ID_MANGA = ?", [$manga->getTitre(),$manga->getPrix(),$manga->getEditeur(),$manga->getGenre(),$manga->getSynopsis(),$manga->getFormat(),$manga->getIsbn(),$manga->getImage(),$manga->getAuteur()->getId(),$manga->getArtiste()->getid(),$manga->getId()]);
             if($query){
                 return $query->rowCount();
             }else{
