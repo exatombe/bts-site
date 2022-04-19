@@ -98,7 +98,7 @@ class Manga
      *
      * @return  self
      */
-    public function setPrix(int $prix): self
+    public function setPrix(float $prix): self
     {
         $this->prix = $prix;
 
