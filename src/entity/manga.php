@@ -29,7 +29,7 @@ class Manga
     private $artiste;
 
 
-    public function __construct(?int $id = null, ?string $titre = null, ?int $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
+    public function __construct(?int $id = null, ?string $titre = null, ?float $prix = null, ?string $editeur = null, ?string $genre = null, ?string $synopsis = null, ?string $format = null, ?string $isbn = null, ?string $image = null, ?Auteur $auteur = null, ?Artiste $artiste = null)
     {
             $this->id = $id;
             $this->titre = $titre;
@@ -88,7 +88,7 @@ class Manga
     /**
      * Get the value of prix
      */
-    public function getPrix(): ?int
+    public function getPrix(): ?float
     {
         return $this->prix;
     }

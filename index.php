@@ -11,19 +11,29 @@
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
+        <div class="cards">
     <?php
-        /* $mangas = $auth->searchManga("Re:Zero");
+       $mangas = $auth->searchManga("");
         if(count($mangas) > 0){
-            echo "<ul>";
+           
             foreach($mangas as $manga){
-                echo "<li>";
-                echo "<a href='manga.php?id=".$manga->getId()."'>".$manga->getTitre()."</a>";
-                echo "</li>";
+              ?>
+              <article class="card">
+            <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
+            <div class="card_text">
+                <p style="font-weight: bold;"><?= $manga->getTitre(); ?></p><br/>
+                <p> de <?= $manga->getAuteur()->getNom()." ".$manga->getAuteur()->getPrenom(); ?></p><br/>
+                <p style="font-size: larger;"><?= $manga->getPrix(); ?>€</p><br/>
+                <div class="button">
+                    <p>AJOUTER AU PANIER</p>
+                </div>
+            </div>
+        </article>
+              <?php
             }
-            echo "</ul>";
-        }
-        */
+        } 
     ?>
+        </div>
         <br/>
         <br/>
         <br/>
