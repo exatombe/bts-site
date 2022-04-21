@@ -31,7 +31,7 @@ if (isset($_SESSION['user'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
         <meta name="robots" content="index, follow">
         <meta name="theme-color" content="#1a1a1a"/>
-        <link rel="icon" type="image/png" sizes="64x64" href="https://bot-creator.com/favicon-64.png">
+        <link rel="icon" type="image/ico" sizes="64x64" href="/media/favicon.ico">
         <title><?php echo $n; ?></title>
 
 <!-- Font Awesome -->
