@@ -93,17 +93,11 @@ html{/*
 
 .card_text{
     text-align: center;
+    height: auto;
     font-size: large;
     font-family: Roboto;
-    height: 100px;
 }
 
-.card_buttons{
-    margin-top: 30px;
-    text-align: center;
-    height: auto;
-    position: relative;
-}
 .card_img{
     object-fit: cover;
     width: 200px;
