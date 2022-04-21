@@ -79,7 +79,7 @@ class Artiste
      */
     public function setPrenom(string $prenom):self
     {
-        $this->prenom = $prenom
+        $this->prenom = $prenom;
 
         return $this;
     }
