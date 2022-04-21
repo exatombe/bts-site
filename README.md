@@ -4,8 +4,9 @@ Bts WebSite
 # Principales fonctions :
 Les fonctions principales fonctionne via l'utilisation des classes suivante :
 
-| Auth | EntityRepository |
-| :--- | :--- |
+| Auth | EntityRepository | Database |
+| :--- | :--- | :--- |
+| Classe "herité" de Database | Classe "herité" de Database | Classe de gestion de la bdd |
 
 ## Auth
 
@@ -86,4 +87,85 @@ $em = new EntityRepository();
 $user = $em->select(new User(2));
 $user->setUsername('test');
 $em->update($user);
+```
+
+## Database
+
+Les méthodes de la classe Database sont appelées automatiquement par la classe EntityRepository ou par la classe Auth.
+
+Exemple : 
+```php
+$em = new EntityRepository();
+$users = $em->query('SELECT * FROM users');
+var_dump($users);
+```
+
+
+
+### query($query, $params = [])
+
+> **Utilisations**
+```php
+$db = new Database();
+$users = $db->query('SELECT * FROM users');
+var_dump($users);
+```
+### find($tablename, $id)
+
+> **Utilisations**
+```php
+$db = new Database();
+$user = $db->find('users', 2);
+var_dump($user);
+```
+### findAll($tablename)
+
+> **Utilisations**
+```php
+$db = new Database();
+$users = $db->findAll('users');
+var_dump($users);
+```
+
+### findBy($tablename, $params)
+
+| Paramètre | Type | Description |
+| :--- | :--- | :--- |
+| $tablename | string | Nom de la table |
+| $params | array | Tableau de paramètre |
+
+> $params
+
+| Paramètre | Type | Description |
+| :--- | :--- | :--- |
+| column | key(string)| Nom de la colonne |
+| value | value (string) | Valeur de la colonne |
+
+> **Utilisations**
+```php
+$db = new Database();
+$users = $db->findBy("users",["username" => "garder500"]);
+var_dump($users);
+```
+
+### findOneBy($tablename, $params)
+
+
+| Paramètre | Type | Description |
+| :--- | :--- | :--- |
+| $tablename | string | Nom de la table |
+| $params | array | Tableau de paramètre |
+
+> $params
+
+| Paramètre | Type | Description |
+| :--- | :--- | :--- |
+| column | key(string)| Nom de la colonne |
+| value | value (string) | Valeur de la colonne |
+
+> **Utilisations**
+```php
+$db = new Database();
+$users = $db->findOneBy("users",["username" => "garder500"]);
+var_dump($users);
 ```
