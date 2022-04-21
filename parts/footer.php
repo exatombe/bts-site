@@ -28,3 +28,7 @@
 			</div>
 
 		</footer>
+
+<?php 
+	$auth->releaseDb();
+?>

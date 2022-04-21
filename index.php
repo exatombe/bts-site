@@ -23,9 +23,12 @@
                 <article class="card">
                     <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
                     <div class="card_text">
-                        <p style="font-weight: bold;"><?= $manga->getTitre(); ?></p><br />
+                        <p style="font-weight: bold;"><?=  $manga->getTitre(); ?></p><br />
                         <p> de <?= $manga->getAuteur()->getNom() . " " . $manga->getAuteur()->getPrenom(); ?></p><br />
                         <p style="font-size: larger;"><?= $manga->getPrix(); ?>€</p><br />
+
+                    </div>
+                    <div class="card_buttons">                        
                         <div class="button">
                             <p>AJOUTER AU PANIER</p>
                         </div>

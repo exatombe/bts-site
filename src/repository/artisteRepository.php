@@ -4,6 +4,7 @@
         public function __construct(){
             parent::__construct();
         }
+    
         public function insertArtiste(Artiste $artiste): string{
            parent::query('INSERT INTO artiste (Nom,Prenom,Genre,Nationalite) VALUES (?,?,?,?)', [$artiste->getNom(), $artiste->getPrenom(), $artiste->getGenre(), $artiste->getNationalite()]);
            return $this->getDb()->lastInsertId();
