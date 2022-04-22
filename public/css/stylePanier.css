@@ -1,0 +1,39 @@
+h4 {
+    font-weight: bolder;
+    font-size: 30px;
+    position: relative;
+    right: 800px;
+    top: 30px;
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.titre {
+    display: inline-flex;
+}
+
+.infocommande {
+    float: right;
+    padding-right: 100px;
+    font-size: larger;
+}
+
+.blockcom {
+    border-bottom: 1px solid black;
+}
+
+.totalblock {
+    border-bottom: 1px solid black;
+}
+
+.buy {
+    border: none;
+    background-color: whitesmoke;
+    position: relative;
+    top: 100px;
+    margin: 0px 90px;
+    padding-bottom: 300px;
+}

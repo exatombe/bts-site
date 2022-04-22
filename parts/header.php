@@ -56,7 +56,7 @@
                         <ul class="matches"></ul>
                     </form>
                 </div>
-                <a href="#" class="cart">
+                <a href="#" id="cart">
                     <svg
                             version="1.1"
                             viewBox="0 0 100 100"
@@ -94,7 +94,31 @@
     <!--<img class="bois" src="/media/bois.png">-->
 </header>
 <script type="text/javascript" src="/public/js/header.js"></script>
+<div class="container">
+  <div class="shopping-cart" style="display: none;">
+    <div class="shopping-cart-header">
+    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+      <span class="shopping-cart-total" style="float: right;">
+        <span class="lighter-text">Total:</span>
+        <span class="main-color-text">10 € ta race</span>
+        </span>
+    </div> <!--end shopping-cart-header -->
 
+    <ul class="shopping-cart-items">
+      <li class="clearfix">
+      </li>
+
+      <li class="clearfix">
+      </li>
+
+      <li class="clearfix">
+      </li>
+    </ul>
+    <br />
+    <br />
+    <a href="panier.php" class="button">Checkout</a>
+  </div> <!--end shopping-cart -->
+</div> <!--end container -->
 <!--
 
 -->

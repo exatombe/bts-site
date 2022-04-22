@@ -1,5 +1,5 @@
 <html lang="fr">
-
+    
 <head>
     <?php
     $n = "Le Marche des Mangas"; // Titre
