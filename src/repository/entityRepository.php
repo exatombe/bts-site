@@ -23,7 +23,9 @@ class EntityRepository extends Database
     {
         parent::__construct();
     }
-
+    /**
+     * Permet de selectionné un "élément" parmis les différentes existante au sein de la base de donnée
+     */
     public function select($class)
     {
         $type = get_class($class);
@@ -43,7 +45,9 @@ class EntityRepository extends Database
             return $this->findDetailCommande($class);
         }
     }
-
+    /**
+     * Permet d'insérer un "élément" parmis les différentes existante au sein de la base de donnée
+     */
     public function insert($class)
     {
         $type = get_class($class);
@@ -63,7 +67,9 @@ class EntityRepository extends Database
             return $this->insertArtiste($class);
         }
     }
-
+    /**
+     * Permet de supprimer un "élément" parmis les différentes existante au sein de la base de donnée
+     */
     public function delete($class)
     {
         $type = get_class($class);
@@ -83,7 +89,9 @@ class EntityRepository extends Database
             return $this->deleteArtiste($class);
         }
     }
-
+    /**
+     * Permet de mettre à jour un "élément" parmis les différentes existante au sein de la base de donnée
+     */
     public function update($class)
     {
         $type = get_class($class);

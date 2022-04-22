@@ -119,4 +119,9 @@ class Database
     {
         return $this->db;
     }
+
+    public function releaseDb(){
+        // release the current connection
+        $this->db = null;
+    }
 }

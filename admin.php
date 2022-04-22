@@ -20,7 +20,7 @@
             case "manga":
                 if(isset($_POST["titre"]) && isset($_POST["prix"]) && isset($_POST["editeur"]) && isset($_POST["synopsis"]) && isset($_POST["format"]) && isset($_POST["isbn"]) && isset($_POST["image"]) && isset($_POST["genre"]) && isset($_POST["auteur"]) && isset($_POST["artiste"])){
                     $titre = htmlspecialchars($_POST["titre"]);
-                    $prix = intval($_POST["prix"]);
+                    $prix = floatval($_POST["prix"]);
                     $editeur = htmlspecialchars($_POST["editeur"]);
                     $synopsis = htmlspecialchars($_POST["synopsis"]);
                     $format = htmlspecialchars($_POST["format"]);
