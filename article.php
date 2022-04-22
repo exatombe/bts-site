@@ -24,7 +24,23 @@
                     Prix:"PRIX"
                 </div>
             </div>
-            <p>Les guildes magiques sont des associations. Elles proposent différentes tâches aux magiciens, allant de la recherche d'un objet à l'attaque en règle. Lucy, une jeune fille, rêve de devenir magicienne. Un jour, elle rencontre Natsu, un magicien maîtrisant le feu, ce dernier l'invite alors à rejoindre sa guilde. Il s'agit de la célèbre Fairy Tail, le sujet de tous les rêves de Lucy. Mais celle-ci est bien mystérieuse et semble être à l'origine de nombreux scandales.</p>
+            <div class="article_synopsis">
+                <p style="font-weight: bold">
+                    Résumé:
+                </p><br/>
+                Les guildes magiques sont des associations. Elles proposent différentes tâches aux magiciens, allant de la recherche d'un objet à l'attaque en règle. Lucy, une jeune fille, rêve de devenir magicienne. Un jour, elle rencontre Natsu, un magicien maîtrisant le feu, ce dernier l'invite alors à rejoindre sa guilde. Il s'agit de la célèbre Fairy Tail, le sujet de tous les rêves de Lucy. Mais celle-ci est bien mystérieuse et semble être à l'origine de nombreux scandales.
+            </div>
+            <div class="article_tableau">
+                <p style="font-weight: bold">Caractéristiques: </p><br/>
+                <table>
+                    <tr>
+                        <td class="article_td">ISBN:</td><td>12345678900</td>
+                    </tr>
+                    <tr>
+                        <td class="article_td">ISBN:</td><td>12345678900</td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <?php include './parts/footer.php'; ?>

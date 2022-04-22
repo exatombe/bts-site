@@ -74,6 +74,14 @@ html{/*
     font-size: large;
 }
 
+.article_tableau{
+    margin: 2% 10%;
+}
+
+.article_td{
+    border: inset grey 10px;
+}
+
 /*  VADIM ESSAIE DE FAIRE DES TRUCS EN CSS (PS : PLS HELP)  */
 /* tkt bg tu gère */
 /* <3 ❤*/
