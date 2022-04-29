@@ -16,33 +16,39 @@
 <br/>
 <br/>
 <br/>
+
 <h1>MON COMPTE</h1>
-<table>
-    <tbody>
+
+<div style ="width : 92vw;margin: auto;">
+<table class="commandetablestyle">
+    <thead>
     <tr>
-        <th>
+        <th scope="col">
             commande
         </th>
-        <th>
-            Statut du paiement
+        <th scope="col">
+            statut du paiement
         </th>
-        <th>
+        <th scope="col">
             total
         </th>
     </tr>
+    </thead>
+    <tbody>
         <tr>
-            <td>
+            <td data-label="commande">
                 #0001
             </td>
-            <td>
+            <td data-label="statut du paiement">
                 payé
             </td>
-            <td>
+            <td data-label="total">
                 10€ ta race
             </td>
         </tr>
     </tbody>
 </table>
+</div>
 
 <br/>
 <br/>
