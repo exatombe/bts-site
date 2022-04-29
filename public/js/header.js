@@ -16,7 +16,11 @@ navToggle.addEventListener("click", function () {
 (function(){
  
     $("#cart").on("click", function() {
-      $(".shopping-cart").fadeToggle( "fast");
+        if(window.location.pathname.includes("panier")){
+            return;
+        }else{
+            $(".shopping-cart").fadeToggle( "fast");
+        }
     });
     
   })();

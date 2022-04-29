@@ -9,7 +9,7 @@
                 </ul>
             </div>
             <div class="site-header__middle">
-                <a href="#" class="brand">LMM</a>
+                <a href="#" class="brand">Le marché du manga</a>
             </div>
             <div class="site-header__end top">
                 <?php if (isset($_SESSION['user'])) {
@@ -29,11 +29,10 @@
                         <i class="fa-solid fa-bars"></i> Menu   
                     </a>
                     <ul class="nav__wrapper">
-                        <li class="nav__item"><a href="#">Home</a></li>
-                        <li class="nav__item"><a href="#">About</a></li>
-                        <li class="nav__item"><a href="#">Services</a></li>
-                        <li class="nav__item"><a href="#">Hire us</a></li>
-                        <li class="nav__item"><a href="#">Contact</a></li>
+                        <li class="nav__item"><a href="http://manga/" style="color: white;">Home</a></li>
+                        <li class="nav__item"><a href="#" style="color: white;">A propos</a></li>
+                        <li class="nav__item"><a href="#" style="color: white;">Services</a></li>
+                        <li class="nav__item"><a href="#" style="color: white;">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -50,7 +49,7 @@
                                 type="search"
                                 name=""
                                 id="search"
-                                placeholder="What's on your mind?"
+                                placeholder="Rechercher un manga"
                                 autocomplete="off"
                         />
                         <ul class="matches"></ul>
