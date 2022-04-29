@@ -9,7 +9,7 @@
                 </ul>
             </div>
             <div class="site-header__middle">
-                <a href="#" class="brand">Le marché du manga</a>
+                <a href="/" class="brand">LMM</a>
             </div>
             <div class="site-header__end top">
                 <?php if (isset($_SESSION['user'])) {
@@ -29,7 +29,7 @@
                         <i class="fa-solid fa-bars"></i> Menu   
                     </a>
                     <ul class="nav__wrapper">
-                        <li class="nav__item"><a href="http://manga/" style="color: white;">Home</a></li>
+                        <li class="nav__item"><a href="/" style="color: white;">Home</a></li>
                         <li class="nav__item"><a href="#" style="color: white;">A propos</a></li>
                         <li class="nav__item"><a href="#" style="color: white;">Services</a></li>
                         <li class="nav__item"><a href="#" style="color: white;">Contact</a></li>
@@ -75,7 +75,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="/dashboard/profile">
                     <svg
                             version="1.1"
                             viewBox="0 0 100 100"
@@ -104,18 +104,24 @@
     </div> <!--end shopping-cart-header -->
 
     <ul class="shopping-cart-items">
-      <li class="clearfix">
-      </li>
+        <?php
+        $mangamania = $auth->getAllManga();
+        if (count($mangamania) > 0) {
 
+        foreach ($mangamania as $manga) {
+        ?>
+            <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
+          <img src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= $manga->getTitre(); ?></span>
+          <span class="item-price" style="font-weight: bold;"><?= $manga->getPrix(); ?>€</span>
+          <div class="item-quantity">Quantity: 01</div>
       </li>
-
-      <li class="clearfix">
-      </li>
+        <?php } } ?>
     </ul>
     <br />
     <br />
-    <a href="panier.php" class="button">Checkout</a>
+    <a href="/panier" class="button">Checkout</a>
   </div> <!--end shopping-cart -->
 </div> <!--end container -->
 <!--

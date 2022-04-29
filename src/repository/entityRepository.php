@@ -130,6 +130,22 @@ class EntityRepository extends Database
         }
     }
 
+    public function getAllManga(): array
+    {
+        function makeArrayOfClassFromValues4($value)
+        {
+            return (new EntityRepository)->select(new Manga($value["ID_MANGA"]));
+        }
+
+        $searchValues = parent::query("SELECT * FROM manga");
+        if($searchValues->rowCount() > 0){
+            $searchValues = $searchValues->fetchAll();
+            return array_map("makeArrayOfClassFromValues4",$searchValues);
+        }else{
+            return [];
+        }
+    }
+
     public function searchAuteur(string $name): array
     {
         function makeArrayOfClassFromValues2($value)
