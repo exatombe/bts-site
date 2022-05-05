@@ -45,7 +45,7 @@ html{/*
 
     /* ligne de séparation entre l'image et les infos principales */
 .article_vligne{
-    width: 0px;
+    width: 0;
     height: 450px;
     display: inline-block;
     margin: 2% 10%;
@@ -56,7 +56,7 @@ html{/*
 }
 
     /* bloc des infos principales (contient: titre / prix / auteur / artiste) */
-.article_infos{
+.article_desc{
     /* infos de l'article (titre prix auteur artiste) */
     border: solid black 2px;
     margin: 2%;
@@ -71,7 +71,32 @@ html{/*
     font-size: xx-large;
     font-weight: bold;
     padding: 4% 8%;
+    height: 50%;
     line-height: 110%;
+}
+
+.article_infos{
+    padding: 2% 4%;
+    margin: 2% 4%;
+    border: solid black 2px;
+}
+
+.article_createurs{
+    display: inline-block;
+    font-size: large;
+    border: solid black 2px;
+    width: 46%;
+    height: 20%;
+}
+
+.article_prix{
+    display: inline-block;
+    font-size: x-large;
+    border: solid black 2px;
+    width: 46%;
+    text-align: center;
+    vertical-align: middle;
+    height: 20%;
 }
 
 .article_synopsis{
