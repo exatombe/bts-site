@@ -14,23 +14,23 @@
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
 <div class="buy">
+<h4 class="pan" style="font-family: 'Reggae One', cursive;">Panier :</h4>
 <article class="infoCommande">
-	<h4>Panier :</h4>
 	<div class="blockcom">
-		<h3>Récapitulatif :</h3>
+		<h3 class="récap">Récapitulatif :</h3>
 		<br />
-		<p>Sous total :</p>
+		<p style="font-family: 'Reggae One', cursive;">Sous total :</p>
 		<br />
-		<p>Réduction :</p>
+		<p style="font-family: 'Reggae One', cursive;">Réduction :</p>
 		<br />
 	</div>
 	<br />
 	<div class="totalblock">
-		<p>Total :</p>
+		<p style="font-family: 'Reggae One', cursive;">Total :</p>
 		<br />
 	</div>
 	<br />
-	<button>Paiement</button>
+	<button class="moula" style="font-family: 'Reggae One', cursive;">Paiement</button>
 </article>
 </div>
 
