@@ -1,0 +1,85 @@
+<html lang="fr">
+    
+<head>
+    <?php
+    $n = "Le Marche des Mangas"; // Titre
+    $content = "Mon super site "; // Description
+    $image ="/media/favicon.ico"; // Image
+    $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
+    require "./parts/head.php";
+
+    ?>
+</head>
+
+<body style="background-color: lightgray;">
+<?php include "./parts/header.php"; ?>
+<h3>Par des weebs pour des weebs</h3>
+<h5>Passionnés de manga depuis l'âge de raison, notre équipe s'est concerté pour créer 
+    un service en ligne capable de répondre au attente en matière de manga papier du marché.
+    Du shônen en passant par le seinen, du shojo au hentai nous possédons un grand nombre de genre
+    et de licence pour tous et pour toutes.</h5>
+<br />
+<br />
+<br />
+<div class="imgbox">
+    <img src="media/jeremy.jpg" alt="un mec moche à lunette" />
+    <img src="media/matteo.jpg" alt="un mec moche mais qui est fort en maths" />
+    <img src="media/vadim.jpg" alt="un mec moche asiatique" />
+    <img src="media/tristan.jpg" alt="un mec moche et c'est tout" />
+</div>
+
+<div class="textimgbox1">
+    <span class="textimgboxcss">
+    <p style="font-size: larger;">Jeremy Soler</p> <br />
+    <p>Chef de projet, amateur de loli depuis 2003</p> <br />
+    <p>« J'ai une super idée faudra juste changer tou... Matteo pose ce couteau »</p>
+    </span>
+</div>
+<div class="textimgbox2">
+    <span class="textimgboxcss">
+    <p style="font-size: larger;">Mattheo Saiter</p> <br />
+    <p>Pro en maths, a mis des centaines de chinois au chômage</p> <br />
+    <p>« Jeremy tu fais chier »</p>
+    </span>
+</div>
+<div class="textimgbox3">
+    <span class="textimgboxcss">
+    <p style="font-size: larger;">Vadim Glavieux</p>
+    <p>Homme de culture</p>
+    <p>« j'ai fais le back mais j'ai rien compris »</p>
+    </span>
+</div>
+<div class="textimgbox4">
+    <span class="textimgboxcss">
+    <p style="font-size: larger;">Tristan Tran</p>
+    <p>Asiatique</p>
+    <p>« Huh ? »</p>
+    </span>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<?php include './parts/footer.php'; ?>
+</body>
+</html>
