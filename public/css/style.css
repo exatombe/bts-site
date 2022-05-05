@@ -210,3 +210,121 @@ html{/*
         border-bottom: 0;
     }
 }
+
+/*Style du panier*/
+
+.pan {
+    font-weight: 400;
+    font-size: 40px;
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+
+.récap {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Reggae One', cursive;
+}
+
+.infocommande {
+    float: right;
+    padding-right: 100px;
+    font-size: larger;
+}
+
+.blockcom {
+    border-bottom: 1px solid black;
+}
+
+.totalblock {
+    border-bottom: 1px solid black;
+}
+
+.buy {
+    border: none;
+    background-color: whitesmoke;
+    position: relative;
+    top: 100px;
+    margin: 0px 90px;
+    padding-bottom: 300px;
+}
+
+.moula {
+    width: 110%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #A11111;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px auto 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.moula:hover{
+    background: #D11111;
+}
+ 
+@media screen and (max-width: 600px) {
+    .pan {
+        font-weight: 400;
+        font-size: 20px;
+        position: relative;
+        left: 50px;
+        top: 40px;
+    }
+    
+    .récap {
+        font-size: 40px;
+        font-weight: 400;
+        font-family: 'Reggae One', cursive;
+    }
+    
+    .infocommande {
+        float: right;
+        padding-right: 100px;
+        font-size: larger;
+    }
+    
+    .blockcom {
+        border-bottom: 1px solid black;
+    }
+    
+    .totalblock {
+        border-bottom: 1px solid black;
+    }
+    
+    .buy {
+        border: none;
+        background-color: whitesmoke;
+        position: relative;
+        top: 100px;
+        margin: 0px 90px;
+        padding-bottom: 300px;
+    }
+    
+    .moula {
+        width: 110%;
+        height: 40px;
+        justify-content: center;
+        display: block;
+        color: #fff;
+        background: #A11111;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 20px auto 10px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: .2s ease-in;
+        cursor: pointer;
+    }
+    .moula:hover{
+        background: #D11111;
+    }
+ }
