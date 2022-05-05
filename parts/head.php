@@ -50,12 +50,14 @@ if (isset($_SESSION['user'])) {
         
         <link rel="stylesheet" type="text/css" href="/public/css/style_global.css">
         <link rel="stylesheet" type="text/css" href="/public/css/stylePanier.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/stylePresentation.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
 
 <script src="https://kit.fontawesome.com/0c8f4b5f9b.js" crossorigin="anonymous"></script>
 <script
