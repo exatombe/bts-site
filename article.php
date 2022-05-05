@@ -17,11 +17,17 @@
             <div class="article_part1">
                 <img class="article_img" src="/media/cover/Fairy%20Tail%20-%20Tome%201.jpg">
                 <div class="article_vligne"></div>
-                <div class="article_infos">
+                <div class="article_desc">
                     <p class="article_titre">Fairy Tail - Tome 1 1 Tome - Tail Fairy Fairy Tail - Tome 1</p><br/>
-                    Auteur:"AUTEUR"
-                    Artiste:"ARTISTE"
-                    Prix:"PRIX"
+                    <div class="article_infos">
+                        <div class="article_createurs">
+                            Auteur:"AUTEUR"
+                            Artiste:"ARTISTE"
+                        </div>
+                        <div class="article_prix">
+                            3.00€
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="article_synopsis">
