@@ -17,6 +17,7 @@ html{/*
 /* TEST MATHEO PAS TOUCHER BANDE DE TCHOINS */
 /* ❤❤❤ */
 
+    /* cache la scrollbar */
 *::-webkit-scrollbar{
     display: none;
 }
@@ -32,6 +33,7 @@ html{/*
     border: solid black 2px;
 }
 
+    /* bloc qui fixe l'image du manga */
 .article_img{
     width: 300px;
     height: 450px;
@@ -41,8 +43,8 @@ html{/*
     vertical-align: middle;
 }
 
+    /* ligne de séparation entre l'image et les infos principales */
 .article_vligne{
-    /* ligne de séparation entre l'image et les infos */
     width: 0px;
     height: 450px;
     display: inline-block;
@@ -53,6 +55,7 @@ html{/*
     vertical-align: middle;
 }
 
+    /* bloc des infos principales (contient: titre / prix / auteur / artiste) */
 .article_infos{
     /* infos de l'article (titre prix auteur artiste) */
     border: solid black 2px;
@@ -63,10 +66,12 @@ html{/*
     width: 33%;
 }
 
+    /* bloc du titre du manga */
 .article_titre{
     font-size: xx-large;
     font-weight: bold;
     padding: 4% 8%;
+    line-height: 110%;
 }
 
 .article_synopsis{
@@ -76,10 +81,20 @@ html{/*
 
 .article_tableau{
     margin: 2% 10%;
+    text-align: center;
 }
 
 .article_td{
-    border: inset grey 10px;
+    border: grey 5px;
+    border-style: solid none none solid;
+}
+
+.article_caractéristiques{
+    margin: 2% 5% 2% 2%;
+    padding: 2%;
+    display: inline-block;
+    border: 4px grey;
+    border-style: solid none none solid;
 }
 
 /*  VADIM ESSAIE DE FAIRE DES TRUCS EN CSS (PS : PLS HELP)  */
@@ -112,6 +127,8 @@ html{/*
     height: 300px;
     margin: 15%;
 }
+
+
 
 .commandetablestyle {
     border: 1px solid #ccc;
