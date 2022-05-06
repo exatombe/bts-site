@@ -44,42 +44,18 @@
 </div>
 <div class="textimgbox3">
     <span class="textimgboxcss">
-    <p style="font-size: larger;">Vadim Glavieux</p>
-    <p>Homme de culture</p>
+    <p style="font-size: larger;">Vadim Glavieux</p> <br />
+    <p>Homme de culture</p> <br />
     <p>« j'ai fais le back mais j'ai rien compris »</p>
     </span>
 </div>
 <div class="textimgbox4">
     <span class="textimgboxcss">
-    <p style="font-size: larger;">Tristan Tran</p>
-    <p>Asiatique</p>
+    <p style="font-size: larger;">Tristan Tran</p> <br />
+    <p>Asiatique</p> <br />
     <p>« Brûlez moi celui qui a niqué le css. Ha c'est moi  »</p>
     </span>
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <?php include './parts/footer.php'; ?>
 </body>
 </html>
