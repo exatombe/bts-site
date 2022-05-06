@@ -35,11 +35,12 @@ html{/*
 
     /* bloc qui fixe l'image du manga */
 .article_img{
+    object-fit: cover;
     width: 300px;
     height: 450px;
     display: inline-block;
     margin: 2% 10%;
-    border: solid black 3px;
+    border: solid black 3px;s
     vertical-align: middle;
 }
 
