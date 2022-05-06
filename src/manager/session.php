@@ -2,10 +2,6 @@
 
 class SessionManager{
 
-    public function addUser($user){
-        $_SESSION['user'] = $user;
-    }
-
     public function getUser(){
         return $_SESSION['user'];
     }

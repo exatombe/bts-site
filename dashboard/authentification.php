@@ -15,6 +15,7 @@
     }
     if(isset($_GET["action"]) == "logout"){
         $_SESSION["user"] = null;
+        $_SESSION["articles"]= null;
         header('Location: ../');
     }
 

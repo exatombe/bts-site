@@ -96,7 +96,7 @@
 <div class="container">
   <div class="shopping-cart" style="display: none;">
     <div class="shopping-cart-header">
-    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><?= count($session->getArticles()); ?></span>
       <span class="shopping-cart-total" style="float: right;">
         <span class="lighter-text">Total:</span>
         <span class="main-color-text"><?= number_format($session->getCartPrice(),2); ?></span>
