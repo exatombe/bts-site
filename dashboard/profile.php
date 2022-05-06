@@ -6,19 +6,30 @@
     $image ="https://img.search.brave.com/H1k51jh7MoZP6ORpCXv7mD-vgVSQciaZIwBtoBkNrqg/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL3By/b2ZpbGVfaW1hZ2Vz/LzE1NjM2OTU4ODIv/bG9nb19ibG9nXzQw/MHg0MDAucG5n"; // Image
     $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
     require $_SERVER['DOCUMENT_ROOT']."/parts/head.php";
+    if ($auth->isLoggedIn() == false)
+    {
+        header('Location: /dashboard/authentification.php');
+        exit();
+    }
     ?>
     </head>
 <body style="background-color: lightgray;">
 <?php include $_SERVER['DOCUMENT_ROOT']."/parts/header.php"; ?>
 <br/>
-<br/>
+<br/>g
 <br/>
 <br/>
 <br/>
 <br/>
 
-<h1>MON COMPTE</h1>
-
+<p class="messagemoncompte"> MON COMPTE </p>
+<p> Bonjour</p>
+<?php
+$user = $auth->getUser();
+var_dump($user);
+?>
+<br/>
+<br/>
 <div style ="width : 92vw;margin: auto;">
 <table class="commandetablestyle">
     <thead>
@@ -49,6 +60,7 @@
     </tbody>
 </table>
 </div>
+
 
 <br/>
 <br/>

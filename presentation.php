@@ -53,7 +53,7 @@
     <span class="textimgboxcss">
     <p style="font-size: larger;">Tristan Tran</p>
     <p>Asiatique</p>
-    <p>« Huh ? »</p>
+    <p>« Brûlez moi celui qui a niqué le css. Ha c'est moi  »</p>
     </span>
 </div>
 <br />
