@@ -121,7 +121,7 @@
             let length = 8,
                 retVal = "";
 
-            function shuffle(array) {
+            function shuffleArray(array) {
                 let currentIndex = array.length,
                     randomIndex;
 
