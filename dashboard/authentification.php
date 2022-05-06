@@ -13,23 +13,24 @@
     if (isset($_SESSION['user'])) {
         header('Location: ../');
     }
-    if(isset($_GET["action"]) == "logout"){
+    if (isset($_GET["action"]) == "logout") {
         $_SESSION["user"] = null;
-        $_SESSION["articles"]= null;
+        $_SESSION["articles"] = null;
         header('Location: ../');
     }
 
     ?>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
 </head>
 
 <body>
-<div id="pageMessages">
+    <div id="pageMessages">
 
-</div>
+    </div>
 
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
@@ -50,19 +51,22 @@
                     $password = $_POST['password'];
                     $confirmPass = $_POST['confirmPass'];
                     $auth->Register($email, $username, $password, $confirmPass, $_FILES['picture_user']);
-                    if ($auth->getError()) 
-                    {
-                    
-                     ?>
-                     <script src="../public/js/Alert.js"></script>
-                     <script> createAlert('Oups!','Something went wrong','<?= $auth->getError();?>','danger',false,true,'pageMessages') </script>
-                   <?php
+                    if ($auth->getError()) {
+
+                ?>
+                        <script src="../public/js/Alert.js"></script>
+                        <script>
+                            createAlert('Oups!', 'Something went wrong', '<?= $auth->getError(); ?>', 'danger', false, true, 'pageMessages')
+                        </script>
+                    <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
-                        ?>
+                    ?>
                         <script src="../public/js/Alert.js"></script>
-                        <script> createAlert('Success!','Wait 3 seconds before you get to the main page...','<?= $auth->getSuccess();?>','success',false,true,'pageMessages') </script>
-                      <?php
+                        <script>
+                            createAlert('Success!', 'Wait 3 seconds before you get to the main page...', '<?= $auth->getSuccess(); ?>', 'success', false, true, 'pageMessages')
+                        </script>
+                <?php
                         echo '<script>setTimeout(function(){window.location.href="../index.php"},3000);</script>';
                     }
                 }
@@ -84,16 +88,20 @@
                     $password = $_POST['password'];
                     $auth->Login($email, $password);
                     if ($auth->getError()) {
-                        ?>
+                ?>
                         <script src="../public/js/Alert.js"></script>
-                        <script> createAlert('Oups!','Something went wrong','<?= $auth->getError();?>','danger',false,true,'pageMessages') </script>
-                      <?php
+                        <script>
+                            createAlert('Oups!', 'Something went wrong', '<?= $auth->getError(); ?>', 'danger', false, true, 'pageMessages')
+                        </script>
+                    <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
-                        ?>
+                    ?>
                         <script src="../public/js/Alert.js"></script>
-                        <script> createAlert('Success!','Wait 3 seconds before you get to the main page...','<?= $auth->getSuccess();?>','success',false,true,'pageMessages') </script>
-                      <?php
+                        <script>
+                            createAlert('Success!', 'Wait 3 seconds before you get to the main page...', '<?= $auth->getSuccess(); ?>', 'success', false, true, 'pageMessages')
+                        </script>
+                <?php
                         echo '<script>setTimeout(function(){window.location.href="../index.php"},3000);</script>';
                     }
                 }
@@ -106,37 +114,51 @@
         let pwd = document.getElementById("passwd"),
             pwd2 = document.getElementById("passwd2");
 
-      // make a function to gen a password with a length of 8 characters,
+        // make a function to gen a password with a length of 8 characters,
         // with at least one number, one uppercase and one lowercase letter and one special character
         // and not three of the same character in a row
         function generatePassword() {
             let length = 8,
                 retVal = "";
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
+
+            function shuffle(array) {
+                let currentIndex = array.length,
+                    randomIndex;
+
+                // While there remain elements to shuffle.
+                while (currentIndex != 0) {
+
+                    // Pick a remaining element.
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // And swap it with the current element.
+                    [array[currentIndex], array[randomIndex]] = [
+                        array[randomIndex], array[currentIndex]
+                    ];
                 }
+
+                return array;
             }
             let lowerChar = "abcdefghijklmnopqrstuvwxyz",
                 upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                 number = "0123456789",
                 specialChar = "!@#$%^&*()_+",
                 charSet = [lowerChar, upperChar, number, specialChar];
-          
-            for(let i = 0; i < length/2; i++) {
+
+            for (let i = 0; i < length / 2; i++) {
                 let shuffle = shuffleArray(charSet);
-                for(let j = 0; j < shuffle.length; j++) {
+                for (let j = 0; j < shuffle.length; j++) {
                     retVal += shuffle[j].charAt(Math.floor(Math.random() * shuffle[j].length));
                 }
-                if(retVal.length > length) {
+                if (retVal.length > length) {
                     retVal = retVal.substring(0, length);
                 }
             }
             console.log(retVal);
             return retVal;
         }
-       
+
         // make a function to fill the password field with a generated password
         function fillPassword() {
             let passwordCurrent = generatePassword();
