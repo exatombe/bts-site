@@ -29,15 +29,14 @@ class Auth extends EntityRepository
                 $this->user = $user;
                 $this->authSuccess = "Logged in successfully";
                 return $this;
-            }else{
+            } else {
                 $this->authError = "Password is incorrect";
                 return $this;
             }
-        }else {
+        } else {
             $this->authError = "User with this email doesn't exist";
             return $this;
         }
-        
     }
     /**
      *  
@@ -66,52 +65,67 @@ class Auth extends EntityRepository
     {
         $user = new User();
         if ($password != "") {
-            if($confirmPass != ""){
-               if ($password === $confirmPass) {
-                $user->setPassword($password);
-            } else{
-                $this->authError="Passwords do not match";
+            if (strlen($password) >= 8) {
+                if (preg_match( "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/" , $password)) {
+                    if(preg_match("/(\S+?(?:[\t ]+\S+)*?)([\t ]*)(?:\1\2?){2,}/", $password)){
+                        $this->authError = "Password can't have 3 consecutive characters";
+                        return $this;
+                    }else{
+                    if ($confirmPass != "") {
+                        if ($confirmPass === $password) {
+                            $user->setPassword($password);
+                        } else {
+                            $this->authError = "Passwords do not match";
+                            return $this;
+                        }
+                    } else {
+                        $this->authError = "Confirm password is empty";
+                        return $this;
+                    }
+                    }
+                } else {
+                    $this->authError = "Password must contain at least one number, one uppercase letter, one lowercase letter and one special character";
+                    return $this;
+                }
+            } else {
+                $this->authError = "Password must be at least 8 characters long";
                 return $this;
             }
-            }else {
-                $this->authError="Confirm password is empty";
-                return $this;
-            }
-        }else {
-            $this->authError="Password is empty";
+        } else {
+            $this->authError = "Password is empty";
             return $this;
         }
 
         if ($email != "") {
             if (preg_match("/.+\@.+\..+/", $email)) {
-                $possibleUser = parent::findOneBy("user",["Email"=>$email]);
-                if($possibleUser){
-                    $this->authError="User with this email already exist";
+                $possibleUser = parent::findOneBy("user", ["Email" => $email]);
+                if ($possibleUser) {
+                    $this->authError = "User with this email already exist";
                     return $this;
-                }else{
+                } else {
                     $user->setEmail($email);
                 }
             } else {
-                $this->authError="Email is not valid";
+                $this->authError = "Email is not valid";
                 return $this;
             }
         } else {
-            $this->authError="Email is empty";
+            $this->authError = "Email is empty";
             return $this;
         }
-        if($username != ""){
+        if ($username != "") {
             if (strlen($username) < 5 || strlen($username) > 65) {
-                $this->authError="Username must be between 5 and 65 characters";
+                $this->authError = "Username must be between 5 and 65 characters";
                 return $this;
             } else {
                 $user->setUsername($username);
             }
-        }else {
-            $this->authError="Username is empty";
+        } else {
+            $this->authError = "Username is empty";
             return $this;
         }
-       
-        $user_id= parent::insertUser($user);
+
+        $user_id = parent::insertUser($user);
         $user->setId(intval($user_id));
         $this->user = $user;
         $this->authSuccess = "User created";
