@@ -1,5 +1,5 @@
 <html lang="fr">
-    
+
 <head>
     <?php
     $n = "Le Marche des Mangas"; // Titre
@@ -17,20 +17,22 @@
         <?php
         $mangas = $auth->searchManga("");
         if (count($mangas) > 0) {
-
             foreach ($mangas as $manga) {
         ?>
                 <article class="card">
-                    <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
+                    <a href="/article.php?id=<?php echo $manga->getId(); ?>">
+                        <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
+                    </a>
                     <div class="card_text">
                         <p style="font-weight: bold;"><?= $manga->getTitre(); ?></p><br />
                         <p> de <?= $manga->getAuteur()->getNom() . " " . $manga->getAuteur()->getPrenom(); ?></p><br />
                         <p style="font-size: larger;"><?= $manga->getPrix(); ?>€</p><br />
-                        <div class="button">
-                            <p>AJOUTER AU PANIER</p>
-                        </div>
+                        <a class="button" href="/addToCart?id=<?= $manga->getId(); ?>">
+                            AJOUTER AU PANIER
+                        </a>
                     </div>
                 </article>
+
         <?php
             }
         }

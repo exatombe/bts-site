@@ -18,7 +18,21 @@ class SessionManager{
     }
     
     public function getArticles(){
-        return $_SESSION['articles'];
+        if(isset($_SESSION['articles'])){
+            return $_SESSION['articles'];
+        }else{
+            return array();
+        }
+    }
+
+    public function getCartPrice(){
+        $total = 0;
+        if(isset($_SESSION['articles'])){
+            foreach($_SESSION['articles'] as $article){
+                $total += $article->getPrix();
+            }
+        }
+        return $total;
     }
 
 }
