@@ -113,6 +113,13 @@
             let length = 8,
                 charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+",
                 retVal = "";
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+            let lowerChar =
             for (let i = 0, n = charset.length; i < length; ++i) {
                 var randomNumber = Math.floor(Math.random() * charset.length);
                 retVal += charset.substring(randomNumber, randomNumber +1);
