@@ -124,11 +124,16 @@
                 specialChar = "!@#$%^&*()_+",
                 charSet = [lowerChar, upperChar, number, specialChar];
           
-            shuffleArray(charSet);
-            for (let i = 0; i < length; i++) {
-                let random = Math.floor(Math.random() * charSet.length);
-                retVal += charSet[random].charAt(Math.floor(Math.random() * charSet[random].length));
+            for(let i = 0; i < length/2; i++) {
+                let shuffle = shuffleArray(charSet);
+                for(let j = 0; j < shuffle.length; j++) {
+                    retVal += shuffle[j].charAt(Math.floor(Math.random() * shuffle[j].length));
+                }
+                if(retVal.length > length) {
+                    retVal = retVal.substring(0, length);
+                }
             }
+            console.log(retVal);
             return retVal;
         }
        
