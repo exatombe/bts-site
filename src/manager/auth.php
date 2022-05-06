@@ -151,7 +151,7 @@ class Auth extends EntityRepository
         }
         $user_id = parent::insertUser($user);
         $fileNameNew = "user-".$user_id. '.' . $fileActualExt;
-        $fileDestination = '/media/users/' . $fileNameNew;
+        $fileDestination = $_SERVER['DOCUMENT_ROOT'].'/media/users/' . $fileNameNew;
         move_uploaded_file($fileTmpName, $fileDestination);
 
         $user->setId(intval($user_id));

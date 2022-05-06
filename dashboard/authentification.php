@@ -34,7 +34,7 @@
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <label for="chk" aria-hidden="true">Sign up</label>
                 <input type="hidden" name="signup" value="submit">
                 <input type="text" name="username" placeholder="Username" required="">
@@ -42,14 +42,14 @@
                 <input type="password" name="password" id="passwd" placeholder="Password" required="">
                 <input type="password" name="confirmPass" id="passwd2" placeholder="Password" required="">
                 <button onclick="fillPassword()">Fill password</button>
-                <input type="file" name="photo de ta sale gueule" placeholder="photo" required="">
+                <input type="file" name="picture_user" placeholder="photo" required="">
                 <?php
                 if (isset($_POST['signup'])) {
                     $email = $_POST['email'];
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $confirmPass = $_POST['confirmPass'];
-                    $auth->Register($email, $username, $password, $confirmPass, $_FILES['photo de ta sale gueule']);
+                    $auth->Register($email, $username, $password, $confirmPass, $_FILES['picture_user']);
                     if ($auth->getError()) 
                     {
                     
@@ -116,7 +116,14 @@
             for (let i = 0, n = charset.length; i < length; ++i) {
                 retVal += charset.charAt(Math.floor(Math.random() * n));
             }
-            return retVal;
+            // check if the password has 3 consecutive characters and if it does, generate a new one
+            // check if the password contains one number, one uppercase and one lowercase letter and one special character
+            // and if it doesn't, generate a new one
+            if (retVal.match(/(.)\1\1/g) || !retVal.match(/[0-9]/g) || !retVal.match(/[A-Z]/g) || !retVal.match(/[a-z]/g) || !retVal.match(/[!@#$%^&*()_+]/g)) {
+                return generatePassword();
+            } else {
+                return retVal;
+            }
         }
        
         // make a function to fill the password field with a generated password
