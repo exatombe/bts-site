@@ -369,9 +369,9 @@ html{/*
 
  .imgbox {
      display: inline-flex;
-     width: 350px;
+     width: 355px;
      height: 350px;
-     padding: 0px 40px;
+     padding: 0px 43px;
  }
 
  .jerem {
@@ -394,11 +394,53 @@ html{/*
      text-align: left;
      border: none;
      background-color: white;
-     margin-right: 100px;
-     margin-left: 40px;
-     height: 150px;
+     margin: 0px 550px;
+     height: 165px;
+     position: relative;
+     right: 480px;
+     padding-top: 20px;
+
  }
 
  .textimgboxcss {
      text-align: center;
  }
+
+ .textimgbox2 {
+    text-align: left;
+    border: none;
+    background-color: white;
+    margin: 0px 550px;
+    height: 150px;
+    position: relative;
+    right: 155px;
+    bottom: 165px;
+    padding-top: 20px;
+
+}
+
+.textimgbox3 {
+    text-align: left;
+    border: none;
+    background-color: white;
+    margin: 0px 550px;
+    height: 120px;
+    position: relative;
+    bottom: 315px;
+    left: 168px;
+    padding-top: 20px;
+
+}
+
+.textimgbox4 {
+    text-align: left;
+    border: none;
+    background-color: white;
+    margin: 0px 550px;
+    height: 95px;
+    position: relative;
+    bottom: 480px;
+    left: 490px;
+    padding-top: 20px;
+
+}
