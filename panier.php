@@ -34,7 +34,8 @@
 </article>
 <br/>
 <br />
-<ul class="shopping-cart-items" style="max-width:500px;">
+<br />
+<ul class="panierproduits" style="max-width:500px;">
      <?php
         $mangaCart = $session->getArticles();
         foreach($mangaCart as $mangaInCart){

@@ -300,6 +300,10 @@ html{/*
 .moula:hover{
     background: #D11111;
 }
+
+.panierproduits {
+    padding-left: 30px;
+}
  
 @media screen and (max-width: 600px) {
     .pan {
