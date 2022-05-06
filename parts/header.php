@@ -83,6 +83,8 @@
                     >
                         <title>Profile</title>
                        <?php
+                       error_reporting(E_ALL ^ E_WARNING); 
+
                        // check User profile picture and display it or default picture
                           if (isset($_SESSION['user'])) {
                                 $id = $auth->getUser()->getId();
