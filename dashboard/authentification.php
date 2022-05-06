@@ -41,6 +41,7 @@
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" name="password" placeholder="Password" required="">
                 <input type="password" name="confirmPass" placeholder="Password" required="">
+                <input type="file" name="photo de ta sale gueule" placeholder="photo" required="">
                 <?php
                 if (isset($_POST['signup'])) {
                     $email = $_POST['email'];

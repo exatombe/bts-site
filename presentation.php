@@ -32,12 +32,12 @@
     <span class="textimgboxcss">
     <p style="font-size: larger;">Jeremy Soler</p> <br />
     <p>Chef de projet, amateur de loli depuis 2003, "FaitTout" man</p> <br />
-    <p>« J'ai une super idée faudra juste changer tou... Matteo pose ce couteau »</p>
+    <p>« J'ai une super idée faudra juste changer tou... Mathéo pose ce couteau »</p>
     </span>
 </div>
 <div class="textimgbox2">
     <span class="textimgboxcss">
-    <p style="font-size: larger;">Mattheo Saiter</p> <br />
+    <p style="font-size: larger;">Mathéo Saiter</p> <br />
     <p>Pro en maths, a mis des centaines de chinois au chômage</p> <br />
     <p>« Jeremy tu fais chier »</p>
     </span>
