@@ -249,7 +249,7 @@ html{/*
     font-size: 40px;
     position: relative;
     left: 50px;
-    top: 40px;
+    top: 20px;
 }
 
 .récap {
@@ -260,7 +260,7 @@ html{/*
 
 .infocommande {
     float: right;
-    padding-right: 100px;
+    padding-right: 80px;
     font-size: larger;
 }
 
@@ -278,7 +278,7 @@ html{/*
     position: relative;
     top: 100px;
     margin: 0px 90px;
-    padding-bottom: 300px;
+    padding-bottom: 100px;
 }
 
 .moula {
