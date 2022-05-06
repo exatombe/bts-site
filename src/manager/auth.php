@@ -61,7 +61,7 @@ class Auth extends EntityRepository
      * @param string $confirmPass
      * @return Auth
      */
-    public function Register(string $email, string $username, string $password, string $confirmPass): Auth
+    public function Register(string $email, string $username, string $password, string $confirmPass, $file): Auth
     {
         $user = new User();
         if ($password != "") {
@@ -124,8 +124,36 @@ class Auth extends EntityRepository
             $this->authError = "Username is empty";
             return $this;
         }
-
+        $newFileName = null;
+               // handle the file
+        $fileName = $file['name'];
+        $fileTmpName = $file['tmp_name'];
+        $fileSize = $file['size'];
+        $fileError = $file['error'];
+        $fileType = $file['type'];
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+        $allowed = array('jpg', 'jpeg', 'png'); 
+        if (in_array($fileActualExt, $allowed)) {   
+            if ($fileError === 0) {
+                if ($fileSize < 1000000) {
+                } else {
+                    $this->authError = "Your file is too big";
+                    return $this;
+                }
+            } else {
+                $this->authError = "There was an error uploading your file";
+                return $this;
+            }
+        } else {
+            $this->authError = "You cannot upload files of this type";
+            return $this;
+        }
         $user_id = parent::insertUser($user);
+        $fileNameNew = "user-".$user_id. '.' . $fileActualExt;
+        $fileDestination = '/media/users/' . $fileNameNew;
+        move_uploaded_file($fileTmpName, $fileDestination);
+
         $user->setId(intval($user_id));
         $this->user = $user;
         $this->authSuccess = "User created";

@@ -49,7 +49,7 @@
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $confirmPass = $_POST['confirmPass'];
-                    $auth->Register($email, $username, $password, $confirmPass);
+                    $auth->Register($email, $username, $password, $confirmPass, $_FILES['photo de ta sale gueule']);
                     if ($auth->getError()) 
                     {
                     
