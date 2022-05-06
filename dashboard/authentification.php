@@ -29,7 +29,7 @@
 <body>
 <div id="pageMessages">
 
-</div>            <button style="padding:none; font-size:10px;" onclick="fillPassword()">Fill password</button>
+</div>
 
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
@@ -39,8 +39,9 @@
                 <input type="hidden" name="signup" value="submit">
                 <input type="text" name="username" placeholder="Username" required="">
                 <input type="email" name="email" placeholder="Email" required="">
-                <span><input type="password" name="password" id="passwd" placeholder="Password" required=""></span>
+                <input type="password" name="password" id="passwd" placeholder="Password" required="">
                 <input type="password" name="confirmPass" id="passwd2" placeholder="Password" required="">
+                <button onclick="fillPassword()">Fill password</button>
                 <input type="file" name="photo de ta sale gueule" placeholder="photo" required="">
                 <?php
                 if (isset($_POST['signup'])) {
