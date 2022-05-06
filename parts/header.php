@@ -104,20 +104,16 @@
     </div> <!--end shopping-cart-header -->
 
     <ul class="shopping-cart-items">
-        <?php
-        $mangamania = $auth->getAllManga();
-        if (count($mangamania) > 0) {
-
-        foreach ($mangamania as $manga) {
-        ?>
+        <!-- 
+     
             <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
-          <img src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>" width="50" height="75" />
-          <span class="item-name"><?= $manga->getTitre(); ?></span>
-          <span class="item-price" style="font-weight: bold;"><?= $manga->getPrix(); ?>€</span>
+          <img src="URL_MANGA" alt="MANGA_TITRE" width="50" height="75" />
+          <span class="item-name">MANGA_TITRE</span>
+          <span class="item-price" style="font-weight: bold;">MANGA_PRIX €</span>
           <div class="item-quantity">Quantity: 01</div>
       </li>
-        <?php } } ?>
+        -->
     </ul>
     <br />
     <br />

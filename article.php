@@ -6,40 +6,45 @@
         $image ="/media/favicon.ico"; // Image
         $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
         require "./parts/head.php";
-
+        $mangarticle = "";
+        if(isset($_GET['id'])){
+        
+          $mangarticle = (new EntityRepository)->select(new Manga(intval($_GET['id'])));
+        }else{
+            header("Location: /");
+        }
         ?>
 
     </head>
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
-
         <div class="article">
             <div class="article_part1">
-                <img class="article_img" src="/media/cover/Fairy%20Tail%20-%20Tome%201.jpg">
+                <img class="article_img" src="<?= $mangarticle->getImage(); ?>">
                 <div class="article_vligne"></div>
                 <div class="article_desc">
-                    <p class="article_titre">Fairy Tail - Tome 1 1 Tome - Tail Fairy Fairy Tail - Tome 1</p><br/>
+                    <p class="article_titre"><?= $mangarticle->getTitre(); ?></p><br/>
                     <div class="article_infos">
                         <div class="article_createurs">
-                            Auteur:"AUTEUR"
-                            Artiste:"ARTISTE"
+                            Auteur:<?= $mangarticle->getAuteur()->getNom() . " " . $mangarticle->getAuteur()->getPrenom(); ?>
+                            Artiste:<?= $mangarticle->getArtiste()->getNom() . " " . $mangarticle->getArtiste()->getPrenom(); ?>
                         </div>
                         <div class="article_prix">
-                            3.00€
+                            <?= number_format($mangarticle->getPrix(),2); ?>€
                         </div>
                     </div>
                 </div>
             </div>
             <div class="article_synopsis">
                 <p style="font-weight: bold"> Résumé: </p>
-                <p style="margin: 2% 5%"> Les guildes magiques sont des associations. Elles proposent différentes tâches aux magiciens, allant de la recherche d'un objet à l'attaque en règle. Lucy, une jeune fille, rêve de devenir magicienne. Un jour, elle rencontre Natsu, un magicien maîtrisant le feu, ce dernier l'invite alors à rejoindre sa guilde. Il s'agit de la célèbre Fairy Tail, le sujet de tous les rêves de Lucy. Mais celle-ci est bien mystérieuse et semble être à l'origine de nombreux scandales.</p>
+                <p style="margin: 2% 5%"> <?= $mangarticle->getSynopsis(); ?> </p>
             </div>
             <div class="article_tableau">
                 <p style="font-weight: bold;text-align: left">Caractéristiques: </p><br/>
-                <div class="article_caractéristiques"> Éditeur : Pika </div>
-                <div class="article_caractéristiques"> ISBN : 2845999143 </div>
-                <div class="article_caractéristiques"> Genre : Shōnen </div>
-                <div class="article_caractéristiques"> Format : 120mm x 180mm</div>
+                <div class="article_caractéristiques"> Éditeur : <?= $mangarticle->getEditeur();  ?> </div>
+                <div class="article_caractéristiques"> ISBN : <?= $mangarticle->getIsbn(); ?> </div>
+                <div class="article_caractéristiques"> Genre : <?= $mangarticle->getGenre(); ?> </div>
+                <div class="article_caractéristiques"> Format : <?= $mangarticle->getFormat(); ?></div>
             </div>
         </div>
 

@@ -53,7 +53,7 @@ fetch("/api/search?product=").then(res=> res.json()).then(data => {
             title: item.Titre,
             lowerTitle: item.Titre.toLowerCase(),
             prix: item.Prix,
-            url: "/api/search?product=" + item.Titre
+            url: "/article.php?id=" + item["ID_MANGA"]
         }
     });
     $(`#search`).autocomplete(words.sort(), render($('.matches')));
