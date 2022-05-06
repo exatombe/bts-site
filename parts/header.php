@@ -99,21 +99,25 @@
     <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
       <span class="shopping-cart-total" style="float: right;">
         <span class="lighter-text">Total:</span>
-        <span class="main-color-text">10 € ta race</span>
+        <span class="main-color-text"><?= number_format($session->getCartPrice(),2); ?></span>
         </span>
     </div> <!--end shopping-cart-header -->
 
     <ul class="shopping-cart-items">
-        <!-- 
-     
+     <?php
+        $mangaCart = $session->getArticles();
+        foreach($mangaCart as $mangaInCart){
+            ?>
             <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
-          <img src="URL_MANGA" alt="MANGA_TITRE" width="50" height="75" />
-          <span class="item-name">MANGA_TITRE</span>
-          <span class="item-price" style="font-weight: bold;">MANGA_PRIX €</span>
+          <img src="<?= $mangaInCart->getImage(); ?>" alt="<?= $mangaInCart->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= $mangaInCart->getTitre(); ?></span>
+          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getPrix(),2); ?> €</span>
           <div class="item-quantity">Quantity: 01</div>
       </li>
-        -->
+      <?php
+        }
+        ?>
     </ul>
     <br />
     <br />
