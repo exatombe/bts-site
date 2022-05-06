@@ -14,10 +14,10 @@
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
 <div class="buy">
-<h4 class="pan" style="font-family: 'Reggae One', cursive;">Panier :</h4>
+<h4 class="pan" style="font-family: 'Reggae One', cursive;"><strong>Panier</strong></h4>
 <article class="infoCommande">
 	<div class="blockcom">
-		<h3 class="récap">Récapitulatif :</h3>
+		<h3 class="récap"><strong>Récapitulatif</strong></h3>
 		<br />
 		<p style="font-family: 'Reggae One', cursive;">Sous total :</p>
 		<br />

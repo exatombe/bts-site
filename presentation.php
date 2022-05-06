@@ -13,8 +13,8 @@
 
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
-<h3>Par des weebs pour des weebs</h3>
-<h5>Passionnés de manga depuis l'âge de raison, notre équipe s'est concerté pour créer 
+<h3 class="titleH3">Par des weebs pour des weebs</h3>
+<h5 class="explicationh5">Passionnés de manga depuis l'âge de raison, notre équipe s'est concerté pour créer 
     un service en ligne capable de répondre au attente en matière de manga papier du marché.
     Du shônen en passant par le seinen, du shojo au hentai nous possédons un grand nombre de genre
     et de licence pour tous et pour toutes.</h5>
@@ -22,16 +22,16 @@
 <br />
 <br />
 <div class="imgbox">
-    <img src="media/jeremy.jpg" alt="un mec moche à lunette" />
-    <img src="media/matteo.jpg" alt="un mec moche mais qui est fort en maths" />
-    <img src="media/vadim.jpg" alt="un mec moche asiatique" />
-    <img src="media/tristan.jpg" alt="un mec moche et c'est tout" />
+    <img class="jerem" src="media/jeremy.jpg" alt="un mec moche à lunette" />
+    <img class="maths" src="media/matteo.jpg" alt="un mec moche mais qui est fort en maths" />
+    <img class="vad" src="media/vadim.jpg" alt="un mec moche asiatique" />
+    <img class="moi" src="media/tristan.jpg" alt="un mec moche et c'est tout" />
 </div>
 
 <div class="textimgbox1">
     <span class="textimgboxcss">
     <p style="font-size: larger;">Jeremy Soler</p> <br />
-    <p>Chef de projet, amateur de loli depuis 2003</p> <br />
+    <p>Chef de projet, amateur de loli depuis 2003, "FaitTout" man</p> <br />
     <p>« J'ai une super idée faudra juste changer tou... Matteo pose ce couteau »</p>
     </span>
 </div>
