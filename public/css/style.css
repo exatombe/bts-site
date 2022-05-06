@@ -360,66 +360,68 @@ html{/*
 
  /* Style de la présentation */
 
- .titleH3 {
-     text-align: center;
-     font-size: 40px;
-     font-family: 'Reggae One', cursive;
-     padding-top: 50px;
- }
+.titleH3 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Reggae One', cursive;
+    padding-top: 50px;
+}
 
- .explicationh5 {
+.explicationh5 {
     font-family: 'Reggae One', cursive;
     text-align: center;
     padding: 20px 90px;
- }
+}
 
- .imgbox {
-     display: inline-flex;
-     width: 355px;
-     height: 350px;
-     padding: 0px 43px;
- }
+.imgbox {
+    display: inline-flex;
+    width: 355px;
+    height: 350px;
+    padding-left: 100px;
+}
 
- .jerem {
+.jerem {
     padding: 0px 30px;
- }
+}
 
- .maths {
+.maths {
     padding: 0px 30px;
- }
+}
 
- .vad {
+.vad {
     padding: 0px 30px;
- }
+}
 
- .moi {
+.moi {
     padding: 0px 30px;
- }
+}
 
- .textimgbox1 {
-     text-align: left;
-     border: none;
-     background-color: white;
-     margin: 0px 550px;
-     height: 165px;
-     position: relative;
-     right: 480px;
-     padding-top: 20px;
-
- }
-
- .textimgboxcss {
-     text-align: center;
- }
-
- .textimgbox2 {
+.textimgbox1 {
     text-align: left;
     border: none;
     background-color: white;
-    margin: 0px 550px;
+    margin: 0px 610px;
+    margin-right: 622px;
+    height: 165px;
+    position: relative;
+    right: 480px;
+    padding-top: 20px;
+
+}
+
+.textimgboxcss {
+    text-align: center;
+}
+
+.textimgbox2 {
+    text-align: left;
+    border: none;
+    background-color: white;
+    margin: 0px 610px;
+    margin-right: 622px;
     height: 150px;
     position: relative;
-    right: 155px;
+    right: 157px;
     bottom: 165px;
     padding-top: 20px;
 
@@ -429,11 +431,12 @@ html{/*
     text-align: left;
     border: none;
     background-color: white;
-    margin: 0px 550px;
+    margin: 0px 610px;
+    margin-right: 622px;
     height: 140px;
     position: relative;
     bottom: 315px;
-    left: 168px;
+    left: 165px;
     padding-top: 20px;
 
 }
@@ -442,11 +445,106 @@ html{/*
     text-align: left;
     border: none;
     background-color: white;
-    margin: 0px 550px;
+    margin: 0px 610px;
+    margin-right: 623px;
     height: 140px;
     position: relative;
-    bottom: 460px;
-    left: 490px;
+    bottom: 455px;
+    left: 488px;
     padding-top: 20px;
 
+}
+
+
+@media screen and (max-width: 1366px) {
+    .titleH3 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Reggae One', cursive;
+        padding-top: 50px;
+    }
+
+    .explicationh5 {
+        font-family: 'Reggae One', cursive;
+        text-align: center;
+        padding: 20px 90px;
+    }
+
+    .imgbox {
+        display: inline-flex;
+        width: 355px;
+        height: 350px;
+        padding: 0px 43px;
+    }
+
+    .jerem {
+        padding: 0px 30px;
+    }
+
+    .maths {
+        padding: 0px 30px;
+    }
+
+    .vad {
+        padding: 0px 30px;
+    }
+
+    .moi {
+        padding: 0px 30px;
+    }
+
+    .textimgbox1 {
+        text-align: left;
+        border: none;
+        background-color: white;
+        margin: 0px 550px;
+        height: 165px;
+        position: relative;
+        right: 480px;
+        padding-top: 20px;
+
+    }
+
+    .textimgboxcss {
+        text-align: center;
+    }
+
+    .textimgbox2 {
+        text-align: left;
+        border: none;
+        background-color: white;
+        margin: 0px 550px;
+        height: 150px;
+        position: relative;
+        right: 155px;
+        bottom: 165px;
+        padding-top: 20px;
+
+    }
+
+    .textimgbox3 {
+        text-align: left;
+        border: none;
+        background-color: white;
+        margin: 0px 550px;
+        height: 140px;
+        position: relative;
+        bottom: 315px;
+        left: 168px;
+        padding-top: 20px;
+
+    }
+
+    .textimgbox4 {
+        text-align: left;
+        border: none;
+        background-color: white;
+        margin: 0px 550px;
+        height: 140px;
+        position: relative;
+        bottom: 460px;
+        left: 490px;
+        padding-top: 20px;
+
+    }
 }
