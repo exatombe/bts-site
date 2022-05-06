@@ -41,7 +41,7 @@
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" name="password" id="passwd" placeholder="Password" required="">
                 <input type="password" name="confirmPass" id="passwd2" placeholder="Password" required="">
-                <button onclick="fillPassword()">Fill password</button>
+                <button onclick="fillPassword()" type="button">Fill password</button>
                 <input type="file" name="picture_user" placeholder="photo" required="">
                 <?php
                 if (isset($_POST['signup'])) {
@@ -114,7 +114,8 @@
                 charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+",
                 retVal = "";
             for (let i = 0, n = charset.length; i < length; ++i) {
-                retVal += charset.charAt(Math.floor(Math.random() * n));
+                var randomNumber = Math.floor(Math.random() * charset.length);
+                retVal += charset.substring(randomNumber, randomNumber +1);
             }
             // check if the password has 3 consecutive characters and if it does, generate a new one
             // check if the password contains one number, one uppercase and one lowercase letter and one special character
