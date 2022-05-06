@@ -111,7 +111,6 @@
         // and not three of the same character in a row
         function generatePassword() {
             let length = 8,
-                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+",
                 retVal = "";
             function shuffleArray(array) {
                 for (let i = array.length - 1; i > 0; i--) {
@@ -119,19 +118,18 @@
                     [array[i], array[j]] = [array[j], array[i]];
                 }
             }
-            let lowerChar =
-            for (let i = 0, n = charset.length; i < length; ++i) {
-                var randomNumber = Math.floor(Math.random() * charset.length);
-                retVal += charset.substring(randomNumber, randomNumber +1);
+            let lowerChar = "abcdefghijklmnopqrstuvwxyz",
+                upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                number = "0123456789",
+                specialChar = "!@#$%^&*()_+",
+                charSet = [lowerChar, upperChar, number, specialChar];
+          
+            shuffleArray(charSet);
+            for (let i = 0; i < length; i++) {
+                let random = Math.floor(Math.random() * charSet.length);
+                retVal += charSet[random].charAt(Math.floor(Math.random() * charSet[random].length));
             }
-            // check if the password has 3 consecutive characters and if it does, generate a new one
-            // check if the password contains one number, one uppercase and one lowercase letter and one special character
-            // and if it doesn't, generate a new one
-            if (retVal.match(/(.)\1\1/g) || !retVal.match(/[0-9]/g) || !retVal.match(/[A-Z]/g) || !retVal.match(/[a-z]/g) || !retVal.match(/[!@#$%^&*()_+]/g)) {
-                return generatePassword();
-            } else {
-                return retVal;
-            }
+            return retVal;
         }
        
         // make a function to fill the password field with a generated password
