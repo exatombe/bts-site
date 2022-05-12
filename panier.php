@@ -26,7 +26,7 @@
 	</div>
 	<br />
 	<div class="totalblock">
-		<p style="font-family: 'Reggae One', cursive;">Total : <?= $session->getCartPrice(); ?> €</p>
+		<p style="font-family: 'Reggae One', cursive;">Total :  <?= number_format($session->getCartPrice(),2); ?> €</p>
 		<br />
 	</div>
 	<br />
@@ -42,10 +42,10 @@
             ?>
             <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
-          <img src="<?= $mangaInCart->getImage(); ?>" alt="<?= $mangaInCart->getTitre(); ?>" width="50" height="75" />
-          <span class="item-name"><?= $mangaInCart->getTitre(); ?></span>
-          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getPrix(),2); ?> €</span>
-          <div class="item-quantity">Quantity: 01</div>
+          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= $mangaInCart->getManga()->getTitre(); ?></span>
+          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getManga()->getPrix()* $mangaInCart->getQuantite(),2); ?> €</span>
+          <div class="item-quantity">Quantity: <?= $mangaInCart->getQuantite(); ?></div>
       </li>
       <?php
         }
