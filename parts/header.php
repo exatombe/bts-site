@@ -129,14 +129,16 @@
     <ul class="shopping-cart-items">
      <?php
         $mangaCart = $session->getArticles();
+
         foreach($mangaCart as $mangaInCart){
             ?>
             <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
-          <img src="<?= $mangaInCart->getImage(); ?>" alt="<?= $mangaInCart->getTitre(); ?>" width="50" height="75" />
-          <span class="item-name"><?= $mangaInCart->getTitre(); ?></span>
-          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getPrix(),2); ?> €</span>
-          <div class="item-quantity">Quantity: 01</div>
+          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= $mangaInCart->getManga()->getTitre(); ?></span>
+          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getManga()->getPrix()*$mangaInCart->getQuantite(),2); ?> €</span>
+          <div class="item-quantity">Quantity: <?= $mangaInCart->getQuantite(); ?></div></br/>
+          <a class="button" href="/removeFromCart?id=<?= $mangaInCart->getManga()->getId(); ?>">Retirer</a>
       </li>
       <?php
         }
