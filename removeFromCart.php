@@ -11,8 +11,7 @@ if (isset($_GET['id'])) {
     $manga = $em->select(new Manga(intval($_GET['id'])));
     $article = new DetailCommande();
     $article->setManga($manga);
-    $article->setQuantite(1);
-    $session->addArticle($article);
+    $session->removeArticle($article);
     if (isset($_SERVER['HTTP_REFERER'])) {
         header("Location: " . $_SERVER['HTTP_REFERER']);
     } else {
