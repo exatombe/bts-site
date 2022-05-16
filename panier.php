@@ -49,7 +49,7 @@
 		<br />
 	</div>
 	<br />
-	<button class="moula" style="font-family: 'Reggae One', cursive;">Paiement</button>
+	<button class="moula" style="font-family: 'Reggae One', cursive;"><a href="Paiement.php" style="color: white;">Paiement</a></button>
 </article>
 <img class="logodumillieu" src="media/favicon.ico" alt="logo" />
 <br/>
