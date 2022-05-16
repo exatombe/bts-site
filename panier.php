@@ -13,8 +13,27 @@
 
 <body style="background-color: lightgray;">
 <?php include "./parts/header.php"; ?>
-<div class="buy">
+<span class="panierglobal">
+<div class="buy1">
 <h4 class="pan" style="font-family: 'Reggae One', cursive;"><strong>Panier</strong></h4>
+<ul class="panierproduits">
+     <?php
+        $mangaCart = $session->getArticles();
+        foreach($mangaCart as $mangaInCart){
+            ?>
+            <hr style="height: 2px; background: grey;" />
+      <li class="clearfix">
+          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= $mangaInCart->getManga()->getTitre(); ?></span>
+          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getManga()->getPrix()* $mangaInCart->getQuantite(),2); ?> €</span>
+          <div class="item-quantity">Quantity: <?= $mangaInCart->getQuantite(); ?></div>
+      </li>
+      <?php
+        }
+        ?>
+    </ul>
+</div>
+<div class="buy">
 <article class="infoCommande">
 	<div class="blockcom">
 		<h3 class="récap"><strong>Récapitulatif</strong></h3>
@@ -32,26 +51,12 @@
 	<br />
 	<button class="moula" style="font-family: 'Reggae One', cursive;">Paiement</button>
 </article>
+<img class="logodumillieu" src="media/favicon.ico" alt="logo" />
 <br/>
 <br />
 <br />
-<ul class="panierproduits" style="max-width:500px;">
-     <?php
-        $mangaCart = $session->getArticles();
-        foreach($mangaCart as $mangaInCart){
-            ?>
-            <hr style="height: 2px; background: grey;" />
-      <li class="clearfix">
-          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
-          <span class="item-name"><?= $mangaInCart->getManga()->getTitre(); ?></span>
-          <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getManga()->getPrix()* $mangaInCart->getQuantite(),2); ?> €</span>
-          <div class="item-quantity">Quantity: <?= $mangaInCart->getQuantite(); ?></div>
-      </li>
-      <?php
-        }
-        ?>
-    </ul>
 </div>
+</span>
 
 <br />
 <br />

@@ -248,9 +248,8 @@ html{/*
 .pan {
     font-weight: 400;
     font-size: 40px;
-    position: relative;
-    left: 50px;
-    top: 20px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .récap {
@@ -261,6 +260,7 @@ html{/*
 
 .infocommande {
     float: right;
+    padding-top: 20px;
     padding-right: 80px;
     font-size: larger;
 }
@@ -273,13 +273,32 @@ html{/*
     border-bottom: 1px solid black;
 }
 
+.panierglobal {
+    display: inline-flex;
+}
+
+.buy1 {
+    border: none;
+    background-color: whitesmoke;
+    position: relative;
+    top: 60px;
+    left: 80px;
+    width: 480px;
+    height: 400px;
+    padding: 0px 50px 30px;
+    overflow: scroll;
+    border-radius: 6px;
+}
+
 .buy {
     border: none;
     background-color: whitesmoke;
     position: relative;
     top: 100px;
-    margin: 0px 90px;
-    padding-bottom: 250px;
+    left: 400px;
+    width: 400px;
+    height: 330px;
+    border-radius: 6px;
 }
 
 .moula {
@@ -294,7 +313,7 @@ html{/*
     margin: 20px auto 10px;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: .2s ease-in;
     cursor: pointer;
 }
@@ -303,26 +322,74 @@ html{/*
 }
 
 .panierproduits {
-    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.logodumillieu {
+    position: relative;
+    right: 220px;
+    bottom: 200px;
+    height: 120px;
+    width: 120px;
 }
  
+@media screen and (max-width: 1280px){
+    .panierglobal {
+        display: inline-flex;
+    }
+    
+    .buy1 {
+        border: none;
+        background-color: whitesmoke;
+        position: relative;
+        top: 60px;
+        left: 50px;
+        width: 480px;
+        height: 400px;
+        padding: 0px 50px 30px;
+        overflow: scroll;
+        border-radius: 6px;
+    }
+    
+    .buy {
+        border: none;
+        background-color: whitesmoke;
+        position: relative;
+        top: 100px;
+        left: 355px;
+        width: 400px;
+        height: 330px;
+        border-radius: 6px;
+    }
+    
+    .logodumillieu {
+        position: relative;
+        right: 210px;
+        bottom: 200px;
+        height: 120px;
+        width: 120px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .pan {
         font-weight: 400;
-        font-size: 28px;
-        padding-bottom: 100px;
+        font-size: 40px;
+        text-align: center;
+        padding-top: 10px;
     }
     
     .récap {
-        font-size: 28px;
+        font-size: 40px;
         font-weight: 400;
         font-family: 'Reggae One', cursive;
-        padding-bottom: 20px;
     }
     
     .infocommande {
-        font-size: medium;
-        padding: 0px 65px;
+        float: right;
+        padding-top: 20px;
+        padding-right: 80px;
+        font-size: larger;
     }
     
     .blockcom {
@@ -333,13 +400,23 @@ html{/*
         border-bottom: 1px solid black;
     }
     
+    .panierglobal {
+        display: block;
+    }
+    
+    .buy1 {
+        border: none;
+        background-color: whitesmoke;
+        width: 330px;
+        overflow: scroll;
+        border-radius: 6px;
+    }
+    
     .buy {
         border: none;
         background-color: whitesmoke;
-        position: relative;
-        top: 100px;
-        margin: 0px 60px;
-        padding-bottom: 300px;
+        width: 330px;
+        border-radius: 6px;
     }
     
     .moula {
@@ -354,12 +431,19 @@ html{/*
         margin: 20px auto 10px;
         outline: none;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         transition: .2s ease-in;
         cursor: pointer;
     }
     .moula:hover{
         background: #D11111;
+    }
+    
+    .panierproduits {
+        padding-top: 20px;
+    }
+    
+    .logodumillieu {
     }
  }
 
