@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/src/entity/Manga.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/src/entity/manga.php';
     trait mangaRepository{
         public function __construct(){
             parent::__construct();

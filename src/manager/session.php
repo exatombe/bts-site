@@ -70,4 +70,13 @@ class SessionManager{
         return $total;
     }
 
+    public function getCartQuantity(){
+        $total = 0;
+        if(isset($_SESSION['articles'])){
+            foreach($_SESSION['articles'] as $article){
+                $total += $article->getQuantite();
+            }
+        }
+        return $total;
+    }
 }

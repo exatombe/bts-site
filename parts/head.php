@@ -1,7 +1,7 @@
 <?php
     if(isset($content) && isset($n) && isset($key) && isset($image)){
-    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/Auth.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/session.php';
+    include_once($_SERVER['DOCUMENT_ROOT'].'/src/manager/auth.php');
+    include_once($_SERVER['DOCUMENT_ROOT'].'/src/manager/session.php');
     $session = new SessionManager();
     session_start();
     $auth = new Auth();
