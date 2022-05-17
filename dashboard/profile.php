@@ -27,7 +27,7 @@
 </div>
 <div>
     <?php 
-        var_dump($session->getArticles());
+        var_dump($auth->getCommands());
     ?>
 </div>
 <br/>

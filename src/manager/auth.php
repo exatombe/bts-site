@@ -167,7 +167,7 @@ class Auth extends EntityRepository
             return (new EntityRepository)->select(new DetailCommande(intval($value["ID_DETAILCOMMANDE"])));
         }
         // call the function to find a command from the database
-        $commandsList = parent::findBy("commande",["ID_USER" => $this->user->getId()]);
+        $commandsList = parent::findBy("commande",["ID_USER" => $this->user->getId(), "Panier" => false]);
         $commands = [];
         foreach ($commandsList as $command) {
             $commands[$command["ID_COMMANDE"]] = array_map("makeArrayOfDetailsCommandes", parent::findBy("detailcommande", ["ID_COMMANDE" => $command["ID_COMMANDE"]]));
