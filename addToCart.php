@@ -10,9 +10,14 @@ if (isset($_GET['id'])) {
     $em = new EntityRepository();
     $manga = $em->select(new Manga(intval($_GET['id'])));
     $article = new DetailCommande();
-    $article->setManga($manga);
-    $article->setQuantite(1);
+    $article->setManga($manga)
+    ->setQuantite(1);
+    if($session->getCommande()){
+        $commande = $_SESSION['commande'];
+        $article->setCommande($commande);
+    }
     $session->addArticle($article);
+
     if (isset($_SERVER['HTTP_REFERER'])) {
         header("Location: " . $_SERVER['HTTP_REFERER']);
     } else {

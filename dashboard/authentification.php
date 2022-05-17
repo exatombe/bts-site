@@ -10,6 +10,7 @@
     $header = true;
     $default = true;
     require "../parts/head.php";
+    $session = new SessionManager();
     if (isset($_SESSION['user'])) {
         header('Location: ../');
     }
@@ -61,6 +62,12 @@
                     <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
+                        $commands = new Commande();
+                        $commands->setUser($auth->getUser());
+                        $commands->setPanier(true);
+                        $commands->setId($auth->insert($commands));
+                        $session->setCommande($commands);
+                        
                     ?>
                         <script src="../public/js/Alert.js"></script>
                         <script>
@@ -96,6 +103,16 @@
                     <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
+                        $commands = new Commande();
+                        $commands->setUser($auth->getUser());
+                        $commands->setPanier(true);
+                        $checkIfPanierAlreadyExist = $auth->findOneBy("commande",["ID_USER" => $auth->getUser()->getId(), "PANIER" => true]);
+                        if ($checkIfPanierAlreadyExist) {
+                            $commands->setId(intval($checkIfPanierAlreadyExist["ID_COMMANDE"]));
+                        } else {
+                            $commands->setId($auth->insert($commands));
+                        }
+                        $session->setCommande($commands);
                     ?>
                         <script src="../public/js/Alert.js"></script>
                         <script>

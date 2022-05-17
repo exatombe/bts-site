@@ -14,7 +14,7 @@
          {
             $detailCommande = parent::find("detailcommande", $detailCommande->getId());
             if($detailCommande){
-                return new DetailCommande($detailCommande[0]["ID_DETAILCOMMANDE"], $detailCommande[0]["Quantite"], $this->select(new Commande($detailCommande[0]["Commande"])), $this->select(new Manga($detailCommande[0]["Manga"])));
+                return new DetailCommande($detailCommande[0]["ID_DETAILCOMMANDE"], $detailCommande[0]["Quantite"], $this->select(new Manga($detailCommande[0]["ID_MANGA"])), $this->select(new Commande($detailCommande[0]["ID_COMMANDE"])));
             }else{
                 return null;
             }

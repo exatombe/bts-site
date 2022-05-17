@@ -16,19 +16,20 @@
 <body style="background-color: lightgray;">
 <?php include $_SERVER['DOCUMENT_ROOT']."/parts/header.php"; ?>
 <br/>
-<br/>g
+<br/>
 <br/>
 <br/>
 <br/>
 <br/>
 
-<p class="messagemoncompte"> MON COMPTE </p>
-<p> Bonjour</p>
-<?php
-$user = $auth->getUser();
-var_dump($user);
-?>
-<br/>
+<div class="messagemoncompte">
+    <p>Bonjour <?php echo $auth->getUser()->getUsername(); ?> !</p>
+</div>
+<div>
+    <?php 
+        var_dump($session->getArticles());
+    ?>
+</div>
 <br/>
 <div style ="width : 92vw;margin: auto;">
 <table class="commandetablestyle">
