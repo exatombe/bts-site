@@ -1,7 +1,7 @@
 <html lang="fr">
 <head>
     <?php
-    $n = "Profil"; // Titre
+    $n = "Details"; // Titre
     $content = "Mon super profil privé"; // Description
     $image = "/media/favicon.ico"; // Image
     $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
@@ -64,7 +64,7 @@
         <?php
             foreach($currentCommandes as $articles){
                 echo '<tr>';
-                echo '<td data-label="article"><a style="color:blue" href="/article?id='.$articles->getManga()->getId().'">'.$articles->getManga()->getTitre().'</a></td>';
+                echo '<td data-label="article"><a style="color:blue" href="/article/'.$articles->getManga()->getId().'">'.$articles->getManga()->getTitre().'</a></td>';
                 echo '<td data-label="quantité">'.$articles->getQuantite().'</td>';
                 echo '<td data-label="prix unitaire">'.$articles->getManga()->getPrix().'€</td>';
                 echo '<td data-label="prix total">'.$articles->getManga()->getPrix()*$articles->getQuantite().'€</td>';

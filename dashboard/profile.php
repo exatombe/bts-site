@@ -55,7 +55,7 @@
         foreach($auth->getCommands() as $key => $value)
         {
             echo '<tr>';
-            echo '<td data-label="commande"><a style="color:blue" href="/dashboard/details?id='.$key.'">#'.$key.'</td>';
+            echo '<td data-label="commande"><a style="color:blue" href="/dashboard/details/'.$key.'">#'.$key.'</td>';
             echo '<td data-label="statut du paiement">Payé</td>';
             echo '<td data-label="total">'.getTotalFromCommand($value).'€</td>';
             echo '</tr>';
