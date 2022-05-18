@@ -25,11 +25,6 @@
 <div class="messagemoncompte">
     <p>Bonjour <?php echo $auth->getUser()->getUsername(); ?> !</p>
 </div>
-<div>
-    <?php 
-        var_dump($auth->getCommands());
-    ?>
-</div>
 <br/>
 <div style ="width : 92vw;margin: auto;">
 <table class="commandetablestyle">
@@ -47,17 +42,25 @@
     </tr>
     </thead>
     <tbody>
-        <tr>
-            <td data-label="commande">
-                #0001
-            </td>
-            <td data-label="statut du paiement">
-                payé
-            </td>
-            <td data-label="total">
-                10€ ta race
-            </td>
-        </tr>
+        <?php
+        function getTotalFromCommand($command)
+        {
+            $total = 0;
+            foreach ($command as $article)
+            {
+                $total += $article->getManga()->getPrix() * $article->getQuantite();
+            }
+            return $total;
+        }
+        foreach($auth->getCommands() as $key => $value)
+        {
+            echo '<tr>';
+            echo '<td data-label="commande"><a style="color:blue" href="/dashboard/details?id='.$key.'">#'.$key.'</td>';
+            echo '<td data-label="statut du paiement">Payé</td>';
+            echo '<td data-label="total">'.getTotalFromCommand($value).'€</td>';
+            echo '</tr>';
+        }
+        ?>
     </tbody>
 </table>
 </div>

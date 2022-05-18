@@ -30,9 +30,9 @@
             }
         }
 
-        public function updateCommande(Commande $commande): ?int
+        public function updateCommande(Commande $commande)
         {
-           $query = parent::query("UPDATE commande SET Panier = ?, ID_USER = ? WHERE ID_COMMANDE = ?", [$commande->getPanier(),$commande->getUser()->getId(),$commande->getId()]);
+           $query = parent::query("UPDATE commande SET Panier = ?, ID_USER = ? WHERE ID_COMMANDE = ?", [$commande->getPanier() ? 1 : 0,$commande->getUser()->getId(),$commande->getId()]);
            if($query){
                return $query->rowCount();
            }else{

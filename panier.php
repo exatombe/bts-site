@@ -19,6 +19,7 @@
 <ul class="panierproduits">
      <?php
         $mangaCart = $session->getArticles();
+     
         foreach($mangaCart as $mangaInCart){
             ?>
             <hr style="height: 2px; background: grey;" />
@@ -49,7 +50,7 @@
 		<br />
 	</div>
 	<br />
-	<button class="moula" style="font-family: 'Reggae One', cursive;"><a href="Paiement.php" style="color: white;">Paiement</a></button>
+	<button class="moula button" onclick="window.location.href='/Paiement'" style="font-family: 'Reggae One', cursive;">Paiement</button>
 </article>
 <img class="logodumillieu" src="media/favicon.ico" alt="logo" />
 <br/>

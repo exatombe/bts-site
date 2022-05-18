@@ -24,6 +24,13 @@ class SessionManager
     public function addArticle($article)
     {
         if (!isset($_SESSION['articles'])) {
+            if ($this->isLogged()) {
+                if(!$article->getId()){
+                $em = new EntityRepository();
+                $article->setCommande($_SESSION['commande']);
+                $article->setId($em->insert($article)); 
+                }
+            }
             $_SESSION['articles'] = array($article);
         } else {
             $found = false;
@@ -32,13 +39,18 @@ class SessionManager
                 if ($value->getManga()->getId() == $article->getManga()->getId()) {
                     $articleCurrent = $_SESSION['articles'][$key];
                     // if the user is logged we update inside the database too
-                    if ($this->isLogged()) {
+                    if ($this->isLogged()) {                        
+                        $em = new EntityRepository();
                         $articleCurrent->setQuantite($value->getQuantite() + 1);
                         if($article->getId()){
                             $articleCurrent->setId($article->getId());
+                            $em->update($articleCurrent);
+                        }elseif($value->getId()){
+                            $articleCurrent->setId($value->getId());
+                            $em->update($articleCurrent);
+                        }else{
+                            $articleCurrent->setId($em->insert($articleCurrent));
                         }
-                        $em = new EntityRepository();
-                        $em->update($articleCurrent);
                         $_SESSION['articles'][$key] =  $articleCurrent;
                     } else {
                         $_SESSION['articles'][$key] =  $articleCurrent->setQuantite($value->getQuantite() + 1);
@@ -54,8 +66,8 @@ class SessionManager
                     if(!$article->getId()){
                     $em = new EntityRepository();
                     $article->setCommande($_SESSION['commande']);
-                    $em->insert($article); 
-                }
+                    $article->setId($em->insert($article)); 
+                    }
                 }
                 array_push($_SESSION['articles'], $article);
             }
@@ -131,9 +143,12 @@ class SessionManager
         $this->setCommandsToAllArticles();
     }
 
+    public function setCommandeAfterCommande($commande){
+        $_SESSION['commande'] = $commande;
+        $this->removeAllArticles();
+    }
 
-
-    public function setCommandsToAllArticles()
+    private function setCommandsToAllArticles()
     {
         if (isset($_SESSION['commande'])) {
 
@@ -167,6 +182,13 @@ class SessionManager
             }
             
             
+        }
+    }
+
+    private function removeAllArticles()
+    {
+        if (isset($_SESSION['articles'])) {
+            unset($_SESSION['articles']);
         }
     }
 }

@@ -10,6 +10,10 @@
         if(isset($_GET['id'])){
         
           $mangarticle = (new EntityRepository)->select(new Manga(intval($_GET['id'])));
+          if(!$mangarticle){
+            header('Location: /');
+            exit();
+          }
         }else{
             header("Location: /");
         }

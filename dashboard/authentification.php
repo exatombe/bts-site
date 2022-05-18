@@ -106,7 +106,7 @@
                         $commands = new Commande();
                         $commands->setUser($auth->getUser());
                         $commands->setPanier(true);
-                        $checkIfPanierAlreadyExist = $auth->findOneBy("commande",["ID_USER" => $auth->getUser()->getId(), "PANIER" => true]);
+                        $checkIfPanierAlreadyExist = $auth->findOneBy("commande",["ID_USER" => $auth->getUser()->getId(), "PANIER" => 1]);
                         if ($checkIfPanierAlreadyExist) {
                             $commands->setId(intval($checkIfPanierAlreadyExist["ID_COMMANDE"]));
                         } else {
