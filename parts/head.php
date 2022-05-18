@@ -1,7 +1,7 @@
 <?php
     if(isset($content) && isset($n) && isset($key) && isset($image)){
-    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/Auth.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/src/manager/session.php';
+    include_once($_SERVER['DOCUMENT_ROOT'].'/src/manager/auth.php');
+    include_once($_SERVER['DOCUMENT_ROOT'].'/src/manager/session.php');
     $session = new SessionManager();
     session_start();
     $auth = new Auth();
@@ -13,18 +13,18 @@ if (isset($_SESSION['user'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="<?php echo $content; ?>"/>
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="application-name" content="AnimeHub" />
+        <meta name="application-name" content="Le marché du Manga" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="AnimeHub" />
+        <meta name="apple-mobile-web-app-title" content="Le marché du Manga" />
         <meta property="og:title" content="<?php echo $n; ?>" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="AnimeHub" />
+        <meta property="og:site_name" content="Le marché du Manga" />
         <meta name="keywords" content="<?php echo $key; ?>" />
-        <meta property="og:url" content="https://animehub.world-heberg.com/" />
+        <meta property="og:url" content="https://lemarchedumanga.com" />
         <meta property="og:image" content="<?php echo $image; ?>" />
         <meta property="og:description" content="<?php echo $content; ?>"/>
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@diamondeagle8" />
+        <meta name="twitter:site" content="@lemarchedumanga" />
         <meta name="twitter:title" content="<?php echo $n; ?>" />
         <meta name="twitter:description" content= "<?php echo $content; ?>" />
         <meta charset="utf-8">

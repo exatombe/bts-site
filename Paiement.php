@@ -1,8 +1,7 @@
 <html lang="fr">
-    
 <head>
     <?php
-    $n = "Le Marche des Mangas"; // Titre
+    $n = "Le Marche des Mangas - Payement"; // Titre
     $content = "Mon super site "; // Description
     $image ="/media/favicon.ico"; // Image
     $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé

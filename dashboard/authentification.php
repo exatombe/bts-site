@@ -2,14 +2,15 @@
 
 <head>
     <?php
-    $n = "Le Marche des Mangas - Login"; // Titre
-    $content = "Le login"; // Description
-    $image = "https://img.search.brave.com/H1k51jh7MoZP6ORpCXv7mD-vgVSQciaZIwBtoBkNrqg/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL3By/b2ZpbGVfaW1hZ2Vz/LzE1NjM2OTU4ODIv/bG9nb19ibG9nXzQw/MHg0MDAucG5n"; // Image
+    $n = "Authentification"; // Titre
+    $content = "Portail de connexion"; // Description
+    $image = "/media/favicon.ico"; // Image
     $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
     $footer = true;
     $header = true;
     $default = true;
     require "../parts/head.php";
+    $session = new SessionManager();
     if (isset($_SESSION['user'])) {
         header('Location: ../');
     }
@@ -61,6 +62,12 @@
                     <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
+                        $commands = new Commande();
+                        $commands->setUser($auth->getUser());
+                        $commands->setPanier(true);
+                        $commands->setId($auth->insert($commands));
+                        $session->setCommande($commands);
+                        
                     ?>
                         <script src="../public/js/Alert.js"></script>
                         <script>
@@ -96,6 +103,16 @@
                     <?php
                     } else {
                         $_SESSION['user'] = $auth->getUser();
+                        $commands = new Commande();
+                        $commands->setUser($auth->getUser());
+                        $commands->setPanier(true);
+                        $checkIfPanierAlreadyExist = $auth->findOneBy("commande",["ID_USER" => $auth->getUser()->getId(), "PANIER" => true]);
+                        if ($checkIfPanierAlreadyExist) {
+                            $commands->setId(intval($checkIfPanierAlreadyExist["ID_COMMANDE"]));
+                        } else {
+                            $commands->setId($auth->insert($commands));
+                        }
+                        $session->setCommande($commands);
                     ?>
                         <script src="../public/js/Alert.js"></script>
                         <script>

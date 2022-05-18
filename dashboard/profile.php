@@ -1,9 +1,9 @@
 <html lang="fr">
 <head>
     <?php
-    $n = "Le Marche des Mangas"; // Titre
-    $content = "Mon super site "; // Description
-    $image ="https://img.search.brave.com/H1k51jh7MoZP6ORpCXv7mD-vgVSQciaZIwBtoBkNrqg/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL3By/b2ZpbGVfaW1hZ2Vz/LzE1NjM2OTU4ODIv/bG9nb19ibG9nXzQw/MHg0MDAucG5n"; // Image
+    $n = "Profil"; // Titre
+    $content = "Mon super profil privé"; // Description
+    $image = "/media/favicon.ico"; // Image
     $key = "manga, scan, shop, e-commerce, one piece, naruto"; // Mots clé
     require $_SERVER['DOCUMENT_ROOT']."/parts/head.php";
     if ($auth->isLoggedIn() == false)
@@ -16,19 +16,20 @@
 <body style="background-color: lightgray;">
 <?php include $_SERVER['DOCUMENT_ROOT']."/parts/header.php"; ?>
 <br/>
-<br/>g
+<br/>
 <br/>
 <br/>
 <br/>
 <br/>
 
-<p class="messagemoncompte"> MON COMPTE </p>
-<p> Bonjour</p>
-<?php
-$user = $auth->getUser();
-var_dump($user);
-?>
-<br/>
+<div class="messagemoncompte">
+    <p>Bonjour <?php echo $auth->getUser()->getUsername(); ?> !</p>
+</div>
+<div>
+    <?php 
+        var_dump($auth->getCommands());
+    ?>
+</div>
 <br/>
 <div style ="width : 92vw;margin: auto;">
 <table class="commandetablestyle">
