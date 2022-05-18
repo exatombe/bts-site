@@ -20,7 +20,7 @@
             foreach ($mangas as $manga) {
         ?>
                 <article class="card">
-                    <a href="/article.php?id=<?php echo $manga->getId(); ?>">
+                    <a href="/article?id=<?php echo $manga->getId(); ?>">
                         <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
                     </a>
                     <div class="card_text">
