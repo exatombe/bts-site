@@ -13,6 +13,14 @@ html{/*
 }
 
 
+/* Main page */
+main{
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1 1;
+    flex-direction: column;
+}
+/* Fin Main page */
 
 /* TEST MATHEO PAS TOUCHER BANDE DE TCHOINS */
 /* ❤❤❤ */

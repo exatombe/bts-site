@@ -1,15 +1,14 @@
 footer {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #262626;
-    bottom: 0;
     color: #666666;
-    display: flex;
     font-size: 5em;
     height: 120px;
-    justify-content: center;
-    position: relative;
     text-transform: uppercase;
-    width: 100%;
+    flex: 1 1;
+    padding: 2rem 0;
   }
 
 

@@ -144,11 +144,10 @@
         }
         ?>
     </ul>
-    <br />
-    <br />
     <a href="/panier" class="button">Checkout</a>
   </div> <!--end shopping-cart -->
 </div> <!--end container -->
+<main>
 <!--
 
 -->

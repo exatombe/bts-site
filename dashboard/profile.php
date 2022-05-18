@@ -15,17 +15,10 @@
     </head>
 <body style="background-color: lightgray;">
 <?php include $_SERVER['DOCUMENT_ROOT']."/parts/header.php"; ?>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 <div class="messagemoncompte">
     <p>Bonjour <?php echo $auth->getUser()->getUsername(); ?> !</p>
 </div>
-<br/>
+</br>
 <div style ="width : 92vw;margin: auto;">
 <table class="commandetablestyle">
     <thead>
@@ -64,34 +57,6 @@
     </tbody>
 </table>
 </div>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/parts/footer.php'; ?>
 </body>
 </html>

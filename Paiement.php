@@ -516,9 +516,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
 <script src="/public/js/cardValidator.js"></script>
-<br />
-<br/>
-
 <?php include './parts/footer.php'; ?>
 </body>
 </html>

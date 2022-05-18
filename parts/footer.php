@@ -1,4 +1,5 @@
-		<footer class="footer-distributed">
+</main>
+<footer class="footer-distributed">
 
 			<div class="footer-right">
 
