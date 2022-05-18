@@ -732,3 +732,52 @@ html{/*
     }
     
 }
+
+/*Css de la page payement*/
+
+.blockpay {
+    border: none;
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 380px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.payt {
+    font-family: 'Reggae One', cursive;
+    font-size: x-large;
+}
+
+.formul {
+    display: flex;
+}
+
+.block2 {
+    display: block;
+}
+
+.blockimput {
+    margin: 20px auto;
+    padding: 12px;
+}
+
+.moulaa {
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #A11111;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px auto 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.moulaa:hover{
+    background: #D11111;
+}
