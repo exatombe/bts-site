@@ -132,6 +132,7 @@
 
         foreach($mangaCart as $mangaInCart){
             ?>
+            <br />
             <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
           <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
@@ -144,6 +145,8 @@
         }
         ?>
     </ul>
+    <br />
+    <br />
     <a href="/panier" class="button">Checkout</a>
   </div> <!--end shopping-cart -->
 </div> <!--end container -->

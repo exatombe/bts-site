@@ -197,15 +197,12 @@
 }
 
 .shopping-cart {
-    margin: 20px 0;
+    margin: 20px 70px;
     float: right;
     background: white;
     width: 320px;
-    position: absolute;
-    right: 150px;
     border-radius: 3px;
     padding: 20px;
-    
     
     .shopping-cart-header {
       border-bottom: 1px solid #E8E8E8;
@@ -267,7 +264,7 @@
     background: $main-color;
     color:white;
     text-align: center;
-    padding: 12px;
+    padding-bottom: 10px;
     text-decoration: none;
     display: block;
     border-radius: 3px;
