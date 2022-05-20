@@ -8,7 +8,7 @@
     require "./parts/head.php";
     $variable = "Nothing";
     if(!$auth->isLoggedIn()){
-        header('Location: /');
+        header('Location: /dashboard/authentification');
     }else{
         if(isset($_POST["card"])){
             $commandes = $session->getCommande();
