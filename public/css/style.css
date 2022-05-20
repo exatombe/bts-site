@@ -57,8 +57,7 @@ main{
     width: 0;
     height: 450px;
     display: inline-block;
-    margin: 2% 10%;
-    margin-left: 0;
+    margin: 2% 10% 2% 0;
     background: #A9A9A9;
     border: solid #A9A9A9 1px;
     vertical-align: middle;
@@ -88,25 +87,36 @@ main{
     padding: 2% 4%;
     margin: 2% 4%;
     border: solid black 2px;
+    min-height: 40%;
 }
 
+/*.article_createurs{
+    width: 50%;
+    height: 20%;
+    margin: 2%;
+}*/
 .article_createurs{
-    display: inline-block;
     font-size: large;
     border: solid black 2px;
-    width: 46%;
-    height: 20%;
-}
-
-.article_prix{
-    display: inline-block;
-    font-size: x-large;
-    border: solid black 2px;
-    width: 46%;
     text-align: center;
+    margin: 10% 5% 10% 5%;
+    min-height: 15%;
+    float: left;
+}
+.article_prix{
+    font-size: xx-large;
+    border: solid black 2px;
+    text-align: center;
+    margin: 10%;
+    min-height: 15%;
+    float: right;
+}
+/*.article_prix{
+    width: 25%;
     vertical-align: middle;
     height: 20%;
-}
+    margin: 2%;
+}*/
 
 .article_synopsis{
     margin: 2% 10%;
@@ -124,7 +134,7 @@ main{
 }
 
 .article_caractéristiques{
-    margin: 2% 5% 2% 2%;
+    margin: 2%;
     padding: 2%;
     display: inline-block;
     border: 4px grey;

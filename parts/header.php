@@ -2,14 +2,8 @@
 <header class="site-header">
     <div class="site-header__top">
         <div class="wrapper site-header__wrapper">
-            <div class="site-header__start">
-                <ul class="">
-                    <li class=""><a href="#">About</a></li>
-                    <li class=""><a href="#">Contact</a></li>
-                </ul>
-            </div>
             <div class="site-header__middle">
-                <a href="/" class="brand">LMM</a>
+                <img src="./media/logo-80.png" class="testlogo12495" href="/">
             </div>
             <div class="site-header__end top">
                 <?php if (isset($_SESSION['user'])) {

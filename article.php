@@ -30,8 +30,9 @@
                     <p class="article_titre"><?= $mangarticle->getTitre(); ?></p><br/>
                     <div class="article_infos">
                         <div class="article_createurs">
-                            Auteur:<?= $mangarticle->getAuteur()->getNom() . " " . $mangarticle->getAuteur()->getPrenom(); ?>
-                            Artiste:<?= $mangarticle->getArtiste()->getNom() . " " . $mangarticle->getArtiste()->getPrenom(); ?>
+                            Auteur: <?= $mangarticle->getAuteur()->getNom() . " " . $mangarticle->getAuteur()->getPrenom(); ?>
+                            <br/><br/>
+                            Artiste: <?= $mangarticle->getArtiste()->getNom() . " " . $mangarticle->getArtiste()->getPrenom(); ?>
                         </div>
                         <div class="article_prix">
                             <?= number_format($mangarticle->getPrix(),2); ?>€
