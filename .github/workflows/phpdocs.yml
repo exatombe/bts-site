@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: build phar
-      uses: docker://phpdoc/phar-ga:master
+      uses: docker://phpdoc/phar-ga:master 
       with:
-        args: box compile
+        args: -d ./src -t ./docs
     - run: ls
     
