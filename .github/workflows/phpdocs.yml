@@ -16,6 +16,6 @@ jobs:
     - name: build phar
       uses: docker://phpdoc/phar-ga:master 
       with:
-        args: -d ./src -t ./docs
+        args: box compile
     - run: ls
     
