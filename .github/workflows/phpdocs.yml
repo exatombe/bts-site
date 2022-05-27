@@ -6,11 +6,13 @@ name: CI
 on:
   release:
     types: [published]
+  workflow_dispatch
     
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: build phar
       uses: docker://phpdoc/phar-ga:master
       with:
