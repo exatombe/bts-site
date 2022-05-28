@@ -25,7 +25,6 @@
         <div class="article">
             <div class="article_part1">
                 <img class="article_img" src="<?= $mangarticle->getImage(); ?>">
-                <div class="article_vligne"></div>
                 <div class="article_desc">
                     <p class="article_titre"><?= $mangarticle->getTitre(); ?></p><br/>
                     <div class="article_infos">
@@ -37,6 +36,9 @@
                         <div class="article_prix">
                             <?= number_format($mangarticle->getPrix(),2); ?>€
                         </div>
+                    </div>
+                    <div class="article_bouton">
+                    <a class="article_ajout_panier" href="/addToCart?id=<?= $mangarticle->getId(); ?>">AJOUTER AU PANIER</a>
                     </div>
                 </div>
             </div>

@@ -34,11 +34,11 @@ main{
     width: auto;
     margin: 15px 20px;
     padding: 10px;
-    border: solid black 2px;
 }
 
 .article_part1{
-    border: solid black 2px;
+    border-bottom: solid grey 2px;
+    margin: 0 10%;
 }
 
     /* bloc qui fixe l'image du manga */
@@ -48,30 +48,19 @@ main{
     height: 450px;
     display: inline-block;
     margin: 2% 10%;
-    border: solid black 3px;
-    vertical-align: middle;
-}
-
-    /* ligne de séparation entre l'image et les infos principales */
-.article_vligne{
-    width: 0;
-    height: 450px;
-    display: inline-block;
-    margin: 2% 10% 2% 0;
-    background: #A9A9A9;
-    border: solid #A9A9A9 1px;
     vertical-align: middle;
 }
 
     /* bloc des infos principales (contient: titre / prix / auteur / artiste) */
 .article_desc{
     /* infos de l'article (titre prix auteur artiste) */
-    border: solid black 2px;
-    margin: 2%;
+    margin: 4% 8%;
     display: inline-block;
     vertical-align: middle;
     height: 400px;
-    width: 33%;
+    width: 36%;
+    text-align: center;
+    border: solid black 1px;
 }
 
     /* bloc du titre du manga */
@@ -81,23 +70,16 @@ main{
     padding: 4% 8%;
     height: 50%;
     line-height: 110%;
+    text-align: left;
 }
 
 .article_infos{
-    padding: 2% 4%;
     margin: 2% 4%;
-    border: solid black 2px;
-    min-height: 40%;
+    min-height: 30%;
 }
 
-/*.article_createurs{
-    width: 50%;
-    height: 20%;
-    margin: 2%;
-}*/
 .article_createurs{
     font-size: large;
-    border: solid black 2px;
     text-align: center;
     margin: 10% 5% 10% 5%;
     min-height: 15%;
@@ -105,18 +87,26 @@ main{
 }
 .article_prix{
     font-size: xx-large;
-    border: solid black 2px;
     text-align: center;
     margin: 10%;
     min-height: 15%;
     float: right;
 }
-/*.article_prix{
-    width: 25%;
-    vertical-align: middle;
-    height: 20%;
-    margin: 2%;
-}*/
+
+.article_ajout_panier{
+    background-color: #8D0E0E;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.article_bouton{
+    color: #fff;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
 
 .article_synopsis{
     margin: 2% 10%;
