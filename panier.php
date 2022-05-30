@@ -52,7 +52,7 @@
 	<br />
 	<button class="moula button" onclick="window.location.href='/Paiement'" style="font-family: 'Reggae One', cursive;">Paiement</button>
 </article>
-<img class="logodumillieu" src="media/favicon.ico" alt="logo" />
+<img class="logodumillieu" src="media/logo-145.png" alt="logo" />
 <br/>
 <br />
 <br />
