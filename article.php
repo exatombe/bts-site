@@ -23,7 +23,7 @@
     <body style="background-color: lightgray;">
         <?php include "./parts/header.php"; ?>
         <div class="article">
-            <div class="article_part1">
+            <div class="article_part">
                 <img class="article_img" src="<?= $mangarticle->getImage(); ?>">
                 <div class="article_desc">
                     <p class="article_titre"><?= $mangarticle->getTitre(); ?></p><br/>
@@ -44,10 +44,13 @@
             </div>
             <div class="article_synopsis">
                 <p style="font-weight: bold"> Résumé: </p>
+                <br/>
                 <p style="margin: 2% 5%"> <?= $mangarticle->getSynopsis(); ?> </p>
             </div>
+            <br/>
             <div class="article_tableau">
-                <p style="font-weight: bold;text-align: left">Caractéristiques: </p><br/>
+                <p style="font-weight: bold;text-align: left">Caractéristiques: </p>
+                <br/><br/>
                 <div class="article_caractéristiques"> Éditeur : <?= $mangarticle->getEditeur();  ?> </div>
                 <div class="article_caractéristiques"> ISBN : <?= $mangarticle->getIsbn(); ?> </div>
                 <div class="article_caractéristiques"> Genre : <?= $mangarticle->getGenre(); ?> </div>

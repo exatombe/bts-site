@@ -36,9 +36,10 @@ main{
     padding: 10px;
 }
 
-.article_part1{
+.article_part{
     border-bottom: solid grey 2px;
-    margin: 0 10%;
+    text-align: center;
+    padding: 0 5%;
 }
 
     /* bloc qui fixe l'image du manga */
@@ -47,18 +48,18 @@ main{
     width: 300px;
     height: 450px;
     display: inline-block;
-    margin: 2% 10%;
+    margin: 2% 15% 2% 2%;
     vertical-align: middle;
 }
 
     /* bloc des infos principales (contient: titre / prix / auteur / artiste) */
 .article_desc{
     /* infos de l'article (titre prix auteur artiste) */
-    margin: 4% 8%;
+    margin: 4% 4% 4% 2%;
     display: inline-block;
     vertical-align: middle;
     height: 400px;
-    width: 36%;
+    width: 300px;
     text-align: center;
     border: solid black 1px;
 }
@@ -68,7 +69,7 @@ main{
     font-size: xx-large;
     font-weight: bold;
     padding: 4% 8%;
-    height: 50%;
+    height: 30%;
     line-height: 110%;
     text-align: left;
 }
@@ -83,14 +84,12 @@ main{
     text-align: center;
     margin: 10% 5% 10% 5%;
     min-height: 15%;
-    float: left;
 }
 .article_prix{
     font-size: xx-large;
     text-align: center;
     margin: 10%;
     min-height: 15%;
-    float: right;
 }
 
 .article_ajout_panier{
