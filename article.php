@@ -51,10 +51,10 @@
             <div class="article_tableau">
                 <p style="font-weight: bold;text-align: left">Caractéristiques: </p>
                 <br/><br/>
-                <div class="article_caractéristiques"> Éditeur : <?= $mangarticle->getEditeur();  ?> </div>
-                <div class="article_caractéristiques"> ISBN : <?= $mangarticle->getIsbn(); ?> </div>
-                <div class="article_caractéristiques"> Genre : <?= $mangarticle->getGenre(); ?> </div>
-                <div class="article_caractéristiques"> Format : <?= $mangarticle->getFormat(); ?></div>
+                <div class="article_caracteristique"> Éditeur : <?= $mangarticle->getEditeur();  ?> </div>
+                <div class="article_caracteristique"> ISBN : <?= $mangarticle->getIsbn(); ?> </div>
+                <div class="article_caracteristique"> Genre : <?= $mangarticle->getGenre(); ?> </div>
+                <div class="article_caracteristique"> Format : <?= $mangarticle->getFormat(); ?></div>
             </div>
         </div>
 
