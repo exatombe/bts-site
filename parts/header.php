@@ -25,7 +25,7 @@
                     <ul class="nav__wrapper">
                         <li class="nav__item"><a href="/" style="color: white;">Home</a></li>
                         <li class="nav__item"><a href="/presentation" style="color: white;">A propos</a></li>
-                        <li class="nav__item"><a href="#" style="color: white;">Services</a></li>
+                        <li class="nav__item"><a href="/categories" style="color: white;">Catégories</a></li>
                         <li class="nav__item"><a href="#" style="color: white;">Contact</a></li>
                     </ul>
                 </nav>
