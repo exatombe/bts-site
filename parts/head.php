@@ -45,7 +45,7 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" type="text/css" href="/public/css/styleFooter.css">
        <?php } ?>
         <?php if(!isset($header)){ ?>
-            <link rel="stylesheet" type="text/css" href="/public/css/header.scss">
+            <link rel="stylesheet" type="text/css" href="/public/css/header.css">
             <link rel="stylesheet" type="text/css" href="/public/css/reset.min.css">
         <?php } ?>
 

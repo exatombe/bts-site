@@ -1,4 +1,4 @@
-<script src="../public/js/search.js"></script>
+<script src="/public/js/search.js"></script>
 <header class="site-header">
     <div class="site-header__top">
         <div class="wrapper site-header__wrapper">
@@ -24,9 +24,10 @@
                     </a>
                     <ul class="nav__wrapper">
                         <li class="nav__item"><a href="/" style="color: white;">Home</a></li>
+                        <li class="nav__item"><a href="/categories/seinen" style="color: white;">Seinen</a></li>
+                        <li class="nav__item"><a href="/categories/shojo" style="color: white;">Shojo</a></li>
+                        <li class="nav__item"><a href="/categories/shonen" style="color: white;">Shonen</a></li>
                         <li class="nav__item"><a href="/presentation" style="color: white;">A propos</a></li>
-                        <li class="nav__item"><a href="/categories" style="color: white;">Catégories</a></li>
-                        <li class="nav__item"><a href="#" style="color: white;">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -119,7 +120,6 @@
         <span class="main-color-text"><?= number_format($session->getCartPrice(),2); ?></span>
         </span>
     </div> <!--end shopping-cart-header -->
-
     <ul class="shopping-cart-items">
      <?php
         $mangaCart = $session->getArticles();
@@ -127,20 +127,17 @@
         foreach($mangaCart as $mangaInCart){
             ?>
             <br />
-            <hr style="height: 2px; background: grey;" />
       <li class="clearfix">
-          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
-          <span class="item-name"><?= $mangaInCart->getManga()->getTitre(); ?></span>
+          <img src="<?= $mangaInCart->getManga()->getImage(); ?>" alt="<?= strlen($mangaInCart->getManga()->getTitre()) > 20 ? substr($mangaInCart->getManga()->getTitre(),0,20) : $mangaInCart->getManga()->getTitre(); ?>" width="50" height="75" />
+          <span class="item-name"><?= strlen($mangaInCart->getManga()->getTitre()) > 20 ? substr($mangaInCart->getManga()->getTitre(),0,20)."..." : $mangaInCart->getManga()->getTitre(); ?></span>
           <span class="item-price" style="font-weight: bold;"><?= number_format($mangaInCart->getManga()->getPrix()*$mangaInCart->getQuantite(),2); ?> €</span>
-          <div class="item-quantity">Quantity: <?= $mangaInCart->getQuantite(); ?></div></br/>
+          <div class="item-quantity">Quantitée: <?= $mangaInCart->getQuantite(); ?></div></br/>
           <a class="button" href="/removeFromCart?id=<?= $mangaInCart->getManga()->getId(); ?>">Retirer</a>
       </li>
       <?php
         }
         ?>
     </ul>
-    <br />
-    <br />
     <a href="/panier" class="button">Checkout</a>
   </div> <!--end shopping-cart -->
 </div> <!--end container -->

@@ -2,6 +2,7 @@ Options -Indexes -MultiViews
 RewriteEngine on
 RewriteRule ^dashboard/details/(.*)$ dashboard/details.php?id=$1 [NC,L]
 RewriteRule ^article/(.*)$ article.php?id=$1 [NC,L]
+RewriteRule ^categories/(.*)$ categories.php?id=$1 [NC,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

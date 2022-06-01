@@ -200,16 +200,115 @@
     font-weight: bold;
     border-radius: 0.2em;
 }
-
-.shopping-cart {
-    margin: 20px 70px;
-    position: relative;
+/* Shopping cart */
+.container {
+    margin: auto;
+    width: 80%;
+    right: 110px;
+    position: absolute;
+ 
+  }
+  
+  .badge {
+    background-color: #EB4040;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .shopping-cart {
+    margin: 20px 0;
+    float: right;
     background: white;
     width: 320px;
+    position: relative;
     border-radius: 3px;
     padding: 20px;
-
-}
+  }
+  .shopping-cart .shopping-cart-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+  }
+  .shopping-cart .shopping-cart-header .shopping-cart-total {
+    float: right;
+  }
+  .shopping-cart .shopping-cart-items {
+    padding-top: 20px;
+    max-height: 350px;
+    overflow: auto;
+  }
+  .shopping-cart .shopping-cart-items li {
+    margin-bottom: 18px;
+  }
+  .shopping-cart .shopping-cart-items img {
+    float: left;
+    object-fit: cover;
+    margin-right: 12px;
+    width: 50px;
+    height: 75px;
+    vertical-align: middle;
+  }
+  .shopping-cart .shopping-cart-items .item-name {
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+  }
+  .shopping-cart .shopping-cart-items .item-price {
+    color: #EB4040;
+    margin-right: 8px;
+  }
+  .shopping-cart .shopping-cart-items .item-quantity {
+    color: #ABB0BE;
+  }
+  
+  .shopping-cart:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+  
+  .cart-icon {
+    color: #515783;
+    font-size: 24px;
+    margin-right: 7px;
+    float: left;
+  }
+  
+  .button {
+    background: #6394F8;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+  }
+  .button:hover {
+    background: #f9a672;
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 @media (max-width: 425px) {
 
