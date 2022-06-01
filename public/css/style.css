@@ -94,7 +94,7 @@ main{
 
 .article_ajout_panier{
     background-color: #8D0E0E;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border-radius: 5px;
     text-align: center;
     color: #fff;
@@ -164,7 +164,7 @@ main{
     object-fit: cover;
     width: 200px;
     height: 300px;
-    margin: 15%;
+    margin: 15% 0;
 }
 
 
