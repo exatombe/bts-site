@@ -163,6 +163,7 @@ Partie entièrement réalisé par Vadim
     text-align: center;
     flex: 1;
     padding: 10px;
+    width: 200px;
 }
 
 .card_text{
