@@ -51,7 +51,7 @@
                     return (new EntityRepository)->select(new Artiste($value["ID_ARTISTE"]));
                 }
                 $name = htmlspecialchars($name);
-                $searchValues = parent::query("SELECT * FROM artiste WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
+                $searchValues = (new EntityRepository)->query("SELECT * FROM artiste WHERE Nom LIKE '%$name%' OR Prenom LIKE '%$name%'");
                 if($searchValues->rowCount() > 0){
                     $searchValues = $searchValues->fetchAll();
                     return array_map("makeArrayOfClassFromValues3",$searchValues);
