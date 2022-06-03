@@ -46,7 +46,7 @@ if (count($mangas) > 0) {
                 <img class="card_img" src="<?= $manga->getImage(); ?>" alt="<?= $manga->getTitre(); ?>">
             </a>
             <div class="card_text">
-                <p style="font-weight: bold;"><?= $manga->getTitre(); ?></p><br />
+                <p style="font-weight: bold;"><?= strlen($manga->getTitre()) > 20 ? substr($manga->getTitre(),0,20)."..." : $manga->getTitre(); ?></p><br />
                 <p> de <?= $manga->getAuteur()->getNom() . " " . $manga->getAuteur()->getPrenom(); ?></p><br />
                 <p style="font-size: larger;"><?= $manga->getPrix(); ?>€</p><br />
                 <a class="button" href="/addToCart?id=<?= $manga->getId(); ?>">
