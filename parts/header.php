@@ -24,9 +24,9 @@
                     </a>
                     <ul class="nav__wrapper">
                         <li class="nav__item"><a href="/" style="color: white;">Home</a></li>
-                        <li class="nav__item"><a href="/categories/seinen" style="color: white;">Seinen</a></li>
-                        <li class="nav__item"><a href="/categories/shojo" style="color: white;">Shojo</a></li>
-                        <li class="nav__item"><a href="/categories/shonen" style="color: white;">Shonen</a></li>
+                        <li class="nav__item"><a href="/categories?id=seinen" style="color: white;">Seinen</a></li>
+                        <li class="nav__item"><a href="/categories?id=shojo" style="color: white;">Shojo</a></li>
+                        <li class="nav__item"><a href="/categories?id=shonen" style="color: white;">Shonen</a></li>
                         <li class="nav__item"><a href="/presentation" style="color: white;">A propos</a></li>
                     </ul>
                 </nav>
