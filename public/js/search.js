@@ -46,6 +46,9 @@ var render = function($output) {
     }
 }
 
+/**
+ * Ici ont fait de l'Ajax pour la recherche vers l'API local
+ */
 fetch("/api/search?product=").then(res=> res.json()).then(data => {
     console.log(data);
     words = data.map(item => {

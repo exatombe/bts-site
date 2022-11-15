@@ -112,7 +112,9 @@ class EntityRepository extends Database
         }
     }
 
-
+/**
+ * Permet de chercher un manga ou plusieurs dans la base de donnée
+ */
     public function searchManga(string $product): array
     {
         function makeArrayOfClassFromValues($value)
@@ -129,7 +131,9 @@ class EntityRepository extends Database
             return [];
         }
     }
-
+/**
+* Permet de récupérer tout les mangas de la base de donnée 
+*/
     public function getAllManga(): array
     {
         function makeArrayOfClassFromValues4($value)
@@ -145,7 +149,9 @@ class EntityRepository extends Database
             return [];
         }
     }
-
+/**
+ * Permet de récupérer tous les auteurs ou un seul auteur en fonction de son nom ou prénom
+ */
     public function searchAuteur(string $name): array
     {
         function makeArrayOfClassFromValues2($value)
@@ -162,6 +168,9 @@ class EntityRepository extends Database
         }
     }
 
+/**
+ * Permet de chercher les artistes parmis les différents existant au sein de la base de donnée
+ */
     public function searchArtiste(string $name): array
     {
         function makeArrayOfClassFromValues3($value)
