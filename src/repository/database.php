@@ -11,8 +11,8 @@ class Database
     function __construct()
     {
         $dsn = 'mysql:dbname=lemarchedumanga;host=localhost';
-        $user = 'root';
-        $password = '';
+        $user = 'lemarchedumanga';
+        $password = '4TNhG7pw2XTWTBML';
         try {
             $dbh = new PDO($dsn, $user, $password);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

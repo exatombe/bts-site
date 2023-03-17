@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html lang="fr">
 
 <head>
