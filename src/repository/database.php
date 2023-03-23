@@ -10,7 +10,7 @@ class Database
     public $error;
     function __construct()
     {
-        $dsn = 'mysql:dbname=lemarchedumanga;host=localhost';
+        $dsn = 'mysql:dbname=lemarchedumanga;host=149.91.80.94';
         $user = 'lemarchedumanga';
         $password = '4TNhG7pw2XTWTBML';
         try {
