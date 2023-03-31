@@ -149,21 +149,16 @@ Partie entièrement réalisé par Vadim et Matheo
 }
 
 .cards{
-    display: flex;
-    order: 5;
-    align-items: flex-start;
-    flex-flow: row wrap;
-    inline-size: auto;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    grid-gap: 20px;
-    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 2rem;
+    margin: 0 7% 5%;
 }
 
 .card{
     text-align: center;
-    flex: 1;
-    padding: 10px;
-    width: 200px;
+    padding: 5px;
 }
 
 .card_text{
@@ -178,8 +173,21 @@ Partie entièrement réalisé par Vadim et Matheo
     object-fit: cover;
     width: 200px;
     height: 300px;
-    margin: 15% 0;
+    margin: 5% 0;
 }
+
+.add-to-cart-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #fff;
+    background-color: #8D0E0E;
+    min-width: 120px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
 /**
 * Style des commandes
 */
@@ -216,6 +224,9 @@ Partie entièrement réalisé par Vadim et Matheo
 }
 
 @media screen and (max-width: 600px) {
+    /*.grid-cards {
+        grid-template-columns: repeat(1, minmax(200px,20%));
+    }*/
     .commandetablestyle {
         border: 0;
     }
@@ -263,7 +274,6 @@ Partie entièrement réalisé par Vadim et Matheo
         border-bottom: 0;
     }
 }
-
 /**
 * Fin style des commandes
 */
