@@ -26,6 +26,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/styleAuthentification.css">
+    <script>
+        function validateForm() {
+            let username = document.forms["signupForm"]["username"].value;
+            let email = document.forms["signupForm"]["username"].value;
+            let passwd = document.forms["signupForm"]["username"].value;
+            let passwd2 = document.forms["signupForm"]["username"].value;
+
+            if (username == "") {
+                document.getElementById("username").style.border = "solid blue 3px";
+                document.getElementById("errorusername").innerHTML = "Please enter a username";
+                return false;
+            }
+            if (email == "") {
+                document.getElementById("username").style.border = "solid blue 3px";
+                document.getElementById("erroremail").innerHTML = "Please enter a valid email";
+                return false;
+            }
+            if (passwd == "") {
+                document.getElementById("username").style.border = "solid blue 3px";
+                document.getElementById("errorpass").innerHTML = "Please enter a password that contain at least 8 characters, an uppercase and a lowercase, a number and a special character.";
+                return false;
+            }
+            if (passwd2 == "") {
+                document.getElementById("username").style.border = "solid blue 3px";
+                document.getElementById("errorusername").innerHTML = "Please enter a username";
+                return false;
+            }
+        }
+    </script>
+    <style>
+        .error{
+            color: #D8000C;
+            background-color: #FFBABA;
+            width: 60%;
+            display: flex;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,15 +74,19 @@
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
-            <form method="POST" enctype="multipart/form-data">
+            <form name="signupForm" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data">
                 <label for="chk" aria-hidden="true">Sign up</label>
                 <input type="hidden" name="signup" value="submit">
-                <input type="text" name="username" placeholder="Username" required="">
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="password" id="passwd" placeholder="Password" required="">
-                <input type="password" name="confirmPass" id="passwd2" placeholder="Password" required="">
+                <input type="text" name="username" id="username" placeholder="Username">
+                <div class="error" name="errorusername" id="errorusername"></div>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <div class="error" name="erroremail" id="erroremail"></div>
+                <input type="password" name="password" id="passwd" placeholder="Password">
+                <div class="error" name="errorpasswd" id="errorpasswd"></div>
+                <input type="password" name="confirmPass" id="passwd2" placeholder="Password">
+                <div class="error" name="errorpasswd2" id="errorpasswd2"></div>
                 <button onclick="fillPassword()" type="button">Fill password</button>
-                <input type="file" name="picture_user" placeholder="photo" required="">
+                <input type="file" name="picture_user" placeholder="photo">
                 <?php
                 if (isset($_POST['signup'])) {
                     $email = $_POST['email'];

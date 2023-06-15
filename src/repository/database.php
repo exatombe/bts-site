@@ -8,6 +8,20 @@ class Database
 {
     private $db;
     public $error;
+    /*function __construct()
+    {
+        $dsn = 'mysql:dbname=lemarchedumanga;host=localhost';
+        $user = 'root';
+        $password = '';
+        try {
+            $dbh = new PDO($dsn, $user, $password);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            // add utf8 encoding
+            $dbh->exec('SET NAMES utf8');
+            $this->db = $dbh;
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+        }*/
     function __construct()
     {
         $dsn = 'mysql:dbname=lemarchedumanga;host=149.91.80.94';
@@ -23,6 +37,7 @@ class Database
             $this->error = $e->getMessage();
         }
     }
+
 
     /**
      * Faire une requête à la base de donnée (SELECT, ou autre...)
